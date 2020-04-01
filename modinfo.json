@@ -1,0 +1,11 @@
+{
+  "type": "code",
+  "modid": "orecrystals",
+  "name": "Ore Crystals",
+  "author": "Taska Raine",
+  "description": "Adds crystals to ore deposits!",
+  "version": "1.0.0",
+  "dependency": {
+    "game": "1.12.6"
+  }
+}

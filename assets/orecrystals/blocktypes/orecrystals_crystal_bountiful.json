@@ -1,0 +1,111 @@
+﻿{
+	code:"orecrystals_crystal_bountiful",
+	class:"orecrystals_crystal_bountiful",
+	behaviors: [],
+	variantgroups: [
+		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "flourite", "galena", 
+		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", 
+		"pentlandite", "phosphorite", "platinum", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"] },
+		{ code: "type", states: ["ore_up", "ore_down", "ore_north", "ore_south", "ore_east", "ore_west"] }
+	],
+	shapebytype: {
+		"*-ore_up": {
+			base: "block/orecrystals_crystal_bountiful", rotateX: 180,
+			alternates: [
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 180, rotateY: 45 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 180, rotateY: 90 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 180, rotateY: 135 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 180, rotateY: 180 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 180, rotateY: 225 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 180, rotateY: 270 },
+			]
+		},
+		"*-ore_down": {
+			base: "block/orecrystals_crystal_bountiful",
+			alternates: [
+				{ base: "block/orecrystals_crystal_bountiful", rotateY: 45 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateY: 90 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateY: 135 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateY: 180 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateY: 225 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateY: 270 },
+			]
+		},
+		"*-ore_north": {
+			base: "block/orecrystals_crystal_bountiful", rotateX: 90,
+			alternates: [
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 90, rotateY: 45},
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 90, rotateY: 90},
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 90, rotateY: 135},
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 90, rotateY: 180},
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 90, rotateY: 225},
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: 90, rotateY: 270},
+			]
+		},
+		"*-ore_south": {
+			base: "block/orecrystals_crystal_bountiful", rotateX: -90,
+			alternates: [
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: -90, rotateY: 45 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: -90, rotateY: 90 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: -90, rotateY: 135 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: -90, rotateY: 180 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: -90, rotateY: 225 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateX: -90, rotateY: 270 },
+			]
+		},
+		"*-ore_east": {
+			base: "block/orecrystals_crystal_bountiful", rotateZ: 90,
+			alternates: [
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: 90, rotateX: 45 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: 90, rotateX: 90 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: 90, rotateX: 135 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: 90, rotateX: 180 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: 90, rotateX: 225 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: 90, rotateX: 270 },
+			]
+		},
+		"*-ore_west": {
+			base: "block/orecrystals_crystal_bountiful", rotateZ: -90,
+			alternates: [
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: -90, rotateX: 45 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: -90, rotateX: 90 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: -90, rotateX: 135 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: -90, rotateX: 180 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: -90, rotateX: 225 },
+				{ base: "block/orecrystals_crystal_bountiful", rotateZ: -90, rotateX: 270 },
+			]
+		},
+	},
+	blockmaterial:"Other",
+	drawtype: "json",
+	sidesolid: { all: false },
+	sideopaque: { all: false },
+	"textures": {
+		"crystal": { base: "block/{crystal}" },
+	},
+	renderPass: "Transparent",
+	collisionbox: null,
+	selectionbox: { 
+		x1: 0.3, y1: 0.0, z1: 0.3, 
+		x2: 0.7, y2: 0.6, z2: 0.7, 
+		
+		rotateXByType: {
+			"*-ore_down": 0,
+			"*-ore_up": 180,
+			"*-ore_south": -90,
+			"*-ore_north": 90
+		},
+		rotateZByType: {
+			"*-ore_east": 90,
+			"*ore_west": -90
+		},
+	},	
+	materialDensity: 3000,
+	replaceable: 5000,
+	lightAbsorption: 0,
+	resistance: 0.1,
+	sounds: {
+		"break": "game:block/glass"
+	},
+	drops: []
+}
