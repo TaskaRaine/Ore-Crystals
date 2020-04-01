@@ -4,7 +4,7 @@ What's that faint glow in the distance...? Is it a way out of this cave? Is it s
 
 No. It's strange, crystallized metal growing from this ore... Huh. Maybe those temporal storms we've been having have something to do with it?
 
-![Quartz Crystal] (https://octodex.github.com/images/yaktocat.png)
+![Screenshot](resources/images/QuartzCrystal.png)
 
 ### Description
 
