@@ -4,7 +4,7 @@ What's that faint glow in the distance...? Is it a way out of this cave? Is it s
 
 No. It's strange, crystallized metal growing from this ore... Huh. Maybe those temporal storms we've been having have something to do with it?
 
-![Quartz Crystal] (/resources/images/QuartzCrystal.png)
+![Quartz Crystal] (https://github.com/TaskaRaine/Ore-Crystals/blob/master/resources/images/QuartzCrystal.png)
 
 ### Description
 
@@ -16,7 +16,7 @@ but they glow all pretty-like!
 
 ### Releases
 
-Version 1.0: [Version 1.0](http://github.com)
+[Version 1.0](http://github.com)
 
 ### Changelog
 
