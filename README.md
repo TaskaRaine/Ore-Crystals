@@ -4,7 +4,7 @@ What's that faint glow in the distance...? Is it a way out of this cave? Is it s
 
 No. It's strange, crystallized metal growing from this ore... Huh. Maybe those temporal storms we've been having have something to do with it?
 
-![Screenshot](resources/images/QuartzCrystal.png)
+![Screenshot](resources/images/CopperCrystal.png)
 
 ### Description
 
@@ -16,10 +16,18 @@ but they glow all pretty-like!
 
 ### Releases
 
+#### Vintage Story 1.12.6+
+
+[Version 1.1](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.1.0.zip)
+
 [Version 1.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.0.0.zip)
 
 ### Changelog
 
-##### Version 1.0
+##### Version 1.1.0
+
+Increased texture opacity of crystals to make them slightly more visible
+
+##### Version 1.0.0
 
 Initial Release
