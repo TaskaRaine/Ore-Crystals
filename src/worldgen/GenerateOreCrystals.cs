@@ -19,7 +19,6 @@ namespace OreCrystals
 
 
         Dictionary<int, string> oreCodeDict = new Dictionary<int, string>();
-        Dictionary<string, int> crystalDict = new Dictionary<string, int>();
 
         //-- A structure to hold information about an individual crystal. --//
         struct OreCrystal
@@ -70,10 +69,6 @@ namespace OreCrystals
                 if(block is BlockOre)
                 {
                     oreCodeDict.Add(block.Id, block.Code.Path);
-                }
-                else if(block is OreCrystalsCrystal)
-                {
-                    crystalDict.Add(block.Code.Path, block.Id);
                 }
             }
             this.api.Event.ChunkColumnGeneration(CrystalGen, EnumWorldGenPass.TerrainFeatures, "standard");
@@ -193,10 +188,9 @@ namespace OreCrystals
         private void CreateNewCrystal(OreCrystal crystal, IServerChunk chunk)
         {
             string codeName = "orecrystals_crystal_" + crystal.quality + "-" + crystal.oreType + "-" + crystal.orientation;
-            int crystalID;
+            int crystalID = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", codeName));
 
-            if (crystalDict.TryGetValue(codeName, out crystalID))
-                chunk.Blocks[crystal.crystalIndex] = crystalID;
+            chunk.Blocks[crystal.crystalIndex] = crystalID;
         }
     }
 }
