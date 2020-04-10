@@ -18,11 +18,17 @@ but they glow all pretty-like!
 
 #### Vintage Story 1.12.6+
 
-[Version 1.1](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.1.0.zip)
+[Version 1.1.1](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.1.1/orecrystals_v1.1.1.zip)
 
-[Version 1.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.0.0.zip)
+[Version 1.1.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.1.0.zip)
+
+[Version 1.0.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.0.0.zip)
 
 ### Changelog
+
+##### Version 1.1.1
+
+Fixed an issue where incorrect crystal IDs were used during world generation when the mod was added to existing worlds.
 
 ##### Version 1.1.0
 

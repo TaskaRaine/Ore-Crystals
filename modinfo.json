@@ -4,7 +4,7 @@
   "name": "Ore Crystals",
   "author": "Taska Raine",
   "description": "Adds crystals to ore deposits!",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "dependency": {
     "game": "1.12.6"
   }
