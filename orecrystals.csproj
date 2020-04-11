@@ -71,6 +71,7 @@
     <None Include="assets\orecrystals\blocktypes\orecrystals_crystal_rich.json" />
     <Compile Include="src\blocks\OreCrystalsCrystal.cs" />
     <Compile Include="src\blocks\OreCrystalsRegisterBlocks.cs" />
+    <Compile Include="src\commands\OreCrystalsRegisterCommands.cs" />
     <Compile Include="src\worldgen\GenerateOreCrystals.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -18,6 +18,8 @@ but they glow all pretty-like!
 
 #### Vintage Story 1.12.6+
 
+[Version 1.1.2](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.1.2/orecrystals_v1.1.2.zip)
+
 [Version 1.1.1](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.1.1/orecrystals_v1.1.1.zip)
 
 [Version 1.1.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.1.0.zip)
@@ -25,6 +27,9 @@ but they glow all pretty-like!
 [Version 1.0.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.0.0.zip)
 
 ### Changelog
+
+##### Version 1.1.2
+Implemented the '/cleanworld' command. This can be used to revert the ? blocks that the mod created due to incorrect crystal IDs. 
 
 ##### Version 1.1.1
 
