@@ -18,6 +18,8 @@ but they glow all pretty-like!
 
 #### Vintage Story 1.12.6+
 
+[Version 1.1.3](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.1.3/orecrystals_v1.1.3.zip)
+
 [Version 1.1.2](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.1.2/orecrystals_v1.1.2.zip)
 
 [Version 1.1.1](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.1.1/orecrystals_v1.1.1.zip)
@@ -28,17 +30,17 @@ but they glow all pretty-like!
 
 ### Changelog
 
+##### Version 1.1.3
+Ore Crystals is now being released as DLL mod which should solve the error where VSSurvival could not be found as a dependency when the mod is loaded on a dedicated server.
+
 ##### Version 1.1.2
 Implemented the '/cleanworld' command. This can be used to revert the ? blocks that the mod created due to incorrect crystal IDs. 
 
 ##### Version 1.1.1
-
 Fixed an issue where incorrect crystal IDs were used during world generation when the mod was added to existing worlds.
 
 ##### Version 1.1.0
-
 Increased texture opacity of crystals to make them slightly more visible
 
 ##### Version 1.0.0
-
 Initial Release

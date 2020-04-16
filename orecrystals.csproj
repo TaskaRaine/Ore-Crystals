@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -16,7 +16,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\bin\Debug\orecrystals\</OutputPath>
+    <OutputPath>$(ProjectDir)\bin</OutputPath>
     <IntermediateOutputPath>..\..\obj\Debug\orecrystals\</IntermediateOutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -25,68 +25,116 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\bin\Release\orecrystals\</OutputPath>
+    <OutputPath>$(ProjectDir)\bin</OutputPath>
     <IntermediateOutputPath>..\..\obj\Release\orecrystals\</IntermediateOutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
+    <Reference Include="System"/>
+
+    <Reference Include="System.Core"/>
+    <Reference Include="System.Xml.Linq"/>
+    <Reference Include="System.Data.DataSetExtensions"/>
+
+
+    <Reference Include="Microsoft.CSharp"/>
+
+    <Reference Include="System.Data"/>
+
+    <Reference Include="System.Net.Http"/>
+
+    <Reference Include="System.Xml"/>
+
     <Reference Include="VintagestoryAPI">
       <HintPath>H:\Vintagestory\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
+
     <Reference Include="VSSurvivalMod">
       <HintPath>H:\Vintagestory\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
+
     <Reference Include="VSEssentials">
       <HintPath>H:\Vintagestory\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
+
     <Reference Include="VSCreativeMod">
       <HintPath>H:\Vintagestory\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
+
     <Reference Include="Newtonsoft.Json">
       <HintPath>H:\Vintagestory\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assets\orecrystals\textures\block\crystaltest.png" />
-    <Content Include="assets\orecrystals\textures\block\orecrystals_white_transparent.png" />
-    <Content Include="modinfo.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\orecrystals\blocktypes\orecrystals_crystal_bountiful.json" />
-    <None Include="assets\orecrystals\blocktypes\orecrystals_crystal_rich.json" />
-    <Compile Include="src\blocks\OreCrystalsCrystal.cs" />
-    <Compile Include="src\blocks\OreCrystalsRegisterBlocks.cs" />
-    <Compile Include="src\commands\OreCrystalsRegisterCommands.cs" />
-    <Compile Include="src\worldgen\GenerateOreCrystals.cs" />
-  </ItemGroup>
-  <ItemGroup />
-  <ItemGroup>
-    <None Include="assets\orecrystals\blocktypes\orecrystals_crystal_poor.json" />
-    <None Include="assets\orecrystals\blocktypes\orecrystals_crystal_medium.json" />
-    <None Include="assets\orecrystals\lang\en.json" />
-    <None Include="assets\orecrystals\shapes\block\orecrystals_crystal_bountiful.json" />
-    <None Include="assets\orecrystals\shapes\block\orecrystals_crystal_medium.json" />
-    <None Include="assets\orecrystals\shapes\block\orecrystals_crystal_poor.json" />
-    <None Include="assets\orecrystals\shapes\block\orecrystals_crystal_rich.json" />
+    <Folder Include="assets\" /><Content Include="assets\orecrystals\blocktypes\orecrystals_crystal_bountiful.json" />
+<Content Include="assets\orecrystals\blocktypes\orecrystals_crystal_medium.json" />
+<Content Include="assets\orecrystals\blocktypes\orecrystals_crystal_poor.json" />
+<Content Include="assets\orecrystals\blocktypes\orecrystals_crystal_rich.json" />
+<Content Include="assets\orecrystals\lang\en.json" />
+<Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_bountiful.json" />
+<Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_medium.json" />
+<Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_poor.json" />
+<Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_rich.json" />
+<Content Include="assets\orecrystals\textures\block\anthracite.png" />
+<Content Include="assets\orecrystals\textures\block\bismuthinite.png" />
+<Content Include="assets\orecrystals\textures\block\bituminouscoal.png" />
+<Content Include="assets\orecrystals\textures\block\borax.png" />
+<Content Include="assets\orecrystals\textures\block\cassiterite.png" />
+<Content Include="assets\orecrystals\textures\block\chromite.png" />
+<Content Include="assets\orecrystals\textures\block\cinnabar.png" />
+<Content Include="assets\orecrystals\textures\block\corundum.png" />
+<Content Include="assets\orecrystals\textures\block\diamond.png" />
+<Content Include="assets\orecrystals\textures\block\emerald.png" />
+<Content Include="assets\orecrystals\textures\block\flint.png" />
+<Content Include="assets\orecrystals\textures\block\flourite.png" />
+<Content Include="assets\orecrystals\textures\block\galena.png" />
+<Content Include="assets\orecrystals\textures\block\galena_nativesilver.png" />
+<Content Include="assets\orecrystals\textures\block\graphite.png" />
+<Content Include="assets\orecrystals\textures\block\hematite.png" />
+<Content Include="assets\orecrystals\textures\block\ilmenite.png" />
+<Content Include="assets\orecrystals\textures\block\kernite.png" />
+<Content Include="assets\orecrystals\textures\block\lapislazuli.png" />
+<Content Include="assets\orecrystals\textures\block\lignite.png" />
+<Content Include="assets\orecrystals\textures\block\limonite.png" />
+<Content Include="assets\orecrystals\textures\block\magnetite.png" />
+<Content Include="assets\orecrystals\textures\block\malachite.png" />
+<Content Include="assets\orecrystals\textures\block\nativecopper.png" />
+<Content Include="assets\orecrystals\textures\block\olivine.png" />
+<Content Include="assets\orecrystals\textures\block\olivine_peridot.png" />
+<Content Include="assets\orecrystals\textures\block\orecrystals_white_transparent.png" />
+<Content Include="assets\orecrystals\textures\block\pentlandite.png" />
+<Content Include="assets\orecrystals\textures\block\phosphorite.png" />
+<Content Include="assets\orecrystals\textures\block\platinum.png" />
+<Content Include="assets\orecrystals\textures\block\quartz.png" />
+<Content Include="assets\orecrystals\textures\block\quartz_nativegold.png" />
+<Content Include="assets\orecrystals\textures\block\quartz_nativesilver.png" />
+<Content Include="assets\orecrystals\textures\block\rhodochrosite.png" />
+<Content Include="assets\orecrystals\textures\block\sphalerite.png" />
+<Content Include="assets\orecrystals\textures\block\sulfur.png" />
+<Content Include="assets\orecrystals\textures\block\sylvite.png" />
+<Content Include="assets\orecrystals\textures\block\uranium.png" />
+<Content Include="assets\orecrystals\textures\block\wolframite.png" />
+
+    <Folder Include="src\" />
+    <Content Include="modinfo.json" /><Compile Include="src\blocks\OreCrystalsCrystal.cs" />
+<Compile Include="src\blocks\OreCrystalsRegisterBlocks.cs" />
+<Compile Include="src\commands\OreCrystalsRegisterCommands.cs" />
+<Compile Include="src\worldgen\GenerateOreCrystals.cs" />
+
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
+copy "$(TargetPath)" "$(ProjectDir)" 
+copy "$(TargetDir)\$(TargetName).pdb" "$(ProjectDir)" 
     </PostBuildEvent>
   </PropertyGroup>
 </Project>

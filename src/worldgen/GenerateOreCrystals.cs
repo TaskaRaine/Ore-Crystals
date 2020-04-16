@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Vintagestory.API;
+﻿using System.Collections.Generic;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
 using Vintagestory.GameContent;
-using Vintagestory.ServerMods;
 
 namespace OreCrystals
 {
@@ -16,7 +12,6 @@ namespace OreCrystals
         private ICoreServerAPI api;
         private IBlockAccessor worldBlockAccessor;
         private int chunkSize;
-
 
         Dictionary<int, string> oreCodeDict = new Dictionary<int, string>();
 
@@ -63,16 +58,9 @@ namespace OreCrystals
             this.worldBlockAccessor = api.World.BlockAccessor;
             this.chunkSize = worldBlockAccessor.ChunkSize;
 
-            //-- ALL BlockOre paths and OreCrystal IDs are stored in dictionaries for later use --// 
-            foreach(var block in api.World.Blocks)
-            {
-                if(block is BlockOre)
-                {
-                    oreCodeDict.Add(block.Id, block.Code.Path);
-                }
-            }
             this.api.Event.ChunkColumnGeneration(CrystalGen, EnumWorldGenPass.TerrainFeatures, "standard");
         }
+
         public override bool ShouldLoad(EnumAppSide side)
         {
             return side == EnumAppSide.Server;
@@ -85,7 +73,7 @@ namespace OreCrystals
         //-- Checks every block in the chunk. If that block is an ore within the oreCodeDict, add its position to the chunk ore dictionary as its unique ID, and the code, for use later --// 
         private void CrystalGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams)
         {
-            for(int chunkCount = 0; chunkCount < chunks.Length; chunkCount++)
+            for (int chunkCount = 0; chunkCount < chunks.Length; chunkCount++)
             {
                 Dictionary<Vec3i, string> chunkOre = new Dictionary<Vec3i, string>();
 
@@ -96,20 +84,20 @@ namespace OreCrystals
                         for (int z = 0; z < chunkSize; z++)
                         {
                             int key = chunks[chunkCount].Blocks[(y * chunkSize + z) * chunkSize + x];
-                            if (oreCodeDict.ContainsKey(key))
+                            Block block = api.World.GetBlock(key);
+
+                            if (block is BlockOre)
                             {
-                                string code;
-                                oreCodeDict.TryGetValue(key, out code);
+                                string code = block.Code.Path;
 
                                 chunkOre.Add(new Vec3i(x, y, z), code);
                             }
                         }
                     }
                 }
-
                 List<OreCrystal> chunkOreCrystals = new List<OreCrystal>();
                 int neighbourKey, neighbourIndex;
-
+                
                 //-- For every ore within the chunk, check its neighbours for an open space. If it's available, a new crystal is placed --//
                 foreach(KeyValuePair<Vec3i, string> pair in chunkOre)
                 {
