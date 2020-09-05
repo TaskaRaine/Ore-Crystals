@@ -13,8 +13,6 @@ namespace OreCrystals
         private IBlockAccessor worldBlockAccessor;
         private int chunkSize;
 
-        Dictionary<int, string> oreCodeDict = new Dictionary<int, string>();
-
         //-- A structure to hold information about an individual crystal. --//
         struct OreCrystal
         {
@@ -95,7 +93,7 @@ namespace OreCrystals
                         }
                     }
                 }
-                List<OreCrystal> chunkOreCrystals = new List<OreCrystal>();
+
                 int neighbourKey, neighbourIndex;
                 
                 //-- For every ore within the chunk, check its neighbours for an open space. If it's available, a new crystal is placed --//
