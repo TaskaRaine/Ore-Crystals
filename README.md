@@ -34,6 +34,9 @@ but they glow all pretty-like!
 
 ### Changelog
 
+##### Version 1.1.4
+Mod updated to be compatible with Vintage Story 1.13
+
 ##### Version 1.1.3
 Ore Crystals is now being released as DLL mod which should solve the error where VSSurvival could not be found as a dependency when the mod is loaded on a dedicated server.
 
