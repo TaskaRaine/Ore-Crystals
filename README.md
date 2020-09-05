@@ -16,6 +16,10 @@ but they glow all pretty-like!
 
 ### Releases
 
+### Vintage Story 1.13.0+
+
+[Version 1.1.4](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.1.4/orecrystals_v1.1.4.zip)
+
 #### Vintage Story 1.12.6+
 
 [Version 1.1.3](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.1.3/orecrystals_v1.1.3.zip)
