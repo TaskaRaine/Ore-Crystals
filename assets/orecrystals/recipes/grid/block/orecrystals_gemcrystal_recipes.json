@@ -1,0 +1,102 @@
+﻿[
+	{
+		//-- Bountiful Gem --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 4
+			},
+			"M": {
+				type: "item",
+				name: "gem",
+				code: "game:gem-*-rough",
+				allowedVariants: ["diamond", "emerald", "olivine_peridot"],
+				quantity: 4
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_bountiful-{gem}-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Rich Gem --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 3
+			},
+			"M": {
+				type: "item",
+				name: "gem",
+				code: "game:gem-*-rough",
+				allowedVariants: ["diamond", "emerald", "olivine_peridot"],
+				quantity: 3
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_rich-{gem}-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Medium Gem --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 2
+			},
+			"M": {
+				type: "item",
+				name: "gem",
+				code: "game:gem-*-rough",
+				allowedVariants: ["diamond", "emerald", "olivine_peridot"],
+				quantity: 2
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_medium-{gem}-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Poor Gem --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1
+			},
+			"M": {
+				type: "item",
+				name: "gem",
+				code: "game:gem-*-rough",
+				allowedVariants: ["diamond", "emerald", "olivine_peridot"],
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_poor-{gem}-ore_down",
+			quantity: 1
+		}
+	},
+]

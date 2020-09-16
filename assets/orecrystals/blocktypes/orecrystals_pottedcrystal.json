@@ -1,0 +1,81 @@
+﻿{
+	code: "orecrystals_pottedcrystal",
+	behaviors: [{name: "UnstableFalling", properties: { attachmentArea: { x1: 5, y1: 0, z1: 5, x2: 10, y2: 0, z2: 10 } }} ],
+	shape: { base: "block/orecrystals_pottedcrystal" },
+	drawtype: "json",
+	creativeinventory: { "general": ["*"], "decorative": ["*"], "crystals":["*"] },
+	variantgroups: [
+		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
+		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", 
+		"diamond", "emerald", "pentlandite", "phosphorite", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"]},
+		{ code: "pot", states: ["burnt", "amber", "boneash", "celadon", "copper", "earthern", "moss", "ochre", "rutile", "seasalt", "tenmoku"] }
+	],
+	"textures": {
+		sides: {  base: "game:block/clay/flowerpot/sides/{pot}" },
+		topbottom: {  base: "game:block/clay/flowerpot/topbottom/{pot}" },
+		crystal: { base: "block/{crystal}" },
+	},
+	lightAbsorption: 1,
+	replaceable: 900,
+	resistance: 1.5,
+	sidesolid: {
+		all: false
+	},
+	sideopaque: {
+		all: false
+	},
+	emitsideao: {
+		all: false
+	},
+	lightHsvByType: {
+		"*-anthracite-*": [47, 1, 8],
+		"*-bismuthinite-*": [14, 3, 8],
+		"*-bituminouscoal-*": [0, 1, 8],
+		"*-borax-*": [11, 1, 8],
+		"*-cassiterite-*": [6, 3, 8],
+		"*-chromite-*": [52, 1, 8],
+		"*-cinnabar-*": [62, 3, 8],
+		"*-corundum-*": [59, 3, 8],
+		"*-flint-*": [8, 5, 8],
+		"*-fluorite-*": [9, 3, 8],
+		"*-galena-*": [35, 3, 8],
+		"*-galena_nativesilver-*": [35, 1, 8],
+		"*-graphite-*": [3, 5, 8],
+		"*-hematite-*": [1, 3, 8],
+		"*-ilmenite-*": [2, 5, 8],
+		"*-kernite-*": [6, 3, 8],
+		"*-lapislazuli-*": [38, 3, 8],
+		"*-lignite-*": [3, 5, 8],
+		"*-limonite-*": [5, 3, 8],
+		"*-magnetite-*": [40, 1, 8],
+		"*-malachite-*": [27, 3, 8],
+		"*-nativecopper-*": [3, 3, 8],
+		"*-olivine-*": [12, 3, 8],
+		"*-olivine_peridot-*": [15, 3, 8],
+		"*-diamond-*": [33, 3, 8],
+		"*-emerald-*": [26, 3, 8],
+		"*-pentlandite-*": [7, 5, 8],
+		"*-phosphorite-*": [4, 3, 8],
+		"*-quartz-*": [0, 0, 8],
+		"*-quartz_nativegold-*": [8, 3, 8],
+		"*-quartz_nativesilver-*": [34, 1, 8],
+		"*-rhodochrosite-*": [1, 3, 8],
+		"*-sphalerite-*": [6, 5, 8],
+		"*-sulfur-*": [8, 3, 8],
+		"*-sylvite-*": [3, 3, 8],
+		"*-uranium-*": [11, 3, 8],
+		"*-wolframite-*": [40, 3, 8],
+	},
+	collisionbox: {
+		x1: 0.3125, y1: 0, z1: 0.3125,
+		x2: 0.6875, y2: 0.825, z2: 0.6875
+	},
+	selectionbox: {
+		x1: 0.3125, y1: 0, z1: 0.3125,
+		x2: 0.6875, y2: 0.825, z2: 0.6875
+	},
+	tpHandTransform: {
+		translation: { x: -2.2, y: -1.5, z: -1.45 },
+		rotation: { x: 1, y: 6, z: -91 }
+	}
+}

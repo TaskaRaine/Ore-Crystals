@@ -2,10 +2,11 @@
 	code:"orecrystals_crystal_poor",
 	class:"orecrystals_crystal_poor",
 	behaviors: [],
+	creativeinventory:{"general":["*-ore_down"], "decorative":["*-ore_down"], "crystals":["*-ore_down"]},
 	variantgroups: [
-		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "flourite", "galena", 
-		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", 
-		"pentlandite", "phosphorite", "platinum", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"] },
+		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
+		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", "diamond", 
+		"emerald", "pentlandite", "phosphorite", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"] },
 		{ code: "type", states: ["ore_up", "ore_down", "ore_north", "ore_south", "ore_east", "ore_west"] }
 	],
 	shapebytype: {
@@ -97,15 +98,74 @@
 		},
 		rotateZByType: {
 			"*-ore_east": 90,
-			"*ore_west": -90
+			"*-ore_west": -90
 		},
 	},	
+	guiTransform: {
+		translation: { x: 0, y: -10, z: 0 },
+		scale: 1.48
+	},
+	fpHandTransform: {
+		translation: { x: 0, y: 0.24, z: 0.5 },
+		rotation: { x: 0, y: 64, z: 0 }
+	},
+	tpHandTransform: {
+		translation: { x: -2.3, y: -1.6, z: -1.5 },
+		rotation: { x: 1, y: 1, z: -90 }
+	},
 	materialDensity: 3000,
 	replaceable: 5000,
 	lightAbsorption: 0,
+	lightHsvByType: {
+		"*-anthracite-*": [47, 1, 1],
+		"*-bismuthinite-*": [14, 3, 1],
+		"*-bituminouscoal-*": [0, 1, 1],
+		"*-borax-*": [11, 1, 1],
+		"*-cassiterite-*": [6, 3, 1],
+		"*-chromite-*": [52, 1, 1],
+		"*-cinnabar-*": [62, 3, 1],
+		"*-corundum-*": [59, 3, 1],
+		"*-flint-*": [8, 5, 1],
+		"*-fluorite-*": [9, 3, 1],
+		"*-galena-*": [35, 3, 1],
+		"*-galena_nativesilver-*": [35, 1, 1],
+		"*-graphite-*": [3, 5, 1],
+		"*-hematite-*": [1, 3, 1],
+		"*-ilmenite-*": [2, 5, 1],
+		"*-kernite-*": [6, 3, 1],
+		"*-lapislazuli-*": [38, 3, 1],
+		"*-lignite-*": [3, 5, 1],
+		"*-limonite-*": [5, 3, 1],
+		"*-magnetite-*": [40, 1, 1],
+		"*-malachite-*": [27, 3, 1],
+		"*-nativecopper-*": [3, 3, 1],
+		"*-olivine-*": [12, 3, 1],
+		"*-olivine_peridot-*": [15, 3, 1],
+		"*-diamond-*": [33, 3, 1],
+		"*-emerald-*": [26, 3, 1],
+		"*-pentlandite-*": [7, 5, 1],
+		"*-phosphorite-*": [4, 3, 1],
+		"*-quartz-*": [0, 0, 1],
+		"*-quartz_nativegold-*": [8, 3, 1],
+		"*-quartz_nativesilver-*": [34, 1, 1],
+		"*-rhodochrosite-*": [1, 3, 1],
+		"*-sphalerite-*": [6, 5, 1],
+		"*-sulfur-*": [8, 3, 1],
+		"*-sylvite-*": [3, 3, 1],
+		"*-uranium-*": [11, 3, 1],
+		"*-wolframite-*": [40, 3, 1],
+	},
 	resistance: 0.1,
 	sounds: {
-		"break": "game:block/glass"
+		"place": "game:player/buildhigh",
+		"break": "game:block/glass",
+		"hit": "game:block/glass"
 	},
-	drops: []
+	vertexFlags: {
+		zOffset: 3,
+		reflective: true
+	},
+	drops: [
+		{ type: "item", code: "orecrystals_crystalshard", quantity: { avg: .3, var: 1, dist: "gaussian" }  }
+	]
 }

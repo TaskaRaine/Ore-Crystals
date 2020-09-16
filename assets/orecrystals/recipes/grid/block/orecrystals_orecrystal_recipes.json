@@ -1,0 +1,110 @@
+﻿[
+	{
+		//-- Bountiful Ores --//
+
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 4
+			},
+			"M": {
+				type: "item",
+				name: "mineral",
+				code: "game:ore-*",
+				allowedVariants: ["lapislazuli", "corundum", "anthracite", "borax", "cinnabar", "lignite", "bituminouscoal", "sylvite", "sulfur",
+				"fluorite", "graphite", "kernite", "phosphorite"],
+				quantity: 4
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_bountiful-{mineral}-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Rich Ores --//
+
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 3
+			},
+			"M": {
+				type: "item",
+				name: "mineral",
+				code: "game:ore-*",
+				allowedVariants: ["lapislazuli", "corundum", "anthracite", "borax", "cinnabar", "lignite", "bituminouscoal", "sylvite", "sulfur",
+				"fluorite", "graphite", "kernite", "phosphorite"],
+				quantity: 3
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_rich-{mineral}-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Medium Ores --//
+
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 2
+			},
+			"M": {
+				type: "item",
+				name: "mineral",
+				code: "game:ore-*",
+				allowedVariants: ["lapislazuli", "corundum", "anthracite", "borax", "cinnabar", "lignite", "bituminouscoal", "sylvite", "sulfur",
+				"fluorite", "graphite", "kernite", "phosphorite"],
+				quantity: 2
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_medium-{mineral}-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Poor Ores --//
+
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1
+			},
+			"M": {
+				type: "item",
+				name: "mineral",
+				code: "game:ore-*",
+				allowedVariants: ["lapislazuli", "corundum", "anthracite", "borax", "cinnabar", "lignite", "bituminouscoal", "sylvite", "sulfur",
+				"fluorite", "graphite", "kernite", "phosphorite"],
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_poor-{mineral}-ore_down",
+			quantity: 1
+		}
+	}
+]

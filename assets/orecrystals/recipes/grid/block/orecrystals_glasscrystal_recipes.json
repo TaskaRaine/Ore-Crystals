@@ -1,0 +1,194 @@
+﻿[
+	{
+		//-- Bountiful Quartz --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 4
+			},
+			"M": {
+				type: "item",
+				code: "game:*",
+				allowedVariants: ["clearquartz", "ore-quartz"],
+				quantity: 4
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_bountiful-quartz-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Rich Quartz --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 3
+			},
+			"M": {
+				type: "item",
+				code: "game:*",
+				allowedVariants: ["clearquartz", "ore-quartz"],
+				quantity: 3
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_rich-quartz-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Medium Quartz --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 2
+			},
+			"M": {
+				type: "item",
+				code: "game:*",
+				allowedVariants: ["clearquartz", "ore-quartz"],
+				quantity: 2
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_medium-quartz-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Poor Quartz --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1
+			},
+			"M": {
+				type: "item",
+				code: "game:*",
+				allowedVariants: ["clearquartz", "ore-quartz"],
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_poor-quartz-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Bountiful Olivine --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 4
+			},
+			"M": {
+				type: "item",
+				code: "game:*",
+				allowedVariants: ["ore-olivine"],
+				quantity: 4
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_bountiful-olivine-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Rich Olivine --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 3
+			},
+			"M": {
+				type: "item",
+				code: "game:*",
+				allowedVariants: ["ore-olivine"],
+				quantity: 3
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_rich-olivine-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Medium Olivine --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 2
+			},
+			"M": {
+				type: "item",
+				code: "game:*",
+				allowedVariants: ["ore-olivine"],
+				quantity: 2
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_medium-olivine-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Poor Olivine --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1
+			},
+			"M": {
+				type: "item",
+				code: "game:*",
+				allowedVariants: ["ore-olivine"],
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_poor-olivine-ore_down",
+			quantity: 1
+		}
+	},
+]

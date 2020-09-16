@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Vintagestory.API.Common;
+﻿using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
@@ -7,25 +6,38 @@ using Vintagestory.GameContent;
 
 namespace OreCrystals
 {
+    enum CrystalDirection
+    {
+        UP = 0,
+        DOWN = 1,
+        SOUTH = 2,
+        NORTH = 3,
+        EAST = 4,
+        WEST = 5
+    }
+
     class GenerateOreCrystals : ModSystem
     {
         private ICoreServerAPI api;
         private IBlockAccessor worldBlockAccessor;
+        private IBlockAccessor chunkBlockAccessor;
         private int chunkSize;
+
+        private LCGRandom worldSeedRand;
 
         //-- A structure to hold information about an individual crystal. --//
         struct OreCrystal
         {
             public string neighbourOreCode;
-            public int crystalIndex;
+            public BlockPos crystalPos;
             public string orientation;
             public string quality;
             public string oreType;
 
-            public OreCrystal(string oreCode, int index, string orient)
+            public OreCrystal(string oreCode, BlockPos pos, string orient)
             {
                 neighbourOreCode = oreCode;
-                crystalIndex = index;
+                crystalPos = pos;
                 orientation = orient;
 
                 string[] oreSplit = neighbourOreCode.Split('-');
@@ -56,6 +68,10 @@ namespace OreCrystals
             this.worldBlockAccessor = api.World.BlockAccessor;
             this.chunkSize = worldBlockAccessor.ChunkSize;
 
+            this.worldSeedRand = new LCGRandom(api.World.Seed);
+
+            this.api.Event.GetWorldgenBlockAccessor(OnWorldGenBlockAccessor);
+
             this.api.Event.ChunkColumnGeneration(CrystalGen, EnumWorldGenPass.TerrainFeatures, "standard");
         }
 
@@ -68,115 +84,165 @@ namespace OreCrystals
         {
             return 0.3;
         }
-        //-- Checks every block in the chunk. If that block is an ore within the oreCodeDict, add its position to the chunk ore dictionary as its unique ID, and the code, for use later --// 
+        private void OnWorldGenBlockAccessor(IChunkProviderThread chunkProvider)
+        {
+            chunkBlockAccessor = chunkProvider.GetBlockAccessor(true);
+        }
+        //-- Checks every block in the chunk. If that block is an ore within the oreCodeDict, pass the block position and ore code to the SpawnCrystals method. --// 
         private void CrystalGen(IServerChunk[] chunks, int chunkX, int chunkZ, ITreeAttribute chunkGenParams)
         {
-            for (int chunkCount = 0; chunkCount < chunks.Length; chunkCount++)
+            BlockPos blockPos = new BlockPos();
+
+            for (int x = 0; x < chunkSize; x++)
             {
-                Dictionary<Vec3i, string> chunkOre = new Dictionary<Vec3i, string>();
+                blockPos.X = chunkX * chunkSize + x;
 
-                for (int x = 0; x < chunkSize; x++)
+                for (int z = 0; z < chunkSize; z++)
                 {
-                    for (int y = 0; y < chunkSize; y++)
+                    blockPos.Z = chunkZ * chunkSize + z;
+
+                    for (int y = 0; y < worldBlockAccessor.GetTerrainMapheightAt(blockPos); y++)
                     {
-                        for (int z = 0; z < chunkSize; z++)
+                        blockPos.Y = y;
+
+                        Block block = chunkBlockAccessor.GetBlock(blockPos);
+                        if (block is BlockOre)
                         {
-                            int key = chunks[chunkCount].Blocks[(y * chunkSize + z) * chunkSize + x];
-                            Block block = api.World.GetBlock(key);
+                            string code = block.Code.Path;
 
-                            if (block is BlockOre)
-                            {
-                                string code = block.Code.Path;
-
-                                chunkOre.Add(new Vec3i(x, y, z), code);
-                            }
+                            SpawnCrystals(blockPos, code);
                         }
                     }
                 }
-
-                int neighbourKey, neighbourIndex;
-                
-                //-- For every ore within the chunk, check its neighbours for an open space. If it's available, a new crystal is placed --//
-                foreach(KeyValuePair<Vec3i, string> pair in chunkOre)
-                {
-                    //-- Check space UP(y + 1) for crystal spawn --//
-                    if (pair.Key.Y < 31)
-                    {
-                        neighbourIndex = ((pair.Key.Y + 1) * chunkSize + pair.Key.Z) * chunkSize + pair.Key.X;
-                        neighbourKey = chunks[chunkCount].Blocks[neighbourIndex];
-
-                        if (neighbourKey == 0)
-                        {
-                            CreateNewCrystal(new OreCrystal(pair.Value, neighbourIndex, "ore_down"), chunks[chunkCount]);
-                        }
-                    }
-                    //-- Check space DOWN(y - 1) for crystal spawn --//
-                    if (pair.Key.Y > 0)
-                    {
-                        neighbourIndex = ((pair.Key.Y - 1) * chunkSize + pair.Key.Z) * chunkSize + pair.Key.X;
-                        neighbourKey = chunks[chunkCount].Blocks[neighbourIndex];
-
-                        if (neighbourKey == 0)
-                        {
-                            CreateNewCrystal(new OreCrystal(pair.Value, neighbourIndex, "ore_up"), chunks[chunkCount]);
-                        }
-                    }
-                    //-- Check space SOUTH(z + 1) for crystal spawn --//
-                    if (pair.Key.Z < 31)
-                    {
-                        neighbourIndex = (pair.Key.Y * chunkSize + (pair.Key.Z + 1)) * chunkSize + pair.Key.X;
-                        neighbourKey = chunks[chunkCount].Blocks[neighbourIndex];
-
-                        if (neighbourKey == 0)
-                        {
-                            CreateNewCrystal(new OreCrystal(pair.Value, neighbourIndex, "ore_north"), chunks[chunkCount]);
-                        }
-                    }
-                    //-- Check space NORTH(z - 1) for crystal spawn --//
-                    if (pair.Key.Z > 0)
-                    {
-                        neighbourIndex = (pair.Key.Y * chunkSize + (pair.Key.Z - 1)) * chunkSize + pair.Key.X;
-                        neighbourKey = chunks[chunkCount].Blocks[neighbourIndex];
-
-                        if (neighbourKey == 0)
-                        {
-                            CreateNewCrystal(new OreCrystal(pair.Value, neighbourIndex, "ore_south"), chunks[chunkCount]);
-                        }
-                    }
-                    //-- Check space EAST(x + 1) for crystal spawn --//
-                    if (pair.Key.X < 31)
-                    {
-                        neighbourIndex = (pair.Key.Y * chunkSize + pair.Key.Z) * chunkSize + (pair.Key.X + 1);
-                        neighbourKey = chunks[chunkCount].Blocks[neighbourIndex];
-
-                        if (neighbourKey == 0)
-                        {
-                            CreateNewCrystal(new OreCrystal(pair.Value, neighbourIndex, "ore_west"), chunks[chunkCount]);
-                        }
-                    }
-                    //-- Check space WEST(x - 1) for crystal spawn --//
-                    if (pair.Key.X > 0)
-                    {
-                        neighbourIndex = (pair.Key.Y * chunkSize + pair.Key.Z) * chunkSize + (pair.Key.X - 1);
-                        neighbourKey = chunks[chunkCount].Blocks[neighbourIndex];
-
-                        if (neighbourKey == 0)
-                        {
-                            CreateNewCrystal(new OreCrystal(pair.Value, neighbourIndex, "ore_east"), chunks[chunkCount]);
-                        }
-                    }
-                }
-                //-- Updates the chunk data after all crystals have been generated --//
-                chunks[chunkCount].MarkModified();
             }
         }
+
+        //-- Check neighbouring block positions for air blocks --//
+        private void SpawnCrystals(BlockPos blockPos, string code)
+        {
+            BlockPos neighbourPos;
+
+            //-- Check space UP(y + 1) for crystal spawn --//
+            if (blockPos.Y < worldBlockAccessor.MapSizeY)
+            {
+                neighbourPos = GetNeighbour(CrystalDirection.UP, blockPos);
+
+                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                {
+                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_down"));
+                }
+            }
+
+            //-- Check space DOWN(y - 1) for crystal spawn --//
+            if (blockPos.Y > 0)
+            {
+                neighbourPos = GetNeighbour(CrystalDirection.DOWN, blockPos);
+
+                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                {
+                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_up"));
+                }
+            }
+            //-- Check space SOUTH(z + 1) for crystal spawn --//
+            if (blockPos.Z < worldBlockAccessor.MapSizeZ)
+            {
+                neighbourPos = GetNeighbour(CrystalDirection.SOUTH, blockPos);
+
+                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                {
+                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_north"));
+                }
+            }
+            //-- Check space NORTH(z - 1) for crystal spawn --//
+            if (blockPos.Z > 0)
+            {
+                neighbourPos = GetNeighbour(CrystalDirection.NORTH, blockPos);
+
+                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                {
+                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_south"));
+                }
+            }
+            //-- Check space EAST(x + 1) for crystal spawn --//
+            if (blockPos.X < worldBlockAccessor.MapSizeX)
+            {
+                neighbourPos = GetNeighbour(CrystalDirection.EAST, blockPos);
+
+                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                {
+                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_west"));
+                }
+            }
+            //-- Check space WEST(x - 1) for crystal spawn --//
+            if (blockPos.X > 0)
+            {
+                neighbourPos = GetNeighbour(CrystalDirection.WEST, blockPos);
+
+                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                {
+                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_east"));
+                }
+            }
+        }
+
         //-- Creates a code string that is then used to search the crystal dictionary for the associated crystal ID, then changes the ID of the air block to that found ID --//  
-        private void CreateNewCrystal(OreCrystal crystal, IServerChunk chunk)
+        private void CreateNewCrystal(OreCrystal crystal)
         {
             string codeName = "orecrystals_crystal_" + crystal.quality + "-" + crystal.oreType + "-" + crystal.orientation;
             int crystalID = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", codeName));
 
-            chunk.Blocks[crystal.crystalIndex] = crystalID;
+            OreCrystalsCrystal newCrystal = new OreCrystalsCrystal
+            {
+                BlockId = crystalID
+            };
+
+            newCrystal.TryPlaceBlockForWorldGen(chunkBlockAccessor, crystal.crystalPos, BlockFacing.UP, this.worldSeedRand);
+        }
+        
+        private BlockPos GetNeighbour(CrystalDirection direction, BlockPos blockPos)
+        {
+            BlockPos neighbour = new BlockPos();
+
+            switch(direction)
+            {
+                case CrystalDirection.UP:
+                    neighbour.X = blockPos.X;
+                    neighbour.Y = blockPos.Y + 1;
+                    neighbour.Z = blockPos.Z;
+
+                    break;
+                case CrystalDirection.DOWN:
+                    neighbour.X = blockPos.X;
+                    neighbour.Y = blockPos.Y - 1;
+                    neighbour.Z = blockPos.Z;
+
+                    break;
+                case CrystalDirection.SOUTH:
+                    neighbour.X = blockPos.X;
+                    neighbour.Y = blockPos.Y;
+                    neighbour.Z = blockPos.Z + 1;
+
+                    break;
+                case CrystalDirection.NORTH:
+                    neighbour.X = blockPos.X;
+                    neighbour.Y = blockPos.Y;
+                    neighbour.Z = blockPos.Z - 1;
+
+                    break;
+                case CrystalDirection.EAST:
+                    neighbour.X = blockPos.X + 1;
+                    neighbour.Y = blockPos.Y;
+                    neighbour.Z = blockPos.Z;
+
+                    break;
+                case CrystalDirection.WEST:
+                    neighbour.X = blockPos.X - 1;
+                    neighbour.Y = blockPos.Y;
+                    neighbour.Z = blockPos.Z;
+
+                    break;
+            }
+            return neighbour;
         }
     }
 }

@@ -1,0 +1,94 @@
+﻿[
+    {
+		//-- Bountiful Flint --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 4
+			},
+			"M": {
+				type: "item",
+				code: "game:flint",
+				quantity: 4
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_bountiful-flint-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Rich Flint --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 3
+			},
+			"M": {
+				type: "item",
+				code: "game:flint",
+				quantity: 3
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_rich-flint-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Medium Flint --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 2
+			},
+			"M": {
+				type: "item",
+				code: "game:flint",
+				quantity: 2
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_medium-flint-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Poor Flint --//
+		ingredientPattern: " C CMC C ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1
+			},
+			"M": {
+				type: "item",
+				code: "game:flint",
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_crystal_poor-flint-ore_down",
+			quantity: 1
+		}
+	},
+]

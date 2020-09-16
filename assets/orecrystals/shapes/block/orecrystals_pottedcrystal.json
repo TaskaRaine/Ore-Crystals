@@ -1,0 +1,152 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureSizes": {
+		"sides": [16,16],
+		"topbottom": [16,16],
+		"crystal": [32, 32],
+	},
+	"textures": {
+		"crystal": ""
+	},
+	"elements": [
+		{
+			"name": "Bottom",
+			"from": [ 6.0, 0.0, 6.0 ], 
+			"to": [ 10.0, 1.0, 10.0 ], 
+			"faces": {
+				"north": { "texture": "#topbottom", "uv": [ 0.0, 0.0, 4.0, 1.0 ], "enabled": false },
+				"east": { "texture": "#-1", "uv": [ 0.0, 0.0, 4.0, 1.0 ], "enabled": false },
+				"south": { "texture": "#-1", "uv": [ 0.0, 0.0, 4.0, 1.0 ], "enabled": false },
+				"west": { "texture": "#-1", "uv": [ 0.0, 0.0, 4.0, 1.0 ], "enabled": false },
+				"up": { "texture": "#topbottom", "uv": [ 8.0, 12.0, 12.0, 16.0 ] },
+				"down": { "texture": "#topbottom", "uv": [ 1.0, 11.0, 5.0, 15.0 ] }
+			}
+		},
+		{
+			"name": "Side N",
+			"from": [ 5.0, 0.0, 5.0 ], 
+			"to": [ 11.0, 7.0, 6.0 ], 
+			"faces": {
+				"north": { "texture": "#sides", "uv": [ 1.0, 1.0, 7.0, 8.0 ] },
+				"east": { "texture": "#sides", "uv": [ 0.0, 1.0, 1.0, 8.0 ] },
+				"south": { "texture": "#topbottom", "uv": [ 0.0, 0.0, 6.0, 7.0 ] },
+				"west": { "texture": "#sides", "uv": [ 7.0, 1.0, 8.0, 8.0 ] },
+				"up": { "texture": "#sides", "uv": [ 1.0, 0.0, 7.0, 1.0 ], "rotation": 180 },
+				"down": { "texture": "#topbottom", "uv": [ 0.0, 10.0, 6.0, 11.0 ] }
+			}
+		},
+		{
+			"name": "Side S",
+			"from": [ 5.0, 0.0, 10.0 ], 
+			"to": [ 11.0, 7.0, 11.0 ], 
+			"faces": {
+				"north": { "texture": "#topbottom", "uv": [ 4.0, 0.0, 10.0, 7.0 ] },
+				"east": { "texture": "#sides", "uv": [ 15.0, 1.0, 16.0, 8.0 ] },
+				"south": { "texture": "#sides", "uv": [ 9.0, 1.0, 15.0, 8.0 ] },
+				"west": { "texture": "#sides", "uv": [ 8.0, 1.0, 9.0, 8.0 ] },
+				"up": { "texture": "#sides", "uv": [ 9.0, 0.0, 15.0, 1.0 ] },
+				"down": { "texture": "#topbottom", "uv": [ 0.0, 15.0, 6.0, 16.0 ] }
+			}
+		},
+		{
+			"name": "Side W",
+			"from": [ 5.0, 0.0, 6.0 ], 
+			"to": [ 6.0, 7.0, 10.0 ], 
+			"faces": {
+				"north": { "texture": "#-1", "uv": [ 0.0, 0.0, 1.0, 7.0 ], "enabled": false },
+				"east": { "texture": "#topbottom", "uv": [ 8.5, 0.0, 12.5, 7.0 ] },
+				"south": { "texture": "#-1", "uv": [ 0.0, 0.0, 1.0, 7.0 ], "enabled": false },
+				"west": { "texture": "#sides", "uv": [ 2.0, 9.0, 6.0, 16.0 ] },
+				"up": { "texture": "#sides", "uv": [ 2.0, 8.0, 6.0, 9.0 ], "rotation": 90 },
+				"down": { "texture": "#topbottom", "uv": [ 5.0, 11.0, 6.0, 15.0 ] }
+			}
+		},
+		{
+			"name": "Side E",
+			"from": [ 10.0, 0.0, 6.0 ], 
+			"to": [ 11.0, 7.0, 10.0 ], 
+			"faces": {
+				"north": { "texture": "#-1", "uv": [ 0.0, 0.0, 1.0, 7.0 ], "enabled": false },
+				"east": { "texture": "#sides", "uv": [ 10.0, 9.0, 14.0, 16.0 ] },
+				"south": { "texture": "#-1", "uv": [ 0.0, 0.0, 1.0, 7.0 ], "enabled": false },
+				"west": { "texture": "#topbottom", "uv": [ 12.0, 0.0, 16.0, 7.0 ] },
+				"up": { "texture": "#sides", "uv": [ 10.0, 8.0, 14.0, 9.0 ], "rotation": 270 },
+				"down": { "texture": "#topbottom", "uv": [ 0.0, 11.0, 1.0, 15.0 ] }
+			}
+		},
+		{
+			"name": "PottedCrystal_Inner_1",
+			"from": [ 7.0, 2.0, 7.0 ], 
+			"to": [ 9.0, 8.0, 9.0 ], 
+			"rotationOrigin": [ 8.0, 1.0, 8.0 ],
+			"renderPass": 3,
+			"shade": false,
+			"reflective": true,
+			"faces": {
+				"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 },
+				"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 },
+				"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 },
+				"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 },
+				"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 },
+				"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 }
+			},
+			"children": [
+				{
+					"name": "PottedCrystal_Outer_1",
+					"from": [ -0.5, 0.0, -0.5 ], 
+					"to": [ 2.5, 7.0, 2.5 ], 
+					"rotationOrigin": [ 1.0, 0.0, 1.0 ],
+					"renderPass": 3,
+					"shade": false,
+					"reflective": true,
+					"faces": {
+						"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5},
+						"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5 },
+						"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5 },
+						"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5 },
+						"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5 },
+						"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5 }
+					}
+				}
+			]
+		},
+		{
+			"name": "PottedCrystal_Inner_8",
+			"from": [ 7.5, 8.0, 7.5 ], 
+			"to": [ 8.5, 12.0, 8.5 ], 
+			"rotationOrigin": [ 8.0, 9.0, 8.0 ],
+			"renderPass": 3,
+			"shade": false,
+			"reflective": true,
+			"faces": {
+				"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 },
+				"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 },
+				"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 },
+				"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 },
+				"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 },
+				"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":50 }
+			},
+			"children": [
+				{
+					"name": "PottedCrystal_Outer_9",
+					"from": [ -0.5, 1.0, -0.5 ], 
+					"to": [ 1.5, 5.0, 1.5 ], 
+					"rotationOrigin": [ 1.0, 1.0, 1.0 ],
+					"renderPass": 3,
+					"shade": false,
+					"reflective": true,
+					"faces": {
+						"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5 },
+						"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5 },
+						"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5 },
+						"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5 },
+						"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5 },
+						"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow":5 }
+					}
+				}
+			]
+		}
+	]}

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Vintagestory.API.Common;
+﻿using Vintagestory.API.Common;
 
 namespace OreCrystals
 {
@@ -16,6 +11,10 @@ namespace OreCrystals
             api.RegisterBlockClass("orecrystals_crystal_medium", typeof(OreCrystalsCrystal));
             api.RegisterBlockClass("orecrystals_crystal_rich", typeof (OreCrystalsCrystal));
             api.RegisterBlockClass("orecrystals_crystal_bountiful", typeof(OreCrystalsCrystal));
+
+            api.RegisterBlockClass("orecrystals_glass", typeof(OreCrystalsGlass));
+
+            api.RegisterBlockClass("orecrystals_pottedcrystal", typeof(Block));
         }
     }
 }
