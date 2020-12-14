@@ -2,6 +2,11 @@
 	code:"orecrystals_glass",
 	class: "orecrystals_glass",
 	creativeinventory: { "general": ["*"], "construction": ["*"], "crystals":["*"] },
+	attributes: {
+		handbook: {
+			groupBy:["orecrystals_glass-*"]
+		}
+	},
 	variantgroups: [
 		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "diamond", "emerald", "flint", "fluorite", 
 		"galena", "galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", 

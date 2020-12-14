@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3361F3C5-A7AA-46F6-8C50-2C7DBBCC7F8C}</ProjectGuid>
+    <ProjectGuid>{833436A6-AADB-42A5-8B0C-7BD711004D3C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>orecrystals</RootNamespace>

@@ -4,6 +4,11 @@
 	shape: { base: "block/orecrystals_pottedcrystal" },
 	drawtype: "json",
 	creativeinventory: { "general": ["*"], "decorative": ["*"], "crystals":["*"] },
+	attributes: {
+		handbook: {
+			groupBy:["orecrystals_pottedcrystal-*-*"]
+		}
+	},
 	variantgroups: [
 		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
 		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", 

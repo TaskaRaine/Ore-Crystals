@@ -3,6 +3,11 @@
 	class:"orecrystals_crystal_bountiful",
 	behaviors: [],
 	creativeinventory:{"general":["*-ore_down"], "decorative":["*-ore_down"], "crystals":["*-ore_down"]},
+	attributes: {
+		handbook: {
+			groupBy:["orecrystals_crystal_bountiful-*-ore_down"]
+		}
+	},
 	variantgroups: [
 		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
 		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", "diamond", 
