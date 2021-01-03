@@ -17,6 +17,7 @@ This mod adds crystals to the worldgen, growing out the sides of any vanilla ore
 ### Releases
 
 ### Vintage Story 1.13.0 - 1.14.0+
+[Version 1.2.2](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.2.2/OreCrystals_v1.2.2.zip)
 
 [Version 1.2.1](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.2.1/orecrystals_v1.2.1.zip)
 
@@ -39,6 +40,9 @@ This mod adds crystals to the worldgen, growing out the sides of any vanilla ore
 [Version 1.0.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.0.0.zip)
 
 ### Changelog
+
+##### Version 1.2.2
+Minor worldgen tweak that prevents crystals from stealing spaces in the new underwater lakes for VS 1.14.3.
 
 ##### Version 1.2.1
 Mod objects are now better organized within the handbook.

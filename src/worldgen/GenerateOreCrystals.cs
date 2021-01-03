@@ -72,7 +72,7 @@ namespace OreCrystals
 
             this.api.Event.GetWorldgenBlockAccessor(OnWorldGenBlockAccessor);
 
-            this.api.Event.ChunkColumnGeneration(CrystalGen, EnumWorldGenPass.TerrainFeatures, "standard");
+            this.api.Event.ChunkColumnGeneration(CrystalGen, EnumWorldGenPass.Vegetation, "standard");
         }
 
         public override bool ShouldLoad(EnumAppSide side)
@@ -120,14 +120,16 @@ namespace OreCrystals
         //-- Check neighbouring block positions for air blocks --//
         private void SpawnCrystals(BlockPos blockPos, string code)
         {
+            EnumBlockMaterial neighbourBlockMaterial;
             BlockPos neighbourPos;
 
             //-- Check space UP(y + 1) for crystal spawn --//
             if (blockPos.Y < worldBlockAccessor.MapSizeY)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.UP, blockPos);
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
                 {
                     CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_down"));
                 }
@@ -137,8 +139,9 @@ namespace OreCrystals
             if (blockPos.Y > 0)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.DOWN, blockPos);
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
                 {
                     CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_up"));
                 }
@@ -147,8 +150,9 @@ namespace OreCrystals
             if (blockPos.Z < worldBlockAccessor.MapSizeZ)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.SOUTH, blockPos);
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
                 {
                     CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_north"));
                 }
@@ -157,8 +161,9 @@ namespace OreCrystals
             if (blockPos.Z > 0)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.NORTH, blockPos);
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
                 {
                     CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_south"));
                 }
@@ -167,8 +172,9 @@ namespace OreCrystals
             if (blockPos.X < worldBlockAccessor.MapSizeX)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.EAST, blockPos);
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
                 {
                     CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_west"));
                 }
@@ -177,8 +183,9 @@ namespace OreCrystals
             if (blockPos.X > 0)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.WEST, blockPos);
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (chunkBlockAccessor.GetBlock(neighbourPos).Id == 0)
+                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
                 {
                     CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_east"));
                 }
