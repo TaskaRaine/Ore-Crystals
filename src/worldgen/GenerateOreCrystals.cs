@@ -1,4 +1,6 @@
-﻿using Vintagestory.API.Common;
+﻿using System.Collections.Generic;
+using Vintagestory.API.Common;
+using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
@@ -131,7 +133,8 @@ namespace OreCrystals
 
                 if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
                 {
-                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_down"));
+                    if(!GenerateObelisk(code, blockPos))
+                        CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_down"));
                 }
             }
 
@@ -250,6 +253,87 @@ namespace OreCrystals
                     break;
             }
             return neighbour;
+        }
+        private bool GenerateObelisk(string oreCode, BlockPos pos)
+        {
+            int blockID = chunkBlockAccessor.GetBlockId(pos);
+            bool canGenerate = false;
+
+            string[] codeSplit = oreCode.Split('-');
+            string variant = codeSplit[codeSplit.Length - 2];
+
+            BlockPos eastNeighbour = GetNeighbour(CrystalDirection.EAST, pos);
+            BlockPos southNeighbour = GetNeighbour(CrystalDirection.SOUTH, pos);
+            BlockPos southeastNeighbour = GetNeighbour(CrystalDirection.SOUTH, eastNeighbour);
+           
+            if(chunkBlockAccessor.GetBlockId(eastNeighbour) == blockID && chunkBlockAccessor.GetBlockId(southNeighbour) == blockID && chunkBlockAccessor.GetBlockId(southeastNeighbour) == blockID)
+            {
+                if (chunkBlockAccessor.GetBlock(pos.UpCopy()).BlockMaterial == EnumBlockMaterial.Air && 
+                    chunkBlockAccessor.GetBlock(eastNeighbour.UpCopy()).BlockMaterial == EnumBlockMaterial.Air && 
+                    chunkBlockAccessor.GetBlock(southNeighbour.UpCopy()).BlockMaterial == EnumBlockMaterial.Air && 
+                    chunkBlockAccessor.GetBlock(southeastNeighbour.UpCopy()).BlockMaterial == EnumBlockMaterial.Air &&
+                    chunkBlockAccessor.GetBlock(pos.UpCopy(2)).BlockMaterial == EnumBlockMaterial.Air &&
+                    chunkBlockAccessor.GetBlock(eastNeighbour.UpCopy(2)).BlockMaterial == EnumBlockMaterial.Air &&
+                    chunkBlockAccessor.GetBlock(southNeighbour.UpCopy(2)).BlockMaterial == EnumBlockMaterial.Air &&
+                    chunkBlockAccessor.GetBlock(southeastNeighbour.UpCopy(2)).BlockMaterial == EnumBlockMaterial.Air)
+                {
+                    canGenerate = true;
+                }
+
+                if(canGenerate)
+                {
+                    CrystalObeliskBottom crystalObeliskBottomNW = new CrystalObeliskBottom
+                    {
+                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk_NW_bottom-" + variant)),
+                        EntityClass = "BlockEntityCrystalObeliskSpawner"
+                    };
+                    CrystalObeliskBottom crystalObeliskBottomNE = new CrystalObeliskBottom
+                    {
+                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk_NE_bottom-" + variant)),
+                        EntityClass = "BlockEntityCrystalObelisk"
+                    };
+                    CrystalObeliskBottom crystalObeliskBottomSW = new CrystalObeliskBottom
+                    {
+                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk_SW_bottom-" + variant)),
+                        EntityClass = "BlockEntityCrystalObelisk"
+                    };
+                    CrystalObeliskBottom crystalObeliskBottomSE = new CrystalObeliskBottom
+                    {
+                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk_SE_bottom-" + variant)),
+                        EntityClass = "BlockEntityCrystalObelisk"
+                    };
+
+                    CrystalObeliskTop crystalObeliskTopNW = new CrystalObeliskTop
+                    {
+                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk_NW_top-" + variant))
+                    };
+                    CrystalObeliskTop crystalObeliskTopNE = new CrystalObeliskTop
+                    {
+                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk_NE_top-" + variant))
+                    };
+                    CrystalObeliskTop crystalObeliskTopSW = new CrystalObeliskTop
+                    {
+                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk_SW_top-" + variant))
+                    };
+                    CrystalObeliskTop crystalObeliskTopSE = new CrystalObeliskTop
+                    {
+                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk_SE_top-" + variant))
+                    };
+
+                    crystalObeliskBottomNW.TryPlaceBlockForWorldGen(chunkBlockAccessor, pos.UpCopy(), BlockFacing.UP, worldSeedRand);
+                    crystalObeliskBottomNE.TryPlaceBlockForWorldGen(chunkBlockAccessor, eastNeighbour.UpCopy(), BlockFacing.UP, worldSeedRand);
+                    crystalObeliskBottomSW.TryPlaceBlockForWorldGen(chunkBlockAccessor, southNeighbour.UpCopy(), BlockFacing.UP, worldSeedRand);
+                    crystalObeliskBottomSE.TryPlaceBlockForWorldGen(chunkBlockAccessor, southeastNeighbour.UpCopy(), BlockFacing.UP, worldSeedRand);
+                    crystalObeliskTopNW.TryPlaceBlockForWorldGen(chunkBlockAccessor, pos.UpCopy(2), BlockFacing.UP, worldSeedRand);
+                    crystalObeliskTopNE.TryPlaceBlockForWorldGen(chunkBlockAccessor, eastNeighbour.UpCopy(2), BlockFacing.UP, worldSeedRand);
+                    crystalObeliskTopSW.TryPlaceBlockForWorldGen(chunkBlockAccessor, southNeighbour.UpCopy(2), BlockFacing.UP, worldSeedRand);
+                    crystalObeliskTopSE.TryPlaceBlockForWorldGen(chunkBlockAccessor, southeastNeighbour.UpCopy(2), BlockFacing.UP, worldSeedRand);
+
+                    return true;
+                }
+            }
+
+            return false;
         }
     }
 }

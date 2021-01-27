@@ -1,0 +1,408 @@
+{
+	"editor": {
+		"allAngles": false,
+		"entityTextureMode": false
+	},
+	"textureWidth": 32,
+	"textureHeight": 32,
+	"textureSizes": {
+	},
+	"textures": {
+	},
+	"elements": [
+		{
+			"name": "Crystal_Heart_InnerRight",
+			"from": [ 7.5, 8.0, 7.5 ], 
+			"to": [ 8.5, 8.5, 8.5 ], 
+			"rotationOrigin": [ 8.0, 8.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
+				"east": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
+				"south": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
+				"west": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
+				"up": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
+				"down": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 }
+			},
+			"children": [
+				{
+					"name": "Crystal_Heart_Right_Tip",
+					"from": [ 0.0, 3.0, 0.0 ], 
+					"to": [ 1.0, 3.5, 1.0 ], 
+					"renderPass": 3,
+					"rotationOrigin": [ -0.5, 4.0, -0.5 ],
+					"faces": {
+						"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+					}
+				},
+				{
+					"name": "Crystal_Heart_Right_Upper",
+					"from": [ -1.0, 1.0, -1.0 ], 
+					"to": [ 2.0, 2.0, 2.0 ], 
+					"renderPass": 3,
+					"rotationOrigin": [ -0.5, 2.0, -0.5 ],
+					"faces": {
+						"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+					}
+				},
+				{
+					"name": "Crystal_Heart_Right_Mid",
+					"from": [ -1.25, -1.0, -1.25 ], 
+					"to": [ 2.25, 0.0, 2.25 ], 
+					"renderPass": 3,
+					"rotationOrigin": [ -0.5, 0.0, -0.5 ],
+					"faces": {
+						"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+					}
+				},
+				{
+					"name": "Crystal_Heart_Right_Lower",
+					"from": [ -0.5, -3.0, -0.5 ], 
+					"to": [ 1.5, -2.0, 1.5 ], 
+					"renderPass": 3,
+					"rotationOrigin": [ -0.5, -2.0, -0.5 ],
+					"faces": {
+						"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+					}
+				}
+			]
+		},
+		{
+			"name": "Crystal_Heart_InnerLeft",
+			"from": [ 7.5, 7.5, 7.5 ], 
+			"to": [ 8.5, 8.0, 8.5 ], 
+			"rotationOrigin": [ 8.0, 8.0, 8.0 ],
+			"faces": {
+				"north": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
+				"east": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
+				"south": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
+				"west": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
+				"up": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
+				"down": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 }
+			},
+			"children": [
+				{
+					"name": "Crystal_Heart_Left_Upper",
+					"from": [ -0.5, 2.5, -0.5 ], 
+					"to": [ 1.5, 3.5, 1.5 ], 
+					"renderPass": 3,
+					"rotationOrigin": [ -0.5, 3.5, -0.5 ],
+					"faces": {
+						"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+					}
+				},
+				{
+					"name": "Crystal_Heart_Left_Mid",
+					"from": [ -1.25, 0.5, -1.25 ], 
+					"to": [ 2.25, 1.5, 2.25 ], 
+					"renderPass": 3,
+					"rotationOrigin": [ -0.5, 1.5, -0.5 ],
+					"faces": {
+						"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+					}
+				},
+				{
+					"name": "Crystal_Heart_Left_Lower",
+					"from": [ -1.0, -1.5, -1.0 ], 
+					"to": [ 2.0, -0.5, 2.0 ], 
+					"renderPass": 3,
+					"rotationOrigin": [ -0.5, -0.5, -0.5 ],
+					"faces": {
+						"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+					}
+				},
+				{
+					"name": "Crystal_Heart_Left_Tip",
+					"from": [ 0.0, -3.0, 0.0 ], 
+					"to": [ 1.0, -2.5, 1.0 ], 
+					"renderPass": 3,
+					"rotationOrigin": [ -0.5, -2.5, -0.5 ],
+					"faces": {
+						"north": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"east": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"south": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"west": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"up": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 },
+						"down": { "texture": "#crystal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 50 }
+					}
+				}
+			]
+		}
+	],
+	"animations": [
+		{
+			"name": "idle",
+			"code": "idle",
+			"quantityframes": 600,
+			"onActivityStopped": "PlayTillEnd",
+			"onAnimationEnd": "Stop",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 4,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 34,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 90.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -90.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 39,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 90.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -90.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 69,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 180.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -180.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 74,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 180.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -180.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 104,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 270.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -270.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 109,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 270.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -270.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 139,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 360.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -360.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 149,
+					"elements": {
+						"Crystal_Heart_InnerRight": { "offsetX": 0.0, "offsetY": -4.0, "offsetZ": 0.0 },
+						"Crystal_Heart_InnerLeft": { "offsetX": 0.0, "offsetY": -4.0, "offsetZ": 0.0 }
+					}
+				},
+				{
+					"frame": 199,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 200,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 204,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 234,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 90.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -90.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 239,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 90.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -90.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 269,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 180.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -180.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 274,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 180.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -180.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 299,
+					"elements": {
+						"Crystal_Heart_InnerRight": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 },
+						"Crystal_Heart_InnerLeft": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0 }
+					}
+				},
+				{
+					"frame": 304,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 270.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -270.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 309,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 270.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -270.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 339,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 360.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -360.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 399,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 400,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 404,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 434,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 90.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -90.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 439,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 90.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -90.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 449,
+					"elements": {
+						"Crystal_Heart_InnerRight": { "offsetX": 0.0, "offsetY": 4.0, "offsetZ": 0.0 },
+						"Crystal_Heart_InnerLeft": { "offsetX": 0.0, "offsetY": 4.0, "offsetZ": 0.0 }
+					}
+				},
+				{
+					"frame": 469,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 180.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -180.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 474,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 180.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -180.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 504,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 270.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -270.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 509,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 270.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -270.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 539,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "rotationX": 0.0, "rotationY": 360.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "rotationX": 0.0, "rotationY": -360.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 599,
+					"elements": {
+						"Crystal_Heart_InnerLeft": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Crystal_Heart_InnerRight": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				}
+			]
+		}
+	]
+}

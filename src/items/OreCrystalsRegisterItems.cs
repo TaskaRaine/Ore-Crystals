@@ -14,6 +14,7 @@ namespace OreCrystals
             base.Start(api);
 
             api.RegisterItemClass("orecrystals_crystalshard", typeof(OreCrystalsCrystalShard));
+            api.RegisterItemClass("ItemCrystalHeart", typeof(ItemCrystalHeart));
         }
     }
 }

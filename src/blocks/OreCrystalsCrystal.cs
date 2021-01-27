@@ -5,6 +5,12 @@ namespace OreCrystals
 {
     class OreCrystalsCrystal : Block
     {
+        public override void OnServerGameTick(IWorldAccessor world, BlockPos pos, object extra = null)
+        {
+            base.OnServerGameTick(world, pos, extra);
+
+            System.Diagnostics.Debug.WriteLine("Derp");
+        }
         //-- If the block that this crystal is butting up against is broken...the crystal should break, too --//
         public override void OnNeighbourBlockChange(IWorldAccessor world, BlockPos pos, BlockPos neibpos)
         {
