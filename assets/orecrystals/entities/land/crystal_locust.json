@@ -16,7 +16,8 @@
 	eyeHeight: 0.3,
 	attributes: {
 		spawnDamageParticles: true,
-		isMechanical: true
+		isMechanical: true,
+		exploded: false
 	},
 	client: {
 		renderer: "Shape",
@@ -90,6 +91,18 @@
 						attackDurationMs: 1000,
 						animation: "attack",
 						animationSpeed: 1.2
+					},
+					{
+						code: "crystalbomb",
+						priority: 4,
+						bombDelay: 1600,
+						particleVelocity: 3.0,
+						damage: 5,
+						damageRange: 3,
+						animation: "run",
+						animationSpeed: 4.5,
+						crouchAnimation: "crystalcrouch",
+						bombAnimation: "crystalbomb"
 					},
 					{
 						code: "stayclosetoentity",

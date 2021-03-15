@@ -16,8 +16,7 @@ namespace OreCrystals
 
             api.RegisterBlockClass("orecrystals_pottedcrystal", typeof(Block));
 
-            api.RegisterBlockClass("CrystalObeliskBottom", typeof(CrystalObeliskBottom));
-            api.RegisterBlockClass("CrystalObeliskTop", typeof(CrystalObeliskTop));
+            api.RegisterBlockClass("CrystalObeliskBlock", typeof(CrystalObeliskBlock));
         }
     }
 }

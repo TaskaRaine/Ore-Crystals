@@ -5,10 +5,9 @@
 	},
 	"textureWidth": 32,
 	"textureHeight": 32,
+	"textureSizes": {
+	},
 	"textures": {
-		"crystal":"entity/limonite",
-		"locust":"game:entity/locust/bronze",
-		"lamp":"entity/crystal_locust/lamp/anthracite"
 	},
 	"elements": [
 		{
@@ -28,7 +27,7 @@
 				{
 					"name": "abdomen",
 					"from": [ 2.0, -0.5, -1.0 ], 
-					"to": [ 7.0, 3.5, 4.0 ],
+					"to": [ 7.0, 3.5, 4.0 ], 
 					"renderPass": 3,
 					"rotationOrigin": [ 2.0, 1.0, 1.5 ],
 					"rotationZ": 10.0,
@@ -111,7 +110,7 @@
 						{
 							"name": "Crystal_1_Base_Core",
 							"from": [ 2.6357, 2.05, 2.5 ], 
-							"to": [ 4.1357, 6.05, 4.0 ],
+							"to": [ 4.1357, 6.05, 4.0 ], 
 							"renderPass": 3,
 							"rotationOrigin": [ 3.1281, 2.0, 3.0 ],
 							"rotationX": 45.0,
@@ -128,7 +127,7 @@
 								{
 									"name": "Crystal_1_Base",
 									"from": [ -0.5, 0.0, -0.5 ], 
-									"to": [ 2.0, 4.0, 2.0 ],
+									"to": [ 2.0, 4.0, 2.0 ], 
 									"renderPass": 3,
 									"rotationOrigin": [ 0.5, 0.0, 0.5 ],
 									"faces": {
@@ -143,7 +142,7 @@
 										{
 											"name": "Crystal_1_Middle_Core",
 											"from": [ 0.83, 4.0, 0.83 ], 
-											"to": [ 1.58, 6.0, 1.58 ],
+											"to": [ 1.58, 6.0, 1.58 ], 
 											"renderPass": 3,
 											"rotationOrigin": [ 1.0, 4.0, 1.0 ],
 											"faces": {
@@ -158,7 +157,7 @@
 												{
 													"name": "Crystal_1_Middle",
 													"from": [ -0.33, 0.0, -0.33 ], 
-													"to": [ 1.17, 2.0, 1.17 ],
+													"to": [ 1.17, 2.0, 1.17 ], 
 													"renderPass": 3,
 													"rotationOrigin": [ 0.5, 0.0, 0.5 ],
 													"faces": {
@@ -173,7 +172,7 @@
 														{
 															"name": "Crystal_1_Tip",
 															"from": [ 0.33, 2.0, 0.33 ], 
-															"to": [ 1.08, 4.0, 1.08 ],
+															"to": [ 1.08, 4.0, 1.08 ], 
 															"renderPass": 3,
 															"rotationOrigin": [ 0.58, 2.0, 0.58 ],
 															"faces": {
@@ -196,7 +195,7 @@
 						{
 							"name": "Crystal_2_Base_Core",
 							"from": [ 2.5, 0.5, -0.5 ], 
-							"to": [ 4.0, 4.5, 1.0 ],
+							"to": [ 4.0, 4.5, 1.0 ], 
 							"renderPass": 3,
 							"rotationOrigin": [ 2.9696, 2.1527, 0.0 ],
 							"rotationX": -67.5,
@@ -214,7 +213,7 @@
 								{
 									"name": "Crystal_2_Base",
 									"from": [ -0.5, 0.0, -0.5 ], 
-									"to": [ 2.0, 4.0, 2.0 ],
+									"to": [ 2.0, 4.0, 2.0 ], 
 									"renderPass": 3,
 									"rotationOrigin": [ 0.5, 0.0, 0.5 ],
 									"faces": {
@@ -229,7 +228,7 @@
 										{
 											"name": "Crystal_2_Middle_Core",
 											"from": [ 0.83, 4.0, 0.83 ], 
-											"to": [ 1.58, 7.0, 1.58 ],
+											"to": [ 1.58, 7.0, 1.58 ], 
 											"renderPass": 3,
 											"rotationOrigin": [ 1.0, 4.0, 1.0 ],
 											"faces": {
@@ -244,7 +243,7 @@
 												{
 													"name": "Crystal_2_Middle",
 													"from": [ -0.33, 0.0, -0.33 ], 
-													"to": [ 1.17, 3.0, 1.17 ],
+													"to": [ 1.17, 3.0, 1.17 ], 
 													"renderPass": 3,
 													"rotationOrigin": [ 0.5, 0.0, 0.5 ],
 													"faces": {
@@ -259,7 +258,7 @@
 														{
 															"name": "Crystal_2_Tip",
 															"from": [ 0.33, 2.0, 0.33 ], 
-															"to": [ 1.08, 5.0, 1.08 ],
+															"to": [ 1.08, 5.0, 1.08 ], 
 															"renderPass": 3,
 															"rotationOrigin": [ 0.58, 2.0, 0.58 ],
 															"faces": {
@@ -282,7 +281,7 @@
 						{
 							"name": "Crystal_5_Core",
 							"from": [ 1.29, 1.97, 2.98 ], 
-							"to": [ 1.79, 2.97, 3.48 ],
+							"to": [ 1.79, 2.97, 3.48 ], 
 							"renderPass": 3,
 							"rotationOrigin": [ 1.7453, 1.7496, 3.6332 ],
 							"rotationX": -67.5,
@@ -300,7 +299,7 @@
 								{
 									"name": "Crystal_5_Base",
 									"from": [ -0.5, 0.0, -0.5 ], 
-									"to": [ 1.0, 2.0, 1.0 ],
+									"to": [ 1.0, 2.0, 1.0 ], 
 									"renderPass": 3,
 									"rotationOrigin": [ -0.25, 0.5, -0.25 ],
 									"faces": {
@@ -315,7 +314,7 @@
 										{
 											"name": "Crystal_5_Tip",
 											"from": [ 0.5, 2.0, 0.5 ], 
-											"to": [ 1.0, 2.5, 1.0 ],
+											"to": [ 1.0, 2.5, 1.0 ], 
 											"renderPass": 3,
 											"rotationOrigin": [ 0.25, 2.0, 0.25 ],
 											"faces": {
@@ -334,7 +333,7 @@
 						{
 							"name": "Crystal_6_Core",
 							"from": [ 1.25, 2.72, 3.23 ], 
-							"to": [ 1.75, 3.72, 3.73 ],
+							"to": [ 1.75, 3.72, 3.73 ], 
 							"renderPass": 3,
 							"rotationOrigin": [ 0.74, 2.5989, 3.6332 ],
 							"rotationX": 112.5,
@@ -352,7 +351,7 @@
 								{
 									"name": "Crystal_6_Base",
 									"from": [ -0.5, 0.0, -0.5 ], 
-									"to": [ 1.0, 2.0, 1.0 ],
+									"to": [ 1.0, 2.0, 1.0 ], 
 									"renderPass": 3,
 									"rotationOrigin": [ -0.25, 0.5, -0.25 ],
 									"faces": {
@@ -367,7 +366,7 @@
 										{
 											"name": "Crystal_6_Tip",
 											"from": [ 0.5, 2.0, 0.5 ], 
-											"to": [ 1.0, 2.5, 1.0 ],
+											"to": [ 1.0, 2.5, 1.0 ], 
 											"renderPass": 3,
 											"rotationOrigin": [ 0.25, 2.0, 0.25 ],
 											"faces": {
@@ -386,7 +385,7 @@
 						{
 							"name": "Crystal_3_Middle_Core",
 							"from": [ 3.38, 2.29, 3.56 ], 
-							"to": [ 4.13, 5.29, 4.31 ],
+							"to": [ 4.13, 5.29, 4.31 ], 
 							"renderPass": 3,
 							"rotationOrigin": [ 3.2804, 2.1627, 3.2439 ],
 							"rotationX": 22.5,
@@ -404,7 +403,7 @@
 								{
 									"name": "Crystal_3_Middle",
 									"from": [ -0.33, 0.0, -0.33 ], 
-									"to": [ 1.17, 3.0, 1.17 ],
+									"to": [ 1.17, 3.0, 1.17 ], 
 									"renderPass": 3,
 									"rotationOrigin": [ 0.5, 0.0, 0.5 ],
 									"faces": {
@@ -419,7 +418,7 @@
 										{
 											"name": "Crystal_3_Tip",
 											"from": [ 0.33, 2.0, 0.33 ], 
-											"to": [ 1.08, 5.0, 1.08 ],
+											"to": [ 1.08, 5.0, 1.08 ], 
 											"renderPass": 3,
 											"rotationOrigin": [ 0.58, 2.0, 0.58 ],
 											"faces": {
@@ -438,7 +437,7 @@
 						{
 							"name": "Crystal_4_Core",
 							"from": [ 5.36, 0.84, 0.98 ], 
-							"to": [ 5.86, 1.84, 1.48 ],
+							"to": [ 5.86, 1.84, 1.48 ], 
 							"renderPass": 3,
 							"rotationOrigin": [ 5.82, 1.62, 1.63 ],
 							"rotationX": -112.5,
@@ -456,7 +455,7 @@
 								{
 									"name": "Crystal_4_Base",
 									"from": [ -0.5, 0.0, -0.5 ], 
-									"to": [ 1.0, 2.0, 1.0 ],
+									"to": [ 1.0, 2.0, 1.0 ], 
 									"renderPass": 3,
 									"rotationOrigin": [ -0.25, 0.5, -0.25 ],
 									"faces": {
@@ -471,7 +470,7 @@
 										{
 											"name": "Crystal_4_Tip",
 											"from": [ 0.5, 2.0, 0.5 ], 
-											"to": [ 1.0, 2.5, 1.0 ],
+											"to": [ 1.0, 2.5, 1.0 ], 
 											"renderPass": 3,
 											"rotationOrigin": [ 0.25, 2.0, 0.25 ],
 											"faces": {
@@ -4844,6 +4843,154 @@
 						"leg extention 5": { "rotationX": -5.0, "rotationY": 15.0, "rotationZ": -5.0 },
 						"leg extention 6": { "rotationX": 20.0, "rotationY": 5.0, "rotationZ": -5.0 },
 						"leg 2 L": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "rotationX": 13.0, "rotationY": 5.0, "rotationZ": -15.0 }
+					}
+				}
+			]
+		},
+
+		{
+			"name": "CrystalCrouch",
+			"code": "crystalcrouch",
+			"quantityframes": 45,
+			"onActivityStopped": "PlayTillEnd",
+			"onAnimationEnd": "Hold",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"body": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"abdomen": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"drill": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Lamp": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 3 R": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 5": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 6": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 3 L": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 21": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 22": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 1 L": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 15": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 16": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 1 R": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 1": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 2": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 2 R": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 3": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 4": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 2 L": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 18": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 19": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 29,
+					"elements": {
+						"body": { "offsetX": 0.0, "offsetY": -1.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 22.5 },
+						"abdomen": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 22.5 },
+						"Lamp": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 22.5 },
+						"leg 3 R": { "rotationX": 0.0, "rotationY": -7.0, "rotationZ": 12.0 },
+						"leg extention 5": { "rotationX": -22.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 6": { "rotationX": -67.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 3 L": { "rotationX": 0.0, "rotationY": 7.0, "rotationZ": -12.0 },
+						"leg extention 21": { "rotationX": -22.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 22": { "rotationX": -67.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 1 L": { "rotationX": 12.0, "rotationY": 22.5, "rotationZ": 0.0 },
+						"leg extention 15": { "rotationX": 8.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 16": { "rotationX": 29.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 1 R": { "rotationX": -12.0, "rotationY": -22.5, "rotationZ": 0.0 },
+						"leg extention 1": { "rotationX": 8.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 2": { "rotationX": 28.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 2 R": { "rotationX": -6.0, "rotationY": -12.0, "rotationZ": 0.0 },
+						"leg extention 3": { "rotationX": 8.0, "rotationY": -23.0, "rotationZ": 0.0 },
+						"leg extention 4": { "rotationX": -23.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 2 L": { "rotationX": 6.0, "rotationY": 12.0, "rotationZ": 0.0 },
+						"leg extention 18": { "rotationX": 8.0, "rotationY": 23.0, "rotationZ": 0.0 },
+						"leg extention 19": { "rotationX": -23.0, "rotationY": 0.0, "rotationZ": 0.0 }
+					}
+				},
+				{
+					"frame": 44,
+					"elements": {
+						"body": { "offsetX": 0.0, "offsetY": -1.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 22.5 },
+						"abdomen": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 22.5 },
+						"drill": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 1 R": { "rotationX": -12.0, "rotationY": -22.5, "rotationZ": 0.0 },
+						"leg extention 1": { "rotationX": 8.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 2": { "rotationX": 28.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 2 R": { "rotationX": -6.0, "rotationY": -12.0, "rotationZ": 0.0 },
+						"leg extention 3": { "rotationX": 8.0, "rotationY": -23.0, "rotationZ": 0.0 },
+						"leg extention 4": { "rotationX": -23.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 3 R": { "rotationX": 0.0, "rotationY": -7.0, "rotationZ": 12.0 },
+						"leg extention 5": { "rotationX": -22.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 6": { "rotationX": -67.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 1 L": { "rotationX": 12.0, "rotationY": 22.5, "rotationZ": 0.0 },
+						"leg extention 15": { "rotationX": 8.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 16": { "rotationX": 29.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 2 L": { "rotationX": 6.0, "rotationY": 12.0, "rotationZ": 0.0 },
+						"leg extention 18": { "rotationX": 8.0, "rotationY": 23.0, "rotationZ": 0.0 },
+						"leg extention 19": { "rotationX": -23.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 3 L": { "rotationX": 0.0, "rotationY": 7.0, "rotationZ": -12.0 },
+						"leg extention 21": { "rotationX": -22.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 22": { "rotationX": -67.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Lamp": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 22.5 }
+					}
+				}
+			]
+		},
+
+		{
+			"name": "CrystalBomb",
+			"code": "crystalbomb",
+			"quantityframes": 30,
+			"onActivityStopped": "PlayTillEnd",
+			"onAnimationEnd": "Hold",
+			"keyframes": [
+				{
+					"frame": 0,
+					"elements": {
+						"body": { "offsetX": 0.0, "offsetY": -1.0, "offsetZ": 0.0, "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 22.5 },
+						"abdomen": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 22.5 },
+						"Crystal_7_Core": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "stretchX": 1.0, "stretchY": 1.0, "stretchZ": 1.0 },
+						"Crystal_1_Base_Core": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "stretchX": 1.0, "stretchY": 1.0, "stretchZ": 1.0 },
+						"Crystal_2_Base_Core": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "stretchX": 1.0, "stretchY": 1.0, "stretchZ": 1.0 },
+						"Crystal_5_Core": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "stretchX": 1.0, "stretchY": 1.0, "stretchZ": 1.0 },
+						"Crystal_6_Core": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "stretchX": 1.0, "stretchY": 1.0, "stretchZ": 1.0 },
+						"Crystal_3_Middle_Core": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "stretchX": 1.0, "stretchY": 1.0, "stretchZ": 1.0 },
+						"Crystal_4_Core": { "offsetX": 0.0, "offsetY": 0.0, "offsetZ": 0.0, "stretchX": 1.0, "stretchY": 1.0, "stretchZ": 1.0 },
+						"drill": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 1 R": { "rotationX": -12.0, "rotationY": -22.5, "rotationZ": 0.0 },
+						"leg extention 1": { "rotationX": 8.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 2": { "rotationX": 28.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 2 R": { "rotationX": -6.0, "rotationY": -12.0, "rotationZ": 0.0 },
+						"leg extention 3": { "rotationX": 8.0, "rotationY": -23.0, "rotationZ": 0.0 },
+						"leg extention 4": { "rotationX": -23.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 3 R": { "rotationX": 0.0, "rotationY": -7.0, "rotationZ": 12.0 },
+						"leg extention 5": { "rotationX": -22.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 6": { "rotationX": -67.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 1 L": { "rotationX": 12.0, "rotationY": 22.5, "rotationZ": 0.0 },
+						"leg extention 15": { "rotationX": 8.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 16": { "rotationX": 29.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 2 L": { "rotationX": 6.0, "rotationY": 12.0, "rotationZ": 0.0 },
+						"leg extention 18": { "rotationX": 8.0, "rotationY": 23.0, "rotationZ": 0.0 },
+						"leg extention 19": { "rotationX": -23.0, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg 3 L": { "rotationX": 0.0, "rotationY": 7.0, "rotationZ": -12.0 },
+						"leg extention 21": { "rotationX": -22.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"leg extention 22": { "rotationX": -67.5, "rotationY": 0.0, "rotationZ": 0.0 },
+						"Lamp": { "rotationX": 0.0, "rotationY": 0.0, "rotationZ": 22.5 }
+					}
+				},
+				{
+					"frame": 29,
+					"elements": {
+						"body": {  },
+						"abdomen": {  },
+						"Crystal_7_Core": { "offsetX": 0.0, "offsetY": 30.0, "offsetZ": 0.0, "stretchX": 0.0, "stretchY": 1.0, "stretchZ": 0.0 },
+						"Crystal_1_Base_Core": { "offsetX": 0.0, "offsetY": 30.0, "offsetZ": 0.0, "stretchX": 0.0, "stretchY": 1.0, "stretchZ": 0.0 },
+						"Crystal_2_Base_Core": { "offsetX": 0.0, "offsetY": 30.0, "offsetZ": 0.0, "stretchX": 0.0, "stretchY": 1.0, "stretchZ": 0.0 },
+						"Crystal_5_Core": { "offsetX": 0.0, "offsetY": 30.0, "offsetZ": 0.0, "stretchX": 0.0, "stretchY": 1.0, "stretchZ": 0.0 },
+						"Crystal_6_Core": { "offsetX": 0.0, "offsetY": 30.0, "offsetZ": 0.0, "stretchX": 0.0, "stretchY": 1.0, "stretchZ": 0.0 },
+						"Crystal_3_Middle_Core": { "offsetX": 0.0, "offsetY": 30.0, "offsetZ": 0.0, "stretchX": 0.0, "stretchY": 1.0, "stretchZ": 0.0 },
+						"Crystal_4_Core": { "offsetX": 0.0, "offsetY": 30.0, "offsetZ": 0.0, "stretchX": 0.0, "stretchY": 1.0, "stretchZ": 0.0 }
 					}
 				}
 			]

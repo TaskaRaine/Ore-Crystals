@@ -171,6 +171,6 @@
 		reflective: true
 	},
 	drops: [
-		{ type: "item", code: "orecrystals_crystalshard", quantity: { avg: 2, var: 3, dist: "gaussian" }  }
+		{ type: "item", code: "orecrystals_crystalshard", quantity: { avg: 2, var: 3, dist: "gaussian" }  },
 	]
 }

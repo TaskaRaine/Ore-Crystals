@@ -29,8 +29,20 @@
 				animation: "idle",
 				blendMode: "Add", 
 				triggeredBy: { defaultAnim: true, onControls: ["idle"] },
+			},
+			{
+				code: "angry-open",
+				animation: "angry-open",
+				blendMode: "Add",
+				triggeredBy: { defaultAnim: false, onControls: ["fly"] }
+			},
+			{
+				code: "angry-animate",
+				animation: "angry-animate",
+				blendMode: "Add",
+				triggeredBy: { defaultAnim: false, onControls: ["fly"] }
 			}
-		]
+		],
 	},
 	server: {
 		behaviors: [

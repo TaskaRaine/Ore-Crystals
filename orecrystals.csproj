@@ -71,6 +71,7 @@
     <Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_medium.json" />
     <Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_poor.json" />
     <Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_rich.json" />
+    <Content Include="assets\orecrystals\sounds\effect\crystal_ping.ogg" />
     <Content Include="assets\orecrystals\textures\block\anthracite.png" />
     <Content Include="assets\orecrystals\textures\block\bismuthinite.png" />
     <Content Include="assets\orecrystals\textures\block\bituminouscoal.png" />
@@ -161,6 +162,8 @@
     <None Include="assets\orecrystals\entities\air\crystal_heart.json" />
     <None Include="assets\orecrystals\entities\land\crystal_locust.json" />
     <None Include="assets\orecrystals\itemtypes\crystal_heart.json" />
+    <None Include="assets\orecrystals\itemtypes\heart_core.json" />
+    <None Include="assets\orecrystals\recipes\grid\block\heart_recipes.json" />
     <None Include="assets\orecrystals\recipes\grid\block\orecrystals_gemcrystal_recipes.json" />
     <None Include="assets\orecrystals\recipes\grid\block\orecrystals_glassblock_recipes.json" />
     <None Include="assets\orecrystals\recipes\grid\block\orecrystals_misccrystal_recipes.json" />
@@ -168,8 +171,7 @@
     <Compile Include="src\blockentity\BECrystalObelisk.cs" />
     <Compile Include="src\blockentity\BECrystalObeliskSpawner.cs" />
     <Compile Include="src\blockentity\RegiterBlockEntities.cs" />
-    <Compile Include="src\blocks\CrystalObeliskBottom.cs" />
-    <Compile Include="src\blocks\CrystalObeliskTop.cs" />
+    <Compile Include="src\blocks\CrystalObeliskBlock.cs" />
     <Compile Include="src\blocks\OreCrystalsCrystal.cs" />
     <Compile Include="src\blocks\OreCrystalsGlass.cs" />
     <Compile Include="src\blocks\OreCrystalsRegisterBlocks.cs" />
@@ -177,9 +179,13 @@
     <Compile Include="src\entities\EntityCrystalHeart.cs" />
     <Compile Include="src\entities\EntityCrystalLocust.cs" />
     <Compile Include="src\entities\RegisterEntities.cs" />
+    <Compile Include="src\entity\AITask\AIRegisterTask.cs" />
+    <Compile Include="src\entity\AITask\AiTaskCrystalLocustBomb.cs" />
     <Compile Include="src\items\ItemCrystalHeart.cs" />
     <Compile Include="src\items\OreCrystalsCrystalShard.cs" />
     <Compile Include="src\items\OreCrystalsRegisterItems.cs" />
+    <Compile Include="src\utility\CrystalColour.cs" />
+    <Compile Include="src\utility\Init.cs" />
     <Compile Include="src\worldgen\GenerateOreCrystals.cs" />
     <None Include="assets\orecrystals\blocktypes\orecrystals_glass.json" />
     <None Include="assets\orecrystals\recipes\grid\block\orecrystals_pottedcrystal_recipes.json" />

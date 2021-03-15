@@ -16,12 +16,12 @@
 			"to": [ 8.5, 8.5, 8.5 ], 
 			"rotationOrigin": [ 8.0, 8.0, 8.0 ],
 			"faces": {
-				"north": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
-				"east": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
-				"south": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
-				"west": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
-				"up": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 },
-				"down": { "texture": "#temporal", "uv": [ 0.0, 0.0, 32.0, 32.0 ], "glow": 150 }
+				"north": { "texture": "#temporal", "uv": [ 0.0, 0.0, 1.0, 0.5 ], "glow": 150 },
+				"east": { "texture": "#temporal", "uv": [ 0.0, 0.0, 1.0, 0.5 ], "glow": 150 },
+				"south": { "texture": "#temporal", "uv": [ 0.0, 0.0, 1.0, 0.5 ], "glow": 150 },
+				"west": { "texture": "#temporal", "uv": [ 0.0, 0.0, 1.0, 0.5 ], "glow": 150 },
+				"up": { "texture": "#temporal", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "glow": 150 },
+				"down": { "texture": "#temporal", "uv": [ 0.0, 0.0, 1.0, 1.0 ], "glow": 150 }
 			},
 			"children": [
 				{
@@ -168,7 +168,7 @@
 			"name": "idle",
 			"code": "idle",
 			"quantityframes": 600,
-			"onActivityStopped": "EaseOut",
+			"onActivityStopped": "PlayTillEnd",
 			"onAnimationEnd": "Stop",
 			"keyframes": [
 				{
@@ -404,12 +404,13 @@
 				}
 			]
 		},
+
 		{
 			"name": "angry-open",
 			"code": "angry-open",
 			"quantityframes": 30,
 			"onActivityStopped": "EaseOut",
-			"onAnimationEnd": "Hold",
+			"onAnimationEnd": "Repeat",
 			"keyframes": [
 				{
 					"frame": 0,
@@ -443,6 +444,7 @@
 				}
 			]
 		},
+
 		{
 			"name": "angry-animate",
 			"code": "angry-animate",

@@ -1,6 +1,8 @@
 ﻿{
 	"game:tabname-crystals": "Ore Crystals",
 
+	"blockhelp-crystal-harvest": "Chisel to Harvest",
+
 	"item-orecrystals_crystalshard": "Crystal Shard",
 
 	"block-orecrystals_crystal_poor-anthracite-*": "Tiny Anthracite Crystal",

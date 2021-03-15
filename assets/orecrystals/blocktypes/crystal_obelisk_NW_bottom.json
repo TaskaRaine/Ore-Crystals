@@ -1,6 +1,6 @@
 ﻿{
 	code:"crystal_obelisk_NW_bottom",
-	class:"CrystalObeliskBottom",
+	class:"CrystalObeliskBlock",
 	entityClass: "BlockEntityCrystalObeliskSpawner",
 	attributes: {
 		heartTaken: false,
@@ -65,5 +65,10 @@
 		"*-sylvite": [3, 3, 6],
 		"*-uranium": [11, 3, 6],
 		"*-wolframite": [40, 3, 6],
+	},
+	sounds: {
+		"place": "game:player/buildhigh",
+		"break": "game:block/glass",
+		"hit": "game:block/glass"
 	},
 }

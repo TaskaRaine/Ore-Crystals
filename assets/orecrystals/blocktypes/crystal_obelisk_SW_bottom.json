@@ -1,7 +1,6 @@
 ﻿{
 	code:"crystal_obelisk_SW_bottom",
-	class:"CrystalObeliskBottom",
-	entityClass: "BlockEntityCrystalObelisk",
+	class:"CrystalObeliskBlock",
 	variantgroups: [
 		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
 		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", "diamond", 
@@ -61,5 +60,10 @@
 		"*-sylvite": [3, 3, 6],
 		"*-uranium": [11, 3, 6],
 		"*-wolframite": [40, 3, 6],
+	},
+	sounds: {
+		"place": "game:player/buildhigh",
+		"break": "game:block/glass",
+		"hit": "game:block/glass"
 	},
 }
