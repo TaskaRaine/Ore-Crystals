@@ -164,5 +164,38 @@
 			code: "orecrystals_pottedcrystal-flint-{pot}",
 			quantity: 1
 		}
-	}
+	},
+	{
+		//-- Potted Silver/Gold Crystal --//
+
+		ingredientPattern: "CCCCMC P ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1
+			},
+			"M": {
+				type: "item",
+				name: "mineral",
+				code: "game:nugget-*",
+				allowedVariants: ["nativesilver", "nativegold"],
+				quantity: 1
+			},
+			"P": {
+				type: "block",
+				name: "pot",
+				code: "game:flowerpot-*",
+				allowedVariants: ["burnt", "amber", "boneash", "celadon", "copper", "earthern", "moss", "ochre", "rutile", "seasalt", "tenmoku"],
+				quantity: 1
+			},
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_pottedcrystal-quartz_{mineral}-{pot}",
+			quantity: 1
+		}
+	},
 ]

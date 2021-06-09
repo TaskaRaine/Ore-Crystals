@@ -7,14 +7,9 @@ namespace OreCrystals
         public override void Start(ICoreAPI api)
         {
             base.Start(api);
-            api.RegisterBlockClass("orecrystals_crystal_poor", typeof(OreCrystalsCrystal));
-            api.RegisterBlockClass("orecrystals_crystal_medium", typeof(OreCrystalsCrystal));
-            api.RegisterBlockClass("orecrystals_crystal_rich", typeof (OreCrystalsCrystal));
-            api.RegisterBlockClass("orecrystals_crystal_bountiful", typeof(OreCrystalsCrystal));
+            api.RegisterBlockClass("OreCrystalsCrystal", typeof(OreCrystalsCrystal));
 
-            api.RegisterBlockClass("orecrystals_glass", typeof(OreCrystalsGlass));
-
-            api.RegisterBlockClass("orecrystals_pottedcrystal", typeof(Block));
+            api.RegisterBlockClass("CrystalPlanter", typeof(CrystalPlanter));
 
             api.RegisterBlockClass("CrystalObeliskBlock", typeof(CrystalObeliskBlock));
         }

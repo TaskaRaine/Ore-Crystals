@@ -1,6 +1,6 @@
 ﻿{
 	code:"orecrystals_crystal_bountiful",
-	class:"orecrystals_crystal_bountiful",
+	class:"OreCrystalsCrystal",
 	behaviors: [],
 	creativeinventory:{"general":["*-ore_down"], "decorative":["*-ore_down"], "crystals":["*-ore_down"]},
 	attributes: {
@@ -163,7 +163,7 @@
 	resistance: 0.1,
 	sounds: {
 		"place": "game:player/buildhigh",
-		"break": "game:block/glass",
+		"break": "block/glass",
 		"hit": "game:block/glass"
 	},
 	vertexFlags: {
@@ -171,6 +171,8 @@
 		reflective: true
 	},
 	drops: [
-		{ type: "item", code: "orecrystals_crystalshard", quantity: { avg: 2, var: 3, dist: "gaussian" }  },
+		{ type: "item", code: "orecrystals_crystalshard", tool: "pickaxe", quantity: { avg: 2, var: 2, dist: "gaussian" }  },
+		{ type: "item", code: "orecrystals_crystalshard", tool: "chisel", quantity: { avg: 4, var: 3, dist: "gaussian" }  },
+		{ type: "item", code: "luminousrod", tool: "chisel", quantity: { avg: 0.10, var: 0.1, dist: "invexp" } }
 	]
 }

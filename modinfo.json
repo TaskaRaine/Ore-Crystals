@@ -4,8 +4,8 @@
   "name": "Ore Crystals",
   "author": "Taska Raine",
   "description": "Adds crystals to ore deposits along with other various crystal-based craftables!",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "dependency": {
-    "game": "1.13.0"
+    "game": "1.15.0"
   }
 }

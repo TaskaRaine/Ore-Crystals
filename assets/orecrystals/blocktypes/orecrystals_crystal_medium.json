@@ -1,6 +1,6 @@
 ﻿{
 	code:"orecrystals_crystal_medium",
-	class:"orecrystals_crystal_medium",
+	class:"OreCrystalsCrystal",
 	behaviors: [],
 	creativeinventory:{"general":["*-ore_down"], "decorative":["*-ore_down"], "crystals":["*-ore_down"]},
 	attributes: {
@@ -163,7 +163,7 @@
 	resistance: 0.1,
 	sounds: {
 		"place": "game:player/buildhigh",
-		"break": "game:block/glass",
+		"break": "block/glass",
 		"hit": "game:block/glass"
 	},
 	vertexFlags: {
@@ -171,6 +171,7 @@
 		reflective: true
 	},
 	drops: [
-		{ type: "item", code: "orecrystals_crystalshard", quantity: { avg: .5, var: 2, dist: "gaussian" }  }
+		{ type: "item", code: "orecrystals_crystalshard", tool: "pickaxe", quantity: { avg: .25, var: 1, dist: "gaussian" }  },
+		{ type: "item", code: "orecrystals_crystalshard", tool: "chisel", quantity: { avg: .5, var: 1, dist: "gaussian" }  }
 	]
 }

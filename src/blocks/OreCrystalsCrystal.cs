@@ -21,28 +21,51 @@ namespace OreCrystals
 
             if (FirstCodePart() == "orecrystals_crystal_poor") return;
 
-            interactions = ObjectCacheUtil.GetOrCreate(api, "crystalBlockInteractions", () =>
-            {
-                List<ItemStack> chiselStackList = new List<ItemStack>();
-
-                foreach (Item item in api.World.Items)
+            if (this.FirstCodePart() == "seed_crystals")
+                interactions = ObjectCacheUtil.GetOrCreate(api, "crystalSeedsInteractions", () =>
                 {
-                    if (item.Code == null) continue;
+                    return new WorldInteraction[] {
+                        new WorldInteraction()
+                        {
+                            ActionLangCode = "orecrystals:blockhelp-crystal-seed-take",
+                            MouseButton = EnumMouseButton.Left
+                        }
+                    };
+                });
+            else
+                interactions = ObjectCacheUtil.GetOrCreate(api, "crystalBlockInteractions", () =>
+                {
+                    List<ItemStack> chiselStackList = new List<ItemStack>();
+                    List<ItemStack> pickaxeStackList = new List<ItemStack>();
 
-                    if (item.Tool == EnumTool.Chisel)
+                    foreach (Item item in api.World.Items)
                     {
-                        chiselStackList.Add(new ItemStack(item));
+                        if (item.Code == null) continue;
+
+                        if (item.Tool == EnumTool.Chisel)
+                        {
+                            chiselStackList.Add(new ItemStack(item));
+                        }
+                        else if(item.Tool == EnumTool.Pickaxe)
+                        {
+                            pickaxeStackList.Add(new ItemStack(item));
+                        }
                     }
-                }
-                return new WorldInteraction[] {
-                    new WorldInteraction()
-                    {
-                        ActionLangCode = "orecrystals:blockhelp-crystal-harvest",
-                        MouseButton = EnumMouseButton.Left,
-                        Itemstacks = chiselStackList.ToArray()
-                    }
-                };
-            });
+                    return new WorldInteraction[] {
+                        new WorldInteraction()
+                        {
+                            ActionLangCode = "orecrystals:blockhelp-crystal-harvest",
+                            MouseButton = EnumMouseButton.Left,
+                            Itemstacks = chiselStackList.ToArray()
+                        },
+                        new WorldInteraction()
+                        {
+                            ActionLangCode = "orecrystals:blockhelp-crystal-break",
+                            MouseButton = EnumMouseButton.Left,
+                            Itemstacks = pickaxeStackList.ToArray()
+                        }
+                    };
+                });
         }
 
         //-- If the block that this crystal is butting up against is broken...the crystal should break, too --//
@@ -93,6 +116,7 @@ namespace OreCrystals
             }
         }
 
+        //-- When a block is placed, ensure that the crystal block is rotated to butt up against the face the player is looking at --//
         public override bool TryPlaceBlock(IWorldAccessor world, IPlayer byPlayer, ItemStack itemstack, BlockSelection blockSel, ref string failureCode)
         {
             string[] blockCode = this.Code.Path.Split('-');
@@ -142,23 +166,44 @@ namespace OreCrystals
         {
             if (byPlayer != null)
             {
-                if (byPlayer.InventoryManager.ActiveTool == EnumTool.Chisel)
-                {
-                    Block harvestedCrystal = world.GetBlock(new AssetLocation("orecrystals", "orecrystals_crystal_poor-" + this.FirstCodePart(1) + "-" + this.LastCodePart()));
-
-                    world.BlockAccessor.SetBlock(harvestedCrystal.Id, pos);
-
-                    if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
-                        byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, CRYSTAL_DURABILITY_DAMAGE);
-                }
-                else
-                {
-                    world.BlockAccessor.SetBlock(0, pos);
-
-                    dropQuantityMultiplier = 0;
-                }
-
                 ItemStack[] drops = this.GetDrops(world, pos, byPlayer, dropQuantityMultiplier);
+
+                if (this.FirstCodePart() != "seed_crystals")
+                {
+                    if (byPlayer.InventoryManager.ActiveTool == EnumTool.Chisel)
+                    {
+                        //-- If the block is broken with a chisel, return the crystal to its 'poor' state and damage the chisel --//
+                        Block harvestedCrystal = world.GetBlock(new AssetLocation("orecrystals", "orecrystals_crystal_poor-" + this.FirstCodePart(1) + "-" + this.LastCodePart()));
+
+                        if (harvestedCrystal.Id != world.BlockAccessor.GetBlockId(pos))
+                            world.BlockAccessor.SetBlock(harvestedCrystal.Id, pos);
+                        else
+                            world.BlockAccessor.SetBlock(0, pos);
+
+                        if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
+                            byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, CRYSTAL_DURABILITY_DAMAGE);
+                    }
+                    else if (byPlayer.InventoryManager.ActiveTool == EnumTool.Pickaxe)
+                    {
+                        //-- If the block is broken with a pickaxe, damage the tool and destroy the block --//
+                        world.BlockAccessor.SetBlock(0, pos);
+
+                        if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
+                            byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, CRYSTAL_DURABILITY_DAMAGE);
+                    }
+                    else
+                    {
+                        world.BlockAccessor.SetBlock(0, pos);
+                    }
+                }
+                else if(this.FirstCodePart() == "seed_crystals")
+                {
+                    //-- If the block is a seed crystal, broken with anything, remove the block and set the drops to only be the seed crystal --//
+                    world.BlockAccessor.SetBlock(0, pos);
+                    drops = new ItemStack[1];
+
+                    drops[0] = new ItemStack(this);
+                }
 
                 if(drops != null)
                 {
@@ -183,6 +228,7 @@ namespace OreCrystals
                 base.OnBlockBroken(world, pos, null, 0);
             }
         }
+        /*
         public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier)
         {
             if(dropQuantityMultiplier != 0)
@@ -204,9 +250,10 @@ namespace OreCrystals
 
             return base.GetDrops(world, pos, byPlayer, dropQuantityMultiplier);
         }
+        */
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {
-            return interactions.Append(base.GetPlacedBlockInteractionHelp(world, selection, forPlayer));
+            return interactions;
         }
     }
 }

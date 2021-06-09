@@ -1,0 +1,16 @@
+﻿[
+	{
+		//-- Crystal Arrow --//
+		ingredientPattern: " CC RCF  ",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"C": { type: "item", code: "orecrystals_crystalshard" },
+			"R": { type: "item", code: "luminousrod" },
+			"F": { type: "item", code: "game:feather" }
+		},
+		output: {
+			type: "item", code: "game:arrow-crystal", quantity: 4
+		}
+	}
+]

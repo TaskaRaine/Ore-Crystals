@@ -95,7 +95,7 @@
 					{
 						code: "crystalbomb",
 						priority: 4,
-						bombDelay: 1600,
+						bombDelay: 3000,
 						particleVelocity: 3.0,
 						damage: 5,
 						damageRange: 3,

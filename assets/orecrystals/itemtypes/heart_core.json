@@ -1,20 +1,24 @@
 ﻿{
 	code: "heart_core",
-	creativeinventory: { "general": ["*"], "crystals":["*"] },
+	attributes: {
+		"itemlight": [26, 3, 2]
+	},
+	creativeinventory: { "general": ["*"], "items":["*"], "crystals":["*"] },
 	maxstacksize: 64,
 	texture: {
 		base: "item/heartcore"
 	},
 	guiTransform: {
 		translation: { x: 2, y: 0, z: 0 },
-		scale: 1.02
+		origin: { x: 0.6, y: 0.5, z: 0 },
+		scale: 1.5
 	},
 	fpHandTransform: {
 		translation: { x: 0.05, y: -0.3, z: 0 },
-		scale: 0.3
+		scale: 1.0
 	},
 	tpHandTransform: {
-		translation: { x: -2.5, y: -1.6, z: -1.9 },
+		translation: { x: -2.2, y: -1.6, z: -1.9 },
 		rotation: { x: 0, y: 0, z: 90 },
 		scale: 0.25
 	}

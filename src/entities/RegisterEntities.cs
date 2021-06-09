@@ -10,6 +10,7 @@ namespace OreCrystals
 
             api.RegisterEntity("EntityCrystalLocust", typeof(EntityCrystalLocust));
             api.RegisterEntity("EntityCrystalHeart", typeof(EntityCrystalHeart));
+            api.RegisterEntity("EntityCrystalGrenade", typeof(EntityCrystalGrenade));
         }
     }
 }

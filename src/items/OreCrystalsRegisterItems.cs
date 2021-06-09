@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Vintagestory.API.Common;
+using Vintagestory.GameContent;
 
 namespace OreCrystals
 {
@@ -15,6 +16,7 @@ namespace OreCrystals
 
             api.RegisterItemClass("orecrystals_crystalshard", typeof(OreCrystalsCrystalShard));
             api.RegisterItemClass("ItemCrystalHeart", typeof(ItemCrystalHeart));
+            api.RegisterItemClass("ItemCrystalGrenade", typeof(ItemCrystalGrenade));
         }
     }
 }

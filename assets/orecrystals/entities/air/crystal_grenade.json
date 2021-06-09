@@ -1,6 +1,6 @@
 ﻿{
-	code: "crystal_heart",
-	class: "EntityCrystalHeart",
+	code: "crystal_grenade",
+	class: "EntityCrystalGrenade",
 	variantgroups: [
 		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
 		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", "diamond", 
@@ -15,7 +15,7 @@
 	client: {
 		renderer: "Shape",
 		renderPass: "Transparent",
-		shape: { base: "entity/air/crystal_heart" },
+		shape: { base: "entity/air/crystal_grenade" },
 		textures: {
 			"crystal": { base: "entity/{crystal}" },
 			"temporal": { base: "game:item/resource/temporalgear" }
@@ -23,33 +23,10 @@
 		behaviors: [
 			{ code: "interpolateposition" }
 		],
-		animations: [
-			{ 
-				code: "idle", 
-				animation: "idle",
-				blendMode: "Add", 
-				triggeredBy: { defaultAnim: true, onControls: ["idle"] },
-			},
-			{
-				code: "angry-open",
-				animation: "angry-open",
-				blendMode: "Add",
-				triggeredBy: { defaultAnim: false, onControls: ["fly"] }
-			},
-			{
-				code: "angry-animate",
-				animation: "angry-animate",
-				blendMode: "Add",
-				triggeredBy: { defaultAnim: false, onControls: ["fly"] }
-			}
-		],
 	},
 	server: {
 		behaviors: [
-			{ code: "health", currenthealt: 10, maxhealth: 10 },
-		],
-	},
-	sounds: {
-		death: "block/glass",
-	},
+			{ code: "despawn", minPlayerDistance: 24, minSeconds: 30 },
+		]
+	}
 }

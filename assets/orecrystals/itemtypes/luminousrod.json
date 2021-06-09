@@ -1,13 +1,12 @@
 ﻿{
-	code: "orecrystals_crystalshard",
-	class: "orecrystals_crystalshard",
-	attributes: {
-		"itemlight": [0, 0, 1]
-	},
-	creativeinventory: { "general": ["*"], "items":["*"], "crystals":["*"] },
+	code: "luminousrod",
+	creativeinventory: { "general": ["*"], "crystals":["*"] },
 	maxstacksize: 64,
+	attributes: {
+		"itemlight": [0, 0, 6]
+	},
 	texture: {
-		base: "item/crystalshard"
+		base: "item/luminousrod"
 	},
 	fpHandTransform: {
 		translation: { x: 0.05, y: -0.25, z: 0 }
@@ -17,6 +16,6 @@
 		rotation: { x: 0, y: -1, z: 69 }
 	},
 	guiTransform: {
-		scale: 1.5
+		scale: 1.2
 	}
 }

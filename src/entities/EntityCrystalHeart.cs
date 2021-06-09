@@ -6,6 +6,7 @@ using Vintagestory.API.Common.Entities;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Server;
+using Vintagestory.API.Util;
 using Vintagestory.GameContent;
 
 namespace OreCrystals
@@ -26,6 +27,8 @@ namespace OreCrystals
         public SimpleParticleProperties crystalParticlesGrow;
         public SimpleParticleProperties heartAngerParticles;
         public SimpleParticleProperties crystalBreakParticles;
+
+        private WorldInteraction[] interactions = null;
 
         private Random growthRand;
 
@@ -57,9 +60,22 @@ namespace OreCrystals
             {
                 cApi = api as ICoreClientAPI;
 
+                InitBreakParticles();
                 InitHeartAreaParticles();
                 InitObeliskAreaParticles();
             }
+
+            interactions = ObjectCacheUtil.GetOrCreate(api, "crystalHeartInteractions", () =>
+            {
+                return new WorldInteraction[] {
+                    new WorldInteraction()
+                    {
+                        ActionLangCode = "orecrystals:entityhelp-heart-grab",
+                        MouseButton = EnumMouseButton.Right,
+                        RequireFreeHand = true
+                    }
+                };
+            });
         }
         public override void OnGameTick(float dt)
         {
@@ -81,12 +97,14 @@ namespace OreCrystals
                 {
                     HandleAnimation();
 
+                    //-- Ambient Particles --//
                     this.World.SpawnParticles(heartAreaParticles);
                     this.World.SpawnParticles(obeliskAreaParticles);
                 }
             }
             else if(Alive && heartAngered)
             {
+                //-- If the heart is damaged, it will become angry, breaking any crystal blocks within its range and kills itself when no more remain --//
                 if (Api.Side == EnumAppSide.Server)
                 {
                     this.World.SpawnParticles(heartAngerParticles);
@@ -104,6 +122,7 @@ namespace OreCrystals
 
                             BreakCrystal(crystalToBreakPos);
 
+                            //-- Crystals broken by an enraged heart are like mines, dealing damage to any entity standing on it --//
                             World.GetEntitiesInsideCuboid(crystalToBreakPos, new BlockPos(crystalToBreakPos.X + 1, crystalToBreakPos.Y + 1, crystalToBreakPos.Z + 1), (entity) =>
                             {
                                 entity.ReceiveDamage(new DamageSource(), 2.0f);
@@ -145,13 +164,33 @@ namespace OreCrystals
 
             if(despawn.reason == EnumDespawnReason.Death)
             {
+                if(Api.Side == EnumAppSide.Server)
+                {
+                    Vec3d heartCenterPosition = this.ServerPos.XYZ + new Vec3d(-0.5, 0, -0.5);
+
+                    SetBreakParticlePosDirCol(heartCenterPosition, "", heartVariant);
+                    this.World.SpawnParticles(crystalBreakParticles);
+
+                    this.PlayEntitySound("death", null, true, 32);
+
+                    World.GetEntitiesInsideCuboid(heartCenterPosition.AsBlockPos, new BlockPos((int)heartCenterPosition.X + 2, (int)heartCenterPosition.Y + 2, (int)heartCenterPosition.Z + 2), (entity) =>
+                    {
+                        entity.ReceiveDamage(new DamageSource(), 5.0f);
+
+                        return true;
+                    });
+                }
+
                 BlockEntityCrystalObeliskSpawner heartSpawner = Api.World.BlockAccessor.GetBlockEntity(this.ServerPos.AsBlockPos - new BlockPos(1, 1, 1)) as BlockEntityCrystalObeliskSpawner;
                 
                 if(heartSpawner != null)
                     heartSpawner.SetHeartTaken();
             }
         }
-
+        public override WorldInteraction[] GetInteractionHelp(IClientWorldAccessor world, EntitySelection es, IClientPlayer player)
+        {
+            return interactions;
+        }
         public void AngerHeart()
         {
             heartAngered = true;
@@ -243,6 +282,7 @@ namespace OreCrystals
 
             Block hostBlock = World.BlockAccessor.GetBlock(ServerPos.AsBlockPos);
 
+            //-- If it survives to the end, it will take its host obelisk with it --//
             if(hostBlock is CrystalObeliskBlock)
             {
                 World.BlockAccessor.BreakBlock(ServerPos.AsBlockPos, null, 0);
@@ -250,6 +290,7 @@ namespace OreCrystals
         }
         private void AttemptGiveHeart(EntityAgent byEntity, ItemSlot itemslot)
         {
+            //-- Currently, the heart can be taken whether it's angry or not --//
             if(itemslot.Empty)
             {
                 ItemStack heart = new ItemStack(World.GetItem(new AssetLocation("orecrystals", "crystal_heart-" + heartVariant)));
@@ -259,6 +300,7 @@ namespace OreCrystals
 
                 BlockEntityCrystalObeliskSpawner heartSpawner = Api.World.BlockAccessor.GetBlockEntity(this.ServerPos.AsBlockPos - new BlockPos(1, 1, 1)) as BlockEntityCrystalObeliskSpawner;
                 
+                //-- Makes sure that the obelisk won't spawn any more hearts if this one gets taken --//
                 if(heartSpawner != null)
                     heartSpawner.SetHeartTaken();
 
@@ -271,6 +313,7 @@ namespace OreCrystals
             Vec3i heartPos = new Vec3i((int)this.ServerPos.X, (int)this.ServerPos.Y, (int)this.ServerPos.Z);
             Block checkBlock;
 
+            //-- Find every crystal within range that can be grown and add it to a list --//
             for (int x = heartPos.X - CRYSTAL_GROWTH_RANGE; x <= heartPos.X + CRYSTAL_GROWTH_RANGE; x++)
             {
                 for (int y = heartPos.Y - CRYSTAL_GROWTH_RANGE; y <= heartPos.Y + CRYSTAL_GROWTH_RANGE; y++)
@@ -296,6 +339,8 @@ namespace OreCrystals
                     }
                 }
             }
+
+            //-- Return the position of a random crystal in the list unless none exist --// 
             if (possibleCrystals.Count == 0)
                 return null;
             else
@@ -303,27 +348,31 @@ namespace OreCrystals
         }
         private void GrowCrystal(BlockPos crystalPos)
         {
+            //-- Change the block at crystalPos to its next stage --//
             Block crystal = blockAccessor.GetBlock(crystalPos);
-            int newBlockId;
+            int newBlockId = -1;
 
             switch(crystal.FirstCodePart())
             {
+                case "seed_crystals":
+                    newBlockId = sApi.WorldManager.GetBlockId(new AssetLocation("orecrystals", "orecrystals_crystal_poor-" + crystal.FirstCodePart(1) + "-" + crystal.LastCodePart()));
+
+                    break;
                 case "orecrystals_crystal_poor":
                     newBlockId = sApi.WorldManager.GetBlockId(new AssetLocation("orecrystals", "orecrystals_crystal_medium-" + crystal.FirstCodePart(1) + "-" + crystal.LastCodePart()));
 
-                    blockAccessor.SetBlock(newBlockId, crystalPos);
                     break;
                 case "orecrystals_crystal_medium":
                     newBlockId = sApi.WorldManager.GetBlockId(new AssetLocation("orecrystals", "orecrystals_crystal_rich-" + crystal.FirstCodePart(1) + "-" + crystal.LastCodePart()));
 
-                    blockAccessor.SetBlock(newBlockId, crystalPos);
                     break;
                 case "orecrystals_crystal_rich":
                     newBlockId = sApi.WorldManager.GetBlockId(new AssetLocation("orecrystals", "orecrystals_crystal_bountiful-" + crystal.FirstCodePart(1) + "-" + crystal.LastCodePart()));
                     
-                    blockAccessor.SetBlock(newBlockId, crystalPos);
                     break;
             }
+
+            blockAccessor.SetBlock(newBlockId, crystalPos);
 
             blockAccessor.Commit();
 
@@ -465,16 +514,23 @@ namespace OreCrystals
         }
         private void InitBreakParticles()
         {
+            Vec3f velocityRand = new Vec3f((float)growthRand.NextDouble(), (float)growthRand.NextDouble(), (float)growthRand.NextDouble()) * 6;
+
             crystalBreakParticles = new SimpleParticleProperties()
             {
-                GravityEffect = 0.1f,
+                MinPos = new Vec3d(this.Pos.X, this.Pos.Y + .25, this.Pos.Z),
 
-                MinSize = 0.4f,
-                MaxSize = 0.8f,
-                SizeEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEARREDUCE, 0.5f),
+                MinVelocity = new Vec3f(velocityRand.X, velocityRand.Y, velocityRand.Z),
+                AddVelocity = new Vec3f(-velocityRand.X, -velocityRand.Y, -velocityRand.Z) * 2,
 
-                MinQuantity = 15,
-                AddQuantity = 30,
+                GravityEffect = 0.2f,
+
+                MinSize = 0.1f,
+                MaxSize = 0.4f,
+                SizeEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEAR, -0.1f),
+
+                MinQuantity = 40,
+                AddQuantity = 80,
 
                 LifeLength = 1.2f,
                 addLifeLength = 1.4f,
@@ -483,7 +539,6 @@ namespace OreCrystals
 
                 WithTerrainCollision = true,
 
-                Color = CrystalColour.GetColour(heartVariant),
                 OpacityEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEARREDUCE, 255),
 
                 VertexFlags = 150,
@@ -506,8 +561,8 @@ namespace OreCrystals
             crystalBreakParticles.MinPos = crystalPos;
             crystalBreakParticles.AddPos = new Vec3d(1, 1, 1);
 
-            crystalBreakParticles.MinVelocity = GetParticleVelocity(crystalDirection, 0.5f, -0.5f);
-            crystalBreakParticles.AddVelocity = crystalBreakParticles.MinVelocity * 2;
+            //crystalBreakParticles.MinVelocity = GetParticleVelocity(crystalDirection, 0.5f, -0.5f);
+            //crystalBreakParticles.AddVelocity = crystalBreakParticles.MinVelocity * 2;
 
             crystalBreakParticles.Color = CrystalColour.GetColour(crystalColour);
         }

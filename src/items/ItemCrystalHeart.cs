@@ -6,6 +6,10 @@ namespace OreCrystals
 {
     class ItemCrystalHeart: Item
     {
+        public override void OnLoaded(ICoreAPI api)
+        {
+            base.OnLoaded(api);
+        }
         public override void OnHeldInteractStart(ItemSlot slot, EntityAgent byEntity, BlockSelection blockSel, EntitySelection entitySel, bool firstEvent, ref EnumHandHandling handling)
         {
             if (blockSel == null) return;

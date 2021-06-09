@@ -12,7 +12,7 @@ namespace OreCrystals
     class BlockEntityCrystalObeliskSpawner: BlockEntityCrystalObelisk
     {
         private const int HEART_SPAWN_INTERVAL = 8000;
-        private const int MIN_HEART_SPAWN_RANGE = 25;
+        private const int MIN_HEART_SPAWN_RANGE = 50;
         private const int CRYSTAL_LOCUST_COUNT = 3;
 
         private Entity crystalHeart = null;
@@ -38,13 +38,19 @@ namespace OreCrystals
                 {
                     if (heartSpawned)
                     {
+                        //-- If a heart has been spawned then associate the nearest heart to this spawner block. This is to ensure that an obelisk has a reference to its heart on load if it already exists in world --//
                         sApi.World.GetEntitiesInsideCuboid(new BlockPos(Pos.X - 5, Pos.Y - 5, Pos.Z - 5), new BlockPos(Pos.X + 5, Pos.Y + 5, Pos.Z + 5), (entity) =>
                         {
                             if(entity is EntityCrystalHeart)
                             {
-                                this.crystalHeart = entity;
+                                if (this.crystalHeart == null || entity.Pos.DistanceTo(new Vec3d(Pos.X, Pos.Y, Pos.Z)) < this.crystalHeart.Pos.DistanceTo(new Vec3d(Pos.X, Pos.Y, Pos.Z)))
+                                {
+                                    this.crystalHeart = entity;
 
-                                return true;
+                                    return true;
+                                }
+                                else
+                                    return false;
                             }
                             else if(entity is EntityCrystalLocust)
                             {
@@ -105,15 +111,23 @@ namespace OreCrystals
         private void SpawnCrystalHeart()
         {
             EntityProperties entityType = sApi.World.GetEntityType(new AssetLocation("orecrystals", "crystal_heart-" + variant));
-            crystalHeart = sApi.World.ClassRegistry.CreateEntity(entityType);
 
-            crystalHeart.ServerPos.SetPos(new EntityPos(this.Pos.X + 1, this.Pos.Y + 1, this.Pos.Z + 1));
+            if(entityType != null)
+            {
+                crystalHeart = sApi.World.ClassRegistry.CreateEntity(entityType);
 
-            crystalHeart.Pos.SetFrom(crystalHeart.ServerPos);
+                crystalHeart.ServerPos.SetPos(new EntityPos(this.Pos.X + 1, this.Pos.Y + 1, this.Pos.Z + 1));
 
-            sApi.World.SpawnEntity(crystalHeart);
+                crystalHeart.Pos.SetFrom(crystalHeart.ServerPos);
 
-            this.heartSpawned = true;
+                sApi.World.SpawnEntity(crystalHeart);
+
+                this.heartSpawned = true;
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("Heart not spawned. Variant: " + variant);
+            }
         }
 
         //-- Serverside Only --//
@@ -121,6 +135,7 @@ namespace OreCrystals
         {
             bool playerInRange = false;
 
+            //-- Checks to see if a player is within range of this spawner --//
             foreach (IPlayer player in sApi.World.AllOnlinePlayers)
             {
                 if (player.Entity.ServerPos.DistanceTo(this.Pos.ToVec3d()) < MIN_HEART_SPAWN_RANGE)
@@ -139,6 +154,9 @@ namespace OreCrystals
             }
             else if(heartSpawned == true)
             {
+                //-- If no player is in range, then unload the heart and locusts and set heartSpawned to false. --//
+                //-- Another heart can spawn if a player again comes within range --//
+
                 if(!playerInRange)
                 {
                     crystalHeart.Die(EnumDespawnReason.OutOfRange);
@@ -155,7 +173,7 @@ namespace OreCrystals
                 }
             }
         }
-
+        //-- Finds an open space within a 3x3 area of the spawner to spawn the crystal locust when a heart is spawned --//
         private EntityPos FindOpenSpace(Vec3i spawnerPos, int locustIndex)
         {
             IBlockAccessor blockAccessor = sApi.World.GetBlockAccessor(false, false, false);

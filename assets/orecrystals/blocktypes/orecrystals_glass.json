@@ -1,6 +1,5 @@
 ﻿{
 	code:"orecrystals_glass",
-	class: "orecrystals_glass",
 	creativeinventory: { "general": ["*"], "construction": ["*"], "crystals":["*"] },
 	attributes: {
 		handbook: {

@@ -1,6 +1,6 @@
 ﻿{
-	code: "crystal_heart",
-	class: "ItemCrystalHeart",
+	code: "crystal_grenade",
+	class: "ItemCrystalGrenade",
 	attributesByType: {
 		"*-anthracite": {
 			"itemlight": [47, 1, 4]
@@ -119,26 +119,39 @@
 		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", "diamond", 
 		"emerald", "pentlandite", "phosphorite", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"] }
 	],
-	creativeinventory: { "general": ["*"], "creatures":["*"], "crystals":["*"] },
+	creativeinventory: { "general": ["*"], "tools": ["*"], "crystals":["*"] },
 	attributes: {
 		handbook: {
-			groupBy:["crystal_heart-*"]
+			groupBy:["crystal_grenade-*"]
 		}
 	},
 	maxstacksize: 1,
-	texture: {
-		base: "item/crystalheart_{crystal}"
+	shape: {
+		base: "entity/air/crystal_grenade"
+	},
+	textures: {
+		"crystal": { base: "entity/{crystal}" },
+		"temporal": { base: "game:item/resource/temporalgear" }
 	},
 	guiTransform: {
-		translation: { x: 1.5, y: 3, z: 0 },
-		scale: 0.8
+		translation: { x: 3, y: 3, z: 0 },
+		origin: { x: 0.5, y: 0.3, z: 0 },
+		scale: 3
 	},
 	fpHandTransform: {
-		translation: { x: 0.05, y: -0.3, z: 0 }
+		translation: { x: 0.05, y: -0.3, z: 0 },
+		scale: 1.8
 	},
 	tpHandTransform: {
-		translation: { x: -2.5, y: -1.6, z: -1.9 },
+		translation: { x: -1.1, y: -1, z: -0.9 },
 		rotation: { x: 0, y: 0, z: 90 },
-		scale: 0.25
+		origin: { x: 0.5, y: 0.5, z: 0.47 },
+		scale: 0.45
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 90, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.5, z: 0.5299 },
+		scale: 3
 	}
 }

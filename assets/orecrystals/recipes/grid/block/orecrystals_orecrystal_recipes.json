@@ -1,89 +1,8 @@
 ﻿[
 	{
-		//-- Bountiful Ores --//
+		//-- Crystal Seeds Ore--//
 
-		ingredientPattern: " C CMC C ",
-		width:3,
-		height:3,
-		ingredients: {
-			"C": {
-				type: "item",
-				code: "orecrystals_crystalshard",
-				quantity: 4
-			},
-			"M": {
-				type: "item",
-				name: "mineral",
-				code: "game:ore-*",
-				allowedVariants: ["lapislazuli", "corundum", "anthracite", "borax", "cinnabar", "lignite", "bituminouscoal", "sylvite", "sulfur",
-				"fluorite", "graphite", "kernite", "phosphorite"],
-				quantity: 4
-			}
-		},
-		output: {
-			type: "block",
-			code: "orecrystals_crystal_bountiful-{mineral}-ore_down",
-			quantity: 1
-		}
-	},
-	{
-		//-- Rich Ores --//
-
-		ingredientPattern: " C CMC C ",
-		width:3,
-		height:3,
-		ingredients: {
-			"C": {
-				type: "item",
-				code: "orecrystals_crystalshard",
-				quantity: 3
-			},
-			"M": {
-				type: "item",
-				name: "mineral",
-				code: "game:ore-*",
-				allowedVariants: ["lapislazuli", "corundum", "anthracite", "borax", "cinnabar", "lignite", "bituminouscoal", "sylvite", "sulfur",
-				"fluorite", "graphite", "kernite", "phosphorite"],
-				quantity: 3
-			}
-		},
-		output: {
-			type: "block",
-			code: "orecrystals_crystal_rich-{mineral}-ore_down",
-			quantity: 1
-		}
-	},
-	{
-		//-- Medium Ores --//
-
-		ingredientPattern: " C CMC C ",
-		width:3,
-		height:3,
-		ingredients: {
-			"C": {
-				type: "item",
-				code: "orecrystals_crystalshard",
-				quantity: 2
-			},
-			"M": {
-				type: "item",
-				name: "mineral",
-				code: "game:ore-*",
-				allowedVariants: ["lapislazuli", "corundum", "anthracite", "borax", "cinnabar", "lignite", "bituminouscoal", "sylvite", "sulfur",
-				"fluorite", "graphite", "kernite", "phosphorite"],
-				quantity: 2
-			}
-		},
-		output: {
-			type: "block",
-			code: "orecrystals_crystal_medium-{mineral}-ore_down",
-			quantity: 1
-		}
-	},
-	{
-		//-- Poor Ores --//
-
-		ingredientPattern: " C CMC C ",
+		ingredientPattern: "CMCMCMCMC",
 		width:3,
 		height:3,
 		ingredients: {
@@ -103,8 +22,108 @@
 		},
 		output: {
 			type: "block",
-			code: "orecrystals_crystal_poor-{mineral}-ore_down",
+			code: "seed_crystals-{mineral}-ore_down",
 			quantity: 1
 		}
-	}
+	},
+	{
+		//-- Crystal Seeds Nugget --//
+
+		ingredientPattern: "CMCMCMCMC",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1
+			},
+			"M": {
+				type: "item",
+				name: "mineral",
+				code: "game:nugget-*",
+				allowedVariants: ["nativecopper", "limonite", "galena", "cassiterite", "chromite", "ilmenite", "sphalerite", "bismuthinite", "magnetite",
+				"hematite", "malachite", "pentlandite", "uranium", "wolframite", "rhodochrosite"],
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "seed_crystals-{mineral}-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Crystal Seeds Flint --//
+		ingredientPattern: "CMCMCMCMC",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1
+			},
+			"M": {
+				type: "item",
+				code: "game:flint",
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "seed_crystals-flint-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Crystal Seeds Gem --//
+		ingredientPattern: "CMCMCMCMC",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1
+			},
+			"M": {
+				type: "item",
+				name: "gem",
+				code: "game:gem-*-rough",
+				allowedVariants: ["diamond", "emerald", "olivine_peridot"],
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "seed_crystals-{gem}-ore_down",
+			quantity: 1
+		}
+	},
+	{
+		//-- Crystal Seeds Silver/Gold --//
+		ingredientPattern: "CMCMCMCMC",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1
+			},
+			"M": {
+				type: "item",
+				name: "mineral",
+				code: "game:nugget-*",
+				allowedVariants: ["nativesilver", "nativegold"],
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "seed_crystals-quartz_{mineral}-ore_down",
+			quantity: 1
+		}
+	},
 ]

@@ -1,6 +1,7 @@
 ﻿using Vintagestory.API;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
+using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.GameContent;
 
@@ -169,9 +170,9 @@ namespace OreCrystals
 
             entity.AnimManager.StartAnimation(new AnimationMetaData() { Animation = bombAnimation, Code = bombAnimation }.Init());
 
-            entity.World.PlaySoundAt(new AssetLocation("game", "sounds/block/glass"), this.entity, null);
-            entity.World.PlaySoundAt(new AssetLocation("game", "sounds/block/glass"), this.entity, null);
-            entity.World.PlaySoundAt(new AssetLocation("game", "sounds/block/glass"), this.entity, null);
+            entity.World.PlaySoundAt(new AssetLocation("orecrystals", "sounds/block/glass"), this.entity, null);
+            entity.World.PlaySoundAt(new AssetLocation("orecrystals", "sounds/block/glass"), this.entity, null);
+            entity.World.PlaySoundAt(new AssetLocation("orecrystals", "sounds/block/glass"), this.entity, null);
 
             entity.World.SpawnParticles(bombParticles);
 
