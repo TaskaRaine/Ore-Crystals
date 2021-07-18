@@ -11,6 +11,7 @@ namespace OreCrystals
 
         public static void InitColours()
         {
+            colourDict.Add("alum", ColorFromRgba(197, 179, 143, 100));
             colourDict.Add("anthracite", ColorFromRgba(243, 235, 255, 100));
             colourDict.Add("bismuthinite", ColorFromRgba(227, 255, 160, 100));
             colourDict.Add("bituminouscoal", ColorFromRgba(153, 153, 153, 100));
@@ -51,6 +52,7 @@ namespace OreCrystals
         }
         public static void InitLights()
         {
+            lightDict.Add("alum", new byte[] { 10, 3, 4 });
             lightDict.Add("anthracite", new byte[] { 47, 1, 4 });
             lightDict.Add("bismuthinite", new byte[] { 14, 3, 4 });
             lightDict.Add("bituminouscoal", new byte[] { 0, 1, 4 });
@@ -88,6 +90,11 @@ namespace OreCrystals
             lightDict.Add("sylvite", new byte[] { 3, 3, 4 });
             lightDict.Add("uranium", new byte[] { 11, 3, 4 });
             lightDict.Add("wolframite", new byte[] { 40, 3, 4 });
+        }
+        public static void Destroy()
+        {
+            colourDict.Clear();
+            lightDict.Clear();
         }
         public static int GetColour(string colour)
         {

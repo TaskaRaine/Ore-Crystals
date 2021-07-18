@@ -1,5 +1,36 @@
 ﻿{
 	"game:tabname-crystals": "Ore Crystals",
+	"game:orecrystals-quickstart-guide": "Ore Crystals",
+	"game:orecrystals-quickstart-title": "Ore Crystals Guide",
+	"game:orecrystals-quickstart-text": 
+"<font weight='bold' align='center'>Ore Crystals Guide</font><br>
+<font weight='bold'>Crystal Variants</font>
+Crystal color and size seem to correlate to the ore upon which it sits. The richer the vein of material, the more pronounced the crystal.
+<br>
+<font weight='bold'>Harvesting Crystals</font>
+These crystalline structures are fragile and will shatter into an unusable fine dust without the use of correct tools. 
+
+A <a href=\'handbooksearch://chisel\'>chisel</a> seems to work best to extract usable <a href=\'handbook://item-orecrystals:orecrystals_crystalshard\'>shards</a>. It is even possible to carve out the <a href=\'handbook://item-orecrystals:luminousrod\'>bright rod</a> from the largest crystals on occassion!
+
+Smashing crystals with a <a href=\'handbooksearch://pickaxe\'>pickaxe</a> seemed to be a less effective means of breaking off the <a href=\'handbook://item-orecrystals:orecrystals_crystalshard\'>shards</a>.
+<br>
+<font weight='bold'>Crystal Farming</font>
+Deep within the depths of the world exist large structures composed of pure energized crystal. Obelisks upon which an unstable mass of living crystal exists. These creatures are the <a href=\'handbooksearch://crystal heart\'>hearts</a> of the temporally unstable subterranean world, infusing its sinister energy into fellow crystals and creatures alike. Controlling them.
+
+Get close. Take one from its perch. Craft <a href=\'handbooksearch://seed crystals\'>'seeds'</a> from the remnants of its shattered throne. Harness its regenerative energy and exploit it to have access to a limitless supply of crystal. 
+
+Oh... and avoid hurting it. It is <i>unstable</i> afterall. 
+<br>
+<font weight='bold'>Crystal Usage</font>
+A few useful things can come from these here crystals...!
+
+<a href=\'handbooksearch://seed crystals\'>'Seeds'</a> are a great way to ensure a sufficient supply of crystal, assuming you have a <a href=\'handbooksearch://crystal heart\'>crystal heart</a> nearby to grow them.
+
+To weaponize them I've thought up some nifty applications. It's possible to make <a href=\'handbook://item-arrow-crystal\'>luminous arrows</a> that light up the darkest of caves. It's also possible to make devastating <a href=\'handbooksearch://crystal grenade\'>grenades</a> using the volatile nature of the <a href=\'handbooksearch://crystal heart\'>crystal hearts</a>.
+
+Of course, being as pretty as they are, these crystals make for some wonderful decor! Make them into some pretty colored <a href=\'handbooksearch://crystalline\'>crystalline glass</a>. If there's a flowerpot or planter handy, why not make <a href=\'handbooksearch://potted crystal\'>potted crystals</a> or <a href=\'handbook://block-orecrystals:crystal_planter-anthracite-chalk-burnt\'>large potted crystals</a> with them?
+",
+
 
 	"game:item-arrow-crystal": "Luminous Crystal Arrow",
 
@@ -28,6 +59,19 @@
 
 	"item-creature-crystal_locust-*": "Crystal Locust",
 	"item-dead-creature-crystal_locust-*": "Dead Crystal Locust",
+
+	"item-crystal_grenade-alum": "Alum Crystal Grenade",
+	"item-creature-crystal_heart-alum": "Alum Crystal Heart",
+	"item-crystal_heart-alum": "Alum Crystal Heart",
+
+	"block-seed_crystals-alum-*": "Alum Seed Crystals",
+	"block-orecrystals_crystal_poor-alum-*": "Tiny Alum Crystal",
+	"block-orecrystals_crystal_medium-alum-*": "Small Alum Crystal",
+	"block-orecrystals_crystal_rich-alum-*": "Large Alum Crystal",
+	"block-orecrystals_crystal_bountiful-alum-*": "Giant Alum Crystal",
+	"block-orecrystals_glass-alum": "Crystalline Alum Glass",
+	"block-orecrystals_pottedcrystal-alum-*": "Potted Alum Crystal",
+	"block-crystal_planter-alum-*": "Large Potted Alum Crystal",
 
 	"item-crystal_grenade-anthracite": "Anthracite Crystal Grenade",
 	"item-creature-crystal_heart-anthracite": "Anthracite Crystal Heart",

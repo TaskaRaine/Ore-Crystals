@@ -42,23 +42,23 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VintagestoryAPI">
-      <HintPath>H:\VintageStory 1.15.0 Pre-2\VintagestoryAPI.dll</HintPath>
+      <HintPath>H:\VintageStory 1.15.0 RC-2\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>H:\VintageStory 1.15.0 Pre-2\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.15.0 RC-2\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>H:\VintageStory 1.15.0 Pre-2\Mods\VSEssentials.dll</HintPath>
+      <HintPath>H:\VintageStory 1.15.0 RC-2\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\VintageStory 1.15.0 Pre-2\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.15.0 RC-2\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>H:\VintageStory 1.15.0 Pre-2\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>H:\VintageStory 1.15.0 RC-2\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -71,6 +71,7 @@
     <None Include="assets\orecrystals\blocktypes\crystal_obelisk.json" />
     <None Include="assets\orecrystals\blocktypes\crystal_planter.json" />
     <None Include="assets\orecrystals\blocktypes\crystal_seeds.json" />
+    <None Include="assets\orecrystals\config\handbook\crystalharvest.json" />
     <None Include="assets\orecrystals\entities\air\crystal_grenade.json" />
     <None Include="assets\orecrystals\itemtypes\crystal_grenade.json" />
     <None Include="assets\orecrystals\itemtypes\luminousrod.json" />
@@ -82,6 +83,7 @@
     <Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_rich.json" />
     <Content Include="assets\orecrystals\sounds\block\glass.ogg" />
     <Content Include="assets\orecrystals\sounds\effect\crystal_ping.ogg" />
+    <Content Include="assets\orecrystals\textures\block\alum.png" />
     <Content Include="assets\orecrystals\textures\block\anthracite.png" />
     <Content Include="assets\orecrystals\textures\block\bismuthinite.png" />
     <Content Include="assets\orecrystals\textures\block\bituminouscoal.png" />
@@ -96,6 +98,7 @@
     <Content Include="assets\orecrystals\textures\block\fluorite.png" />
     <Content Include="assets\orecrystals\textures\block\galena.png" />
     <Content Include="assets\orecrystals\textures\block\galena_nativesilver.png" />
+    <Content Include="assets\orecrystals\textures\block\glass\alum.png" />
     <Content Include="assets\orecrystals\textures\block\glass\anthracite.png" />
     <Content Include="assets\orecrystals\textures\block\glass\bismuthinite.png" />
     <Content Include="assets\orecrystals\textures\block\glass\bituminouscoal.png" />

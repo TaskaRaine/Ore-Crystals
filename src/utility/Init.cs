@@ -11,5 +11,11 @@ namespace OreCrystals
             CrystalColour.InitColours();
             CrystalColour.InitLights();
         }
+        public override void Dispose()
+        {
+            base.Dispose();
+
+            CrystalColour.Destroy();
+        }
     }
 }

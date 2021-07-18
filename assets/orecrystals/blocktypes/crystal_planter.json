@@ -15,13 +15,20 @@
 		}
 	},
 	variantgroups: [
-		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
+		{ code: "crystal", states: ["alum", "anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
 		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", 
 		"diamond", "emerald", "pentlandite", "phosphorite", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"]},
 		{ code: "rock", loadFromProperties: "game:block/rockwithdeposit" },
 		{ code: "planter", states: ["amber", "ashforest", "burnt", "copper", "cthonic", "earthern", "loam", "ochre", "rime", "seasalt", "tenmoku", "undergrowth"] }
 	],
 	allowedVariants: [
+		"crystal_planter-alum-chalk-*",
+		"crystal_planter-alum-chert-*",
+		"crystal_planter-alum-conglomerate-*",
+		"crystal_planter-alum-limestone-*",
+		"crystal_planter-alum-claystone-*",
+		"crystal_planter-alum-sandstone-*",
+		"crystal_planter-alum-shale-*",
 		"crystal_planter-anthracite-chalk-*",
 		"crystal_planter-anthracite-chert-*",
 		"crystal_planter-anthracite-conglomerate-*",
@@ -308,6 +315,7 @@
 		all: false
 	},
 	lightHsvByType: {
+		"*-alum-*": [10, 3, 12],
 		"*-anthracite-*": [47, 1, 12],
 		"*-bismuthinite-*": [14, 3, 12],
 		"*-bituminouscoal-*": [0, 1, 12],

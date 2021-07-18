@@ -63,6 +63,8 @@ namespace OreCrystals
                 InitBreakParticles();
                 InitHeartAreaParticles();
                 InitObeliskAreaParticles();
+
+                AnimManager.StartAnimation("idle");
             }
 
             interactions = ObjectCacheUtil.GetOrCreate(api, "crystalHeartInteractions", () =>
@@ -95,7 +97,7 @@ namespace OreCrystals
                 }
                 else
                 {
-                    HandleAnimation();
+                    //HandleAnimation();
 
                     //-- Ambient Particles --//
                     this.World.SpawnParticles(heartAreaParticles);
@@ -138,7 +140,7 @@ namespace OreCrystals
                 }
                 else
                 {
-                    HandleAnimation();
+                    //HandleAnimation();
                 }
             }
         }
@@ -194,6 +196,10 @@ namespace OreCrystals
         public void AngerHeart()
         {
             heartAngered = true;
+
+            AnimManager.StopAnimation("idle");
+            AnimManager.StartAnimation("angry-open");
+            AnimManager.StartAnimation("angry-animate");
         }
 
         private void HandleAnimation()

@@ -142,7 +142,7 @@
   {
     "op": "add",
     "path": "/attributes/breakChanceOnImpactByType/*-crystal",
-    "value": 1.0,
+    "value": 0.4,
     "file": "game:itemtypes/tool/arrow"
   }
 ]

@@ -48,7 +48,24 @@ namespace OreCrystals
                 }
             }, Privilege.controlserver);
 
-            /*
+            api.RegisterCommand("stone", "Spawns a test stone", "/stone basalt, etc.",
+            (IServerPlayer player, int groupId, CmdArgs args) =>
+            {
+                try
+                {
+                    EntityProperties entityType = api.World.GetEntityType(new AssetLocation("game", "thrownstone-" + args[0]));
+                    Entity entity = api.World.ClassRegistry.CreateEntity(entityType);
+                    EntityPos entityPos = new EntityPos(player.Entity.ServerPos.X, player.Entity.ServerPos.Y, player.Entity.ServerPos.Z);
+
+                    entity.ServerPos.SetPos(new Vec3d(entityPos.X - 1, entityPos.Y - 1, entityPos.Z - 1));
+                    entity.Pos.SetFrom(entity.ServerPos);
+                    api.World.SpawnEntity(entity);
+                }
+                catch
+                {
+                    api.Server.LogWarning("A stone could not be spawned. " + args[0] + " is not a spawnable variant.");
+                }
+            }, Privilege.controlserver);
             api.RegisterCommand("locust", "Spawns a test locust", "/locust bismutinite, etc.",
             (IServerPlayer player, int groupId, CmdArgs args) =>
             {
@@ -68,7 +85,6 @@ namespace OreCrystals
                     api.Server.LogWarning("A crystal locust could not be spawned. " + args[0] + " is not a spawnable variant.");
                 }
             }, Privilege.controlserver);
-            */
         }
     }
 }

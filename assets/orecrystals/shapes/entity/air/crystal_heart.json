@@ -169,7 +169,7 @@
 			"code": "idle",
 			"quantityframes": 600,
 			"onActivityStopped": "EaseOut",
-			"onAnimationEnd": "Stop",
+			"onAnimationEnd": "Repeat",
 			"keyframes": [
 				{
 					"frame": 0,

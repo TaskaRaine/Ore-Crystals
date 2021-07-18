@@ -9,7 +9,7 @@
 		}
 	},
 	variantgroups: [
-		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
+		{ code: "crystal", states: ["alum", "anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
 		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", "diamond", 
 		"emerald", "pentlandite", "phosphorite", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"] },
 		{ code: "type", states: ["ore_up", "ore_down", "ore_north", "ore_south", "ore_east", "ore_west"] }
@@ -129,6 +129,7 @@
 	replaceable: 5000,
 	lightAbsorption: 0,
 	lightHsvByType: {
+		"*-alum-*": [10, 3, 1],
 		"*-anthracite-*": [47, 1, 1],
 		"*-bismuthinite-*": [14, 3, 1],
 		"*-bituminouscoal-*": [0, 1, 1],
