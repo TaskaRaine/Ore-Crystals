@@ -1,0 +1,25 @@
+﻿[
+	{
+		ingredientPattern: "CCCCHCCCC",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 2
+			},
+			"H": {
+				type: "item",
+				name: "heart",
+				code: "crystal_heart-*",
+				quantity: 1
+			}
+		},
+		output: {
+			type: "item",
+			code: "crystal_grenade-{heart}",
+			quantity: 1
+		}
+	}
+]

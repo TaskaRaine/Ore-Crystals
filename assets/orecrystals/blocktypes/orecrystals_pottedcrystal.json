@@ -10,7 +10,7 @@
 		}
 	},
 	variantgroups: [
-		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
+		{ code: "crystal", states: ["alum", "anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
 		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", 
 		"diamond", "emerald", "pentlandite", "phosphorite", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"]},
 		{ code: "pot", states: ["burnt", "amber", "boneash", "celadon", "copper", "earthern", "moss", "ochre", "rutile", "seasalt", "tenmoku"] }
@@ -21,6 +21,7 @@
 		crystal: { base: "block/{crystal}" },
 	},
 	lightAbsorption: 1,
+	blockmaterial: "Ceramic",
 	replaceable: 900,
 	resistance: 1.5,
 	sidesolid: {
@@ -33,6 +34,7 @@
 		all: false
 	},
 	lightHsvByType: {
+		"*-alum-*": [10, 3, 8],
 		"*-anthracite-*": [47, 1, 8],
 		"*-bismuthinite-*": [14, 3, 8],
 		"*-bituminouscoal-*": [0, 1, 8],

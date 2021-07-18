@@ -1,264 +1,556 @@
 ﻿{
 	"game:tabname-crystals": "Ore Crystals",
+	"game:orecrystals-quickstart-guide": "Ore Crystals",
+	"game:orecrystals-quickstart-title": "Ore Crystals Guide",
+	"game:orecrystals-quickstart-text": 
+"<font weight='bold' align='center'>Ore Crystals Guide</font><br>
+<font weight='bold'>Crystal Variants</font>
+Crystal color and size seem to correlate to the ore upon which it sits. The richer the vein of material, the more pronounced the crystal.
+<br>
+<font weight='bold'>Harvesting Crystals</font>
+These crystalline structures are fragile and will shatter into an unusable fine dust without the use of correct tools. 
+
+A <a href=\'handbooksearch://chisel\'>chisel</a> seems to work best to extract usable <a href=\'handbook://item-orecrystals:orecrystals_crystalshard\'>shards</a>. It is even possible to carve out the <a href=\'handbook://item-orecrystals:luminousrod\'>bright rod</a> from the largest crystals on occassion!
+
+Smashing crystals with a <a href=\'handbooksearch://pickaxe\'>pickaxe</a> seemed to be a less effective means of breaking off the <a href=\'handbook://item-orecrystals:orecrystals_crystalshard\'>shards</a>.
+<br>
+<font weight='bold'>Crystal Farming</font>
+Deep within the depths of the world exist large structures composed of pure energized crystal. Obelisks upon which an unstable mass of living crystal exists. These creatures are the <a href=\'handbooksearch://crystal heart\'>hearts</a> of the temporally unstable subterranean world, infusing its sinister energy into fellow crystals and creatures alike. Controlling them.
+
+Get close. Take one from its perch. Craft <a href=\'handbooksearch://seed crystals\'>'seeds'</a> from the remnants of its shattered throne. Harness its regenerative energy and exploit it to have access to a limitless supply of crystal. 
+
+Oh... and avoid hurting it. It is <i>unstable</i> afterall. 
+<br>
+<font weight='bold'>Crystal Usage</font>
+A few useful things can come from these here crystals...!
+
+<a href=\'handbooksearch://seed crystals\'>'Seeds'</a> are a great way to ensure a sufficient supply of crystal, assuming you have a <a href=\'handbooksearch://crystal heart\'>crystal heart</a> nearby to grow them.
+
+To weaponize them I've thought up some nifty applications. It's possible to make <a href=\'handbook://item-arrow-crystal\'>luminous arrows</a> that light up the darkest of caves. It's also possible to make devastating <a href=\'handbooksearch://crystal grenade\'>grenades</a> using the volatile nature of the <a href=\'handbooksearch://crystal heart\'>crystal hearts</a>.
+
+Of course, being as pretty as they are, these crystals make for some wonderful decor! Make them into some pretty colored <a href=\'handbooksearch://crystalline\'>crystalline glass</a>. If there's a flowerpot or planter handy, why not make <a href=\'handbooksearch://potted crystal\'>potted crystals</a> or <a href=\'handbook://block-orecrystals:crystal_planter-anthracite-chalk-burnt\'>large potted crystals</a> with them?
+",
+
+
+	"game:item-arrow-crystal": "Luminous Crystal Arrow",
+
+	"game:item-creature-arrow-crystal": "Luminous Crystal Arrow",
+
+	"blockhelp-crystal-harvest": "Harvest",
+	"blockhelp-crystal-break": "Shatter",
+	"blockhelp-crystal-seed-take": "Collect",
+
+	"entityhelp-heart-grab": "Take",
+
+	"blockhelp-crystal-planter-desc": "Crafted in grid by placing an ore block atop a planter then surrounding the ore with 5 stacks of 5 crystal shards.",
 
 	"item-orecrystals_crystalshard": "Crystal Shard",
+	"item-luminousrod": "Luminous Rod",
+	"item-heart_core": "Heart Core",
 
+	"block-crystal_obelisk-nw-bottom-*": "Crystal Obelisk",
+	"block-crystal_obelisk-ne-bottom-*": "Crystal Obelisk",
+	"block-crystal_obelisk-sw-bottom-*": "Crystal Obelisk",
+	"block-crystal_obelisk-se-bottom-*": "Crystal Obelisk",
+	"block-crystal_obelisk-nw-top-*": "Crystal Obelisk",
+	"block-crystal_obelisk-ne-top-*": "Crystal Obelisk",
+	"block-crystal_obelisk-sw-top-*": "Crystal Obelisk",
+	"block-crystal_obelisk-se-top-*": "Crystal Obelisk",
+
+	"item-creature-crystal_locust-*": "Crystal Locust",
+	"item-dead-creature-crystal_locust-*": "Dead Crystal Locust",
+
+	"item-crystal_grenade-alum": "Alum Crystal Grenade",
+	"item-creature-crystal_heart-alum": "Alum Crystal Heart",
+	"item-crystal_heart-alum": "Alum Crystal Heart",
+
+	"block-seed_crystals-alum-*": "Alum Seed Crystals",
+	"block-orecrystals_crystal_poor-alum-*": "Tiny Alum Crystal",
+	"block-orecrystals_crystal_medium-alum-*": "Small Alum Crystal",
+	"block-orecrystals_crystal_rich-alum-*": "Large Alum Crystal",
+	"block-orecrystals_crystal_bountiful-alum-*": "Giant Alum Crystal",
+	"block-orecrystals_glass-alum": "Crystalline Alum Glass",
+	"block-orecrystals_pottedcrystal-alum-*": "Potted Alum Crystal",
+	"block-crystal_planter-alum-*": "Large Potted Alum Crystal",
+
+	"item-crystal_grenade-anthracite": "Anthracite Crystal Grenade",
+	"item-creature-crystal_heart-anthracite": "Anthracite Crystal Heart",
+	"item-crystal_heart-anthracite": "Anthracite Crystal Heart",
+
+	"block-seed_crystals-anthracite-*": "Anthracite Seed Crystals",
 	"block-orecrystals_crystal_poor-anthracite-*": "Tiny Anthracite Crystal",
 	"block-orecrystals_crystal_medium-anthracite-*": "Small Anthracite Crystal",
 	"block-orecrystals_crystal_rich-anthracite-*": "Large Anthracite Crystal",
 	"block-orecrystals_crystal_bountiful-anthracite-*": "Giant Anthracite Crystal",
 	"block-orecrystals_glass-anthracite": "Crystalline Anthracite Glass",
 	"block-orecrystals_pottedcrystal-anthracite-*": "Potted Anthracite Crystal",
+	"block-crystal_planter-anthracite-*": "Large Potted Anthracite Crystal",
 
+	"item-crystal_grenade-bismuthinite": "Bismuthinite Crystal Grenade",
+	"item-creature-crystal_heart-bismuthinite": "Bismuthinite Crystal Heart",
+	"item-crystal_heart-bismuthinite": "Bismuthinite Crystal Heart",
+
+	"block-seed_crystals-bismuthinite-*": "Bismuthinite Seed Crystals",
 	"block-orecrystals_crystal_poor-bismuthinite-*": "Tiny Bismuthinite Crystal",
 	"block-orecrystals_crystal_medium-bismuthinite-*": "Small Bismuthinite Crystal",
 	"block-orecrystals_crystal_rich-bismuthinite-*": "Large Bismuthinite Crystal",
 	"block-orecrystals_crystal_bountiful-bismuthinite-*": "Giant Bismuthinite Crystal",
 	"block-orecrystals_glass-bismuthinite": "Crystalline Bismuthinite Glass",
 	"block-orecrystals_pottedcrystal-bismuthinite-*": "Potted Bismuthinite Crystal",
+	"block-crystal_planter-bismuthinite-*": "Large Potted Bismuthinite Crystal",
 
+	"item-crystal_grenade-bituminouscoal": "Coal Crystal Grenade",
+	"item-creature-crystal_heart-bituminouscoal": "Coal Crystal Heart",
+	"item-crystal_heart-bituminouscoal": "Coal Crystal Heart",
+
+	"block-seed_crystals-bituminouscoal-*": "Coal Seed Crystals",
 	"block-orecrystals_crystal_poor-bituminouscoal-*": "Tiny Coal Crystal",
 	"block-orecrystals_crystal_medium-bituminouscoal-*": "Small Coal Crystal",
 	"block-orecrystals_crystal_rich-bituminouscoal-*": "Large Coal Crystal",
 	"block-orecrystals_crystal_bountiful-bituminouscoal-*": "Giant Coal Crystal",
 	"block-orecrystals_glass-bituminouscoal": "Crystalline Coal Glass",
 	"block-orecrystals_pottedcrystal-bituminouscoal-*": "Potted Coal Crystal",
+	"block-crystal_planter-bituminouscoal-*": "Large Potted Coal Crystal",
 
+	"item-crystal_grenade-borax": "Borax Crystal Grenade",
+	"item-creature-crystal_heart-borax": "Borax Crystal Heart",
+	"item-crystal_heart-borax": "Borax Crystal Heart",
+
+	"block-seed_crystals-borax-*": "Borax Seed Crystals",
 	"block-orecrystals_crystal_poor-borax-*": "Tiny Borax Crystal",
 	"block-orecrystals_crystal_medium-borax-*": "Small Borax Crystal",
 	"block-orecrystals_crystal_rich-borax-*": "Large Borax Crystal",
 	"block-orecrystals_crystal_bountiful-borax-*": "Giant Borax Crystal",
 	"block-orecrystals_glass-borax": "Crystalline Borax Glass",
 	"block-orecrystals_pottedcrystal-borax-*": "Potted Borax Crystal",
+	"block-crystal_planter-borax-*": "Large Potted Borax Crystal",
 
+	"item-crystal_grenade-cassiterite": "Cassiterite Crystal Grenade",
+	"item-creature-crystal_heart-cassiterite": "Cassiterite Crystal Heart",
+	"item-crystal_heart-cassiterite": "Cassiterite Crystal Heart",
+
+	"block-seed_crystals-cassiterite-*": "Cassiterite Seed Crystals",
 	"block-orecrystals_crystal_poor-cassiterite-*": "Tiny Cassiterite Crystal",
 	"block-orecrystals_crystal_medium-cassiterite-*": "Small Cassiterite Crystal",
 	"block-orecrystals_crystal_rich-cassiterite-*": "Large Cassiterite Crystal",
 	"block-orecrystals_crystal_bountiful-cassiterite-*": "Giant Cassiterite Crystal",
 	"block-orecrystals_glass-cassiterite": "Crystalline Cassiterite Glass",
 	"block-orecrystals_pottedcrystal-cassiterite-*": "Potted Cassiterite Crystal",
+	"block-crystal_planter-cassiterite-*": "Large Potted Cassiterite Crystal",
 
+	"item-crystal_grenade-chromite": "Chromite Crystal Grenade",
+	"item-creature-crystal_heart-chromite": "Chromite Crystal Heart",
+	"item-crystal_heart-chromite": "Chromite Crystal Heart",
+
+	"block-seed_crystals-chromite-*": "Chromite Seed Crystals",
 	"block-orecrystals_crystal_poor-chromite-*": "Tiny Chromite Crystal",
 	"block-orecrystals_crystal_medium-chromite-*": "Small Chromite Crystal",
 	"block-orecrystals_crystal_rich-chromite-*": "Large Chromite Crystal",
 	"block-orecrystals_crystal_bountiful-chromite-*": "Giant Chromite Crystal",
 	"block-orecrystals_glass-chromite": "Crystalline Chromite Glass",
 	"block-orecrystals_pottedcrystal-chromite-*": "Potted Chromite Crystal",
+	"block-crystal_planter-chromite-*": "Large Potted Chromite Crystal",
 
+	"item-crystal_grenade-cinnabar": "Cinnabar Crystal Grenade",
+	"item-creature-crystal_heart-cinnabar": "Cinnabar Crystal Heart",
+	"item-crystal_heart-cinnabar": "Cinnabar Crystal Heart",
+
+	"block-seed_crystals-cinnabar-*": "Cinnabar Seed Crystals",
 	"block-orecrystals_crystal_poor-cinnabar-*": "Tiny Cinnabar Crystal",
 	"block-orecrystals_crystal_medium-cinnabar-*": "Small Cinnabar Crystal",
 	"block-orecrystals_crystal_rich-cinnabar-*": "Large Cinnabar Crystal",
 	"block-orecrystals_crystal_bountiful-cinnabar-*": "Giant Cinnabar Crystal",
 	"block-orecrystals_glass-cinnabar": "Crystalline Cinnabar Glass",
 	"block-orecrystals_pottedcrystal-cinnabar-*": "Potted Cinnabar Crystal",
+	"block-crystal_planter-cinnabar-*": "Large Potted Cinnabar Crystal",
 
+	"item-crystal_grenade-corundum": "Corundum Crystal Grenade",
+	"item-creature-crystal_heart-corundum": "Corundum Crystal Heart",
+	"item-crystal_heart-corundum": "Corundum Crystal Heart",
+
+	"block-seed_crystals-corundum-*": "Corundum Seed Crystals",
 	"block-orecrystals_crystal_poor-corundum-*": "Tiny Corundum Crystal",
 	"block-orecrystals_crystal_medium-corundum-*": "Small Corundum Crystal",
 	"block-orecrystals_crystal_rich-corundum-*": "Large Corundum Crystal",
 	"block-orecrystals_crystal_bountiful-corundum-*": "Giant Corundum Crystal",
 	"block-orecrystals_glass-corundum": "Crystalline Corundum Glass",
 	"block-orecrystals_pottedcrystal-corundum-*": "Potted Corundum Crystal",
+	"block-crystal_planter-corundum-*": "Large Potted Corundum Crystal",
 
+	"item-crystal_grenade-diamond": "Diamond Crystal Grenade",
+	"item-creature-crystal_heart-diamond": "Diamond Crystal Heart",
+	"item-crystal_heart-diamond": "Diamond Crystal Heart",
+
+	"block-seed_crystals-diamond-*": "Diamond Seed Crystals",
 	"block-orecrystals_crystal_poor-diamond-*": "Tiny Diamond Crystal",
 	"block-orecrystals_crystal_medium-diamond-*": "Small Diamond Crystal",
 	"block-orecrystals_crystal_rich-diamond-*": "Large Diamond Crystal",
 	"block-orecrystals_crystal_bountiful-diamond-*": "Giant Diamond Crystal",
 	"block-orecrystals_glass-diamond": "Crystalline Diamond Glass",
 	"block-orecrystals_pottedcrystal-diamond-*": "Potted Diamond Crystal",
+	"block-crystal_planter-diamond-*": "Large Potted Diamond Crystal",
 
+	"item-crystal_grenade-emerald": "Emerald Crystal Grenade",
+	"item-creature-crystal_heart-emerald": "Emerald Crystal Heart",
+	"item-crystal_heart-emerald": "Emerald Crystal Heart",
+
+	"block-seed_crystals-emerald-*": "Emerald Seed Crystals",
 	"block-orecrystals_crystal_poor-emerald-*": "Tiny Emerald Crystal",
 	"block-orecrystals_crystal_medium-emerald-*": "Small Emerald Crystal",
 	"block-orecrystals_crystal_rich-emerald-*": "Large Emerald Crystal",
 	"block-orecrystals_crystal_bountiful-emerald-*": "Giant Emerald Crystal",
 	"block-orecrystals_glass-emerald": "Crystalline Emerald Glass",
 	"block-orecrystals_pottedcrystal-emerald-*": "Potted Emerald Crystal",
+	"block-crystal_planter-emerald-*": "Large Potted Emerald Crystal",
 
+	"item-crystal_grenade-flint": "Flint Crystal Grenade",
+	"item-creature-crystal_heart-flint": "Flint Crystal Heart",
+	"item-crystal_heart-flint": "Flint Crystal Heart",
+
+	"block-seed_crystals-flint-*": "Flint Seed Crystals",
 	"block-orecrystals_crystal_poor-flint-*": "Tiny Flint Crystal",
 	"block-orecrystals_crystal_medium-flint-*": "Small Flint Crystal",
 	"block-orecrystals_crystal_rich-flint-*": "Large Flint Crystal",
 	"block-orecrystals_crystal_bountiful-flint-*": "Giant Flint Crystal",
 	"block-orecrystals_glass-flint": "Crystalline Flint Glass",
 	"block-orecrystals_pottedcrystal-flint-*": "Potted Flint Crystal",
+	"block-crystal_planter-flint-*": "Large Potted Flint Crystal",
 
+	"item-crystal_grenade-fluorite": "Fluorite Crystal Grenade",
+	"item-creature-crystal_heart-fluorite": "Fluorite Crystal Heart",
+	"item-crystal_heart-fluorite": "Fluorite Crystal Heart",
+
+	"block-seed_crystals-fluorite-*": "Fluorite Seed Crystals",
 	"block-orecrystals_crystal_poor-fluorite-*": "Tiny Fluorite Crystal",
 	"block-orecrystals_crystal_medium-fluorite-*": "Small Fluorite Crystal",
 	"block-orecrystals_crystal_rich-fluorite-*": "Large Fluorite Crystal",
 	"block-orecrystals_crystal_bountiful-fluorite-*": "Giant Fluorite Crystal",
 	"block-orecrystals_glass-fluorite": "Crystalline Fluorite Glass",
 	"block-orecrystals_pottedcrystal-fluorite-*": "Potted Fluorite Crystal",
+	"block-crystal_planter-fluorite-*": "Large Potted Fluorite Crystal",
 
+	"item-crystal_grenade-galena": "Galena Crystal Grenade",
+	"item-creature-crystal_heart-galena": "Galena Crystal Heart",
+	"item-crystal_heart-galena": "Galena Crystal Heart",
+
+	"block-seed_crystals-galena-*": "Galena Seed Crystals",
 	"block-orecrystals_crystal_poor-galena-*": "Tiny Galena Crystal",
 	"block-orecrystals_crystal_medium-galena-*": "Small Galena Crystal",
 	"block-orecrystals_crystal_rich-galena-*": "Large Galena Crystal",
 	"block-orecrystals_crystal_bountiful-galena-*": "Giant Galena Crystal",
 	"block-orecrystals_glass-galena": "Crystalline Galena Glass",
 	"block-orecrystals_pottedcrystal-galena-*": "Potted Galena Crystal",
+	"block-crystal_planter-galena-*": "Large Potted Galena Crystal",
 
+	"item-crystal_grenade-galena_nativesilver": "Galena Silver Crystal Grenade",
+	"item-creature-crystal_heart-galena_nativesilver": "Galena Silver Crystal Heart",
+	"item-crystal_heart-galena_nativesilver": "Galena Silver Crystal Heart",
+
+	"block-seed_crystals-galena_nativesilver-*": "Galena Silver Seed Crystals",
 	"block-orecrystals_crystal_poor-galena_nativesilver-*": "Tiny Galena Silver Crystal",
 	"block-orecrystals_crystal_medium-galena_nativesilver-*": "Small Galena Silver Crystal",
 	"block-orecrystals_crystal_rich-galena_nativesilver-*": "Large Galena Silver Crystal",
 	"block-orecrystals_crystal_bountiful-galena_nativesilver-*": "Giant Galena Silver Crystal",
 	"block-orecrystals_glass-galena_nativesilver": "Crystalline Galena Silver Glass",
 	"block-orecrystals_pottedcrystal-galena_nativesilver-*": "Potted Galena Silver Crystal",
+	"block-crystal_planter-galena_nativesilver-*": "Large Potted Galena Silver Crystal",
 
+	"item-crystal_grenade-graphite": "Graphite Crystal Grenade",
+	"item-creature-crystal_heart-graphite": "Graphite Crystal Heart",
+	"item-crystal_heart-graphite": "Graphite Crystal Heart",
+
+	"block-seed_crystals-graphite-*": "Graphite Seed Crystals",
 	"block-orecrystals_crystal_poor-graphite-*": "Tiny Graphite Crystal",
 	"block-orecrystals_crystal_medium-graphite-*": "Small Graphite Crystal",
 	"block-orecrystals_crystal_rich-graphite-*": "Large Graphite Crystal",
 	"block-orecrystals_crystal_bountiful-graphite-*": "Giant Graphite Crystal",
 	"block-orecrystals_glass-graphite": "Crystalline Graphite Glass",
 	"block-orecrystals_pottedcrystal-graphite-*": "Potted Graphite Crystal",
+	"block-crystal_planter-graphite-*": "Large Potted Graphite Crystal",
 
+	"item-crystal_grenade-hematite": "Hematite Crystal Grenade",
+	"item-creature-crystal_heart-hematite": "Hematite Crystal Heart",
+	"item-crystal_heart-hematite": "Hematite Crystal Heart",
+
+	"block-seed_crystals-hematite-*": "Hematite Seed Crystals",
 	"block-orecrystals_crystal_poor-hematite-*": "Tiny Hematite Crystal",
 	"block-orecrystals_crystal_medium-hematite-*": "Small Hematite Crystal",
 	"block-orecrystals_crystal_rich-hematite-*": "Large Hematite Crystal",
 	"block-orecrystals_crystal_bountiful-hematite-*": "Giant Hematite Crystal",
 	"block-orecrystals_glass-hematite": "Crystalline Hematite Glass",
 	"block-orecrystals_pottedcrystal-hematite-*": "Potted Hematite Crystal",
+	"block-crystal_planter-hematite-*": "Large Potted Hematite Crystal",
 
+	"item-crystal_grenade-ilmenite": "Ilmenite Crystal Grenade",
+	"item-creature-crystal_heart-ilmenite": "Ilmenite Crystal Heart",
+	"item-crystal_heart-ilmenite": "Ilmenite Crystal Heart",
+
+	"block-seed_crystals-ilmenite-*": "Ilmenite Seed Crystals",
 	"block-orecrystals_crystal_poor-ilmenite-*": "Tiny Ilmenite Crystal",
 	"block-orecrystals_crystal_medium-ilmenite-*": "Small Ilmenite Crystal",
 	"block-orecrystals_crystal_rich-ilmenite-*": "Large Ilmenite Crystal",
 	"block-orecrystals_crystal_bountiful-ilmenite-*": "Giant Ilmenite Crystal",
 	"block-orecrystals_glass-ilmenite": "Crystalline Ilmenite Glass",
 	"block-orecrystals_pottedcrystal-ilmenite-*": "Potted Ilmenite Crystal",
+	"block-crystal_planter-ilmenite-*": "Large Potted Ilmenite Crystal",
 
+	"item-crystal_grenade-kernite": "Kernite Crystal Grenade",
+	"item-creature-crystal_heart-kernite": "Kernite Crystal Heart",
+	"item-crystal_heart-kernite": "Kernite Crystal Heart",
+
+	"block-seed_crystals-kernite-*": "Kernite Seed Crystals",
 	"block-orecrystals_crystal_poor-kernite-*": "Tiny Kernite Crystal",
 	"block-orecrystals_crystal_medium-kernite-*": "Small Kernite Crystal",
 	"block-orecrystals_crystal_rich-kernite-*": "Large Kernite Crystal",
 	"block-orecrystals_crystal_bountiful-kernite-*": "Giant Kernite Crystal",
 	"block-orecrystals_glass-kernite": "Crystalline Kernite Glass",
 	"block-orecrystals_pottedcrystal-kernite-*": "Potted Kernite Crystal",
+	"block-crystal_planter-kernite-*": "Large Potted Kernite Crystal",
 
+	"item-crystal_grenade-lapislazuli": "Lapis Lazuli Crystal Grenade",
+	"item-creature-crystal_heart-lapislazuli": "Lapis Lazuli Crystal Heart",
+	"item-crystal_heart-lapislazuli": "Lapis Lazuli Crystal Heart",
+
+	"block-seed_crystals-lapislazuli-*": "Lapis Lazuli Seed Crystals",
 	"block-orecrystals_crystal_poor-lapislazuli-*": "Tiny Lapis Lazuli Crystal",
 	"block-orecrystals_crystal_medium-lapislazuli-*": "Small Lapis Lazuli Crystal",
 	"block-orecrystals_crystal_rich-lapislazuli-*": "Large Lapis Lazuli Crystal",
 	"block-orecrystals_crystal_bountiful-lapislazuli-*": "Giant Lapis Lazuli Crystal",
 	"block-orecrystals_glass-lapislazuli": "Crystalline Lapis Lazuli Glass",
 	"block-orecrystals_pottedcrystal-lapislazuli-*": "Potted Lapis Lazuli Crystal",
+	"block-crystal_planter-lapislazuli-*": "Large Potted Lapis Lazuli Crystal",
 
+	"item-crystal_grenade-lignite": "Lignite Crystal Grenade",
+	"item-creature-crystal_heart-lignite": "Lignite Crystal Heart",
+	"item-crystal_heart-lignite": "Lignite Crystal Heart",
+
+	"block-seed_crystals-lignite-*": "Lignite Seed Crystals",
 	"block-orecrystals_crystal_poor-lignite-*": "Tiny Lignite Crystal",
 	"block-orecrystals_crystal_medium-lignite-*": "Small Lignite Crystal",
 	"block-orecrystals_crystal_rich-lignite-*": "Large Lignite Crystal",
 	"block-orecrystals_crystal_bountiful-lignite-*": "Giant Lignite Crystal",
 	"block-orecrystals_glass-lignite": "Crystalline Lignite Glass",
 	"block-orecrystals_pottedcrystal-lignite-*": "Potted Lignite Crystal",
+	"block-crystal_planter-lignite-*": "Large Potted Lignite Crystal",
 
+	"item-crystal_grenade-limonite": "Limonite Crystal Grenade",
+	"item-creature-crystal_heart-limonite": "Limonite Crystal Heart",
+	"item-crystal_heart-limonite": "Limonite Crystal Heart",
+
+	"block-seed_crystals-limonite-*": "Limonite Seed Crystals",
 	"block-orecrystals_crystal_poor-limonite-*": "Tiny Limonite Crystal",
 	"block-orecrystals_crystal_medium-limonite-*": "Small Limonite Crystal",
 	"block-orecrystals_crystal_rich-limonite-*": "Large Limonite Crystal",
 	"block-orecrystals_crystal_bountiful-limonite-*": "Giant Limonite Crystal",
 	"block-orecrystals_glass-limonite": "Crystalline Limonite Glass",
 	"block-orecrystals_pottedcrystal-limonite-*": "Potted Limonite Crystal",
+	"block-crystal_planter-limonite-*": "Large Potted Limonite Crystal",
 
+	"item-crystal_grenade-magnetite": "Magnetite Crystal Grenade",
+	"item-creature-crystal_heart-magnetite": "Magnetite Crystal Heart",
+	"item-crystal_heart-magnetite": "Magnetite Crystal Heart",
+
+	"block-seed_crystals-magnetite-*": "Magnetite Seed Crystals",
 	"block-orecrystals_crystal_poor-magnetite-*": "Tiny Magnetite Crystal",
 	"block-orecrystals_crystal_medium-magnetite-*": "Small Magnetite Crystal",
 	"block-orecrystals_crystal_rich-magnetite-*": "Large Magnetite Crystal",
 	"block-orecrystals_crystal_bountiful-magnetite-*": "Giant Magnetite Crystal",
 	"block-orecrystals_glass-magnetite": "Crystalline Magnetite Glass",
 	"block-orecrystals_pottedcrystal-magnetite-*": "Potted Magnetite Crystal",
+	"block-crystal_planter-magnetite-*": "Large Potted Magnetite Crystal",
 
+	"item-crystal_grenade-malachite": "Malachite Crystal Grenade",
+	"item-creature-crystal_heart-malachite": "Malachite Crystal Heart",
+	"item-crystal_heart-malachite": "Malachite Crystal Heart",
+
+	"block-seed_crystals-malachite-*": "Malachite Seed Crystals",
 	"block-orecrystals_crystal_poor-malachite-*": "Tiny Malachite Crystal",
 	"block-orecrystals_crystal_medium-malachite-*": "Small Malachite Crystal",
 	"block-orecrystals_crystal_rich-malachite-*": "Large Malachite Crystal",
 	"block-orecrystals_crystal_bountiful-malachite-*": "Giant Malachite Crystal",
 	"block-orecrystals_glass-malachite": "Crystalline Malachite Glass",
 	"block-orecrystals_pottedcrystal-malachite-*": "Potted Malachite Crystal",
+	"block-crystal_planter-malachite-*": "Large Potted Malachite Crystal",
 
+	"item-crystal_grenade-nativecopper": "Native Copper Crystal Grenade",
+	"item-creature-crystal_heart-nativecopper": "Native Copper Crystal Heart",
+	"item-crystal_heart-nativecopper": "Native Copper Crystal Heart",
+
+	"block-seed_crystals-nativecopper-*": "Native Copper Seed Crystals",
 	"block-orecrystals_crystal_poor-nativecopper-*": "Tiny Native Copper Crystal",
 	"block-orecrystals_crystal_medium-nativecopper-*": "Small Native Copper Crystal",
 	"block-orecrystals_crystal_rich-nativecopper-*": "Large Native Copper Crystal",
 	"block-orecrystals_crystal_bountiful-nativecopper-*": "Giant Native Copper Crystal",
 	"block-orecrystals_glass-nativecopper": "Crystalline Native Copper Glass",
 	"block-orecrystals_pottedcrystal-nativecopper-*": "Potted Native Copper Crystal",
+	"block-crystal_planter-nativecopper-*": "Large Potted Native Copper Crystal",
 
+	"item-crystal_grenade-olivine": "Olivine Crystal Grenade",
+	"item-creature-crystal_heart-olivine": "Olivine Crystal Heart",
+	"item-crystal_heart-olivine": "Olivine Crystal Heart",
+
+	"block-seed_crystals-olivine-*": "Olivine Seed Crystals",
 	"block-orecrystals_crystal_poor-olivine-*": "Tiny Olivine Crystal",
 	"block-orecrystals_crystal_medium-olivine-*": "Small Olivine Crystal",
 	"block-orecrystals_crystal_rich-olivine-*": "Large Olivine Crystal",
 	"block-orecrystals_crystal_bountiful-olivine-*": "Giant Olivine Crystal",
 	"block-orecrystals_glass-olivine": "Crystalline Olivine Glass",
 	"block-orecrystals_pottedcrystal-olivine-*": "Potted Olivine Crystal",
+	"block-crystal_planter-olivine-*": "Large Potted Olivine Crystal",
 
+	"item-crystal_grenade-olivine_peridot": "Peridot Crystal Grenade",
+	"item-creature-crystal_heart-olivine_peridot": "Peridot Crystal Heart",
+	"item-crystal_heart-olivine_peridot": "Peridot Crystal Heart",
+
+	"block-seed_crystals-olivine_peridot-*": "Peridot Seed Crystals",
 	"block-orecrystals_crystal_poor-olivine_peridot-*": "Tiny Peridot Crystal",
 	"block-orecrystals_crystal_medium-olivine_peridot-*": "Small Peridot Crystal",
 	"block-orecrystals_crystal_rich-olivine_peridot-*": "Large Peridot Crystal",
 	"block-orecrystals_crystal_bountiful-olivine_peridot-*": "Giant Peridot Crystal",
 	"block-orecrystals_glass-olivine_peridot": "Crystalline Peridot Glass",
 	"block-orecrystals_pottedcrystal-olivine_peridot-*": "Potted Peridot Crystal",
+	"block-crystal_planter-olivine_peridot-*": "Large Potted Peridot Crystal",
 
+	"item-crystal_grenade-pentlandite": "Pentlandite Crystal Grenade",
+	"item-creature-crystal_heart-pentlandite": "Pentlandite Crystal Heart",
+	"item-crystal_heart-pentlandite": "Pentlandite Crystal Heart",
+
+	"block-seed_crystals-pentlandite-*": "Pentlandite Seed Crystals",
 	"block-orecrystals_crystal_poor-pentlandite-*": "Tiny Pentlandite Crystal",
 	"block-orecrystals_crystal_medium-pentlandite-*": "Small Pentlandite Crystal",
 	"block-orecrystals_crystal_rich-pentlandite-*": "Large Pentlandite Crystal",
 	"block-orecrystals_crystal_bountiful-pentlandite-*": "Giant Pentlandite Crystal",
 	"block-orecrystals_glass-pentlandite": "Crystalline Pentlandite Glass",
 	"block-orecrystals_pottedcrystal-pentlandite-*": "Potted Pentlandite Crystal",
+	"block-crystal_planter-pentlandite-*": "Large Potted Pentlandite Crystal",
 
+	"item-crystal_grenade-phosphorite": "Phosphorite Crystal Grenade",
+	"item-creature-crystal_heart-phosphorite": "Phosphorite Crystal Heart",
+	"item-crystal_heart-phosphorite": "Phosphorite Crystal Heart",
+
+	"block-seed_crystals-phosphorite-*": "Phosphorite Seed Crystals",
 	"block-orecrystals_crystal_poor-phosphorite-*": "Tiny Phosphorite Crystal",
 	"block-orecrystals_crystal_medium-phosphorite-*": "Small Phosphorite Crystal",
 	"block-orecrystals_crystal_rich-phosphorite-*": "Large Phosphorite Crystal",
 	"block-orecrystals_crystal_bountiful-phosphorite-*": "Giant Phosphorite Crystal",
 	"block-orecrystals_glass-phosphorite": "Crystalline Phosphorite Glass",
 	"block-orecrystals_pottedcrystal-phosphorite-*": "Potted Phosphorite Crystal",
+	"block-crystal_planter-phosphorite-*": "Large Potted Phosphorite Crystal",
 
+	"item-crystal_grenade-quartz": "Quartz Crystal Grenade",
+	"item-creature-crystal_heart-quartz": "Quartz Crystal Heart",
+	"item-crystal_heart-quartz": "Quartz Crystal Heart",
+
+	"block-seed_crystals-quartz-*": "Quartz Seed Crystals",
 	"block-orecrystals_crystal_poor-quartz-*": "Tiny Quartz Crystal",
 	"block-orecrystals_crystal_medium-quartz-*": "Small Quartz Crystal",
 	"block-orecrystals_crystal_rich-quartz-*": "Large Quartz Crystal",
 	"block-orecrystals_crystal_bountiful-quartz-*": "Giant Quartz Crystal",
 	"block-orecrystals_glass-quartz": "Crystalline Quartz Glass",
 	"block-orecrystals_pottedcrystal-quartz-*": "Potted Quartz Crystal",
+	"block-crystal_planter-quartz-*": "Large Potted Quartz Crystal",
 
+	"item-crystal_grenade-quartz_nativegold": "Gold Crystal Grenade",
+	"item-creature-crystal_heart-quartz_nativegold": "Gold Crystal Heart",
+	"item-crystal_heart-quartz_nativegold": "Gold Crystal Heart",
+
+	"block-seed_crystals-quartz_nativegold-*": "Gold Seed Crystals",
 	"block-orecrystals_crystal_poor-quartz_nativegold-*": "Tiny Gold Crystal",
 	"block-orecrystals_crystal_medium-quartz_nativegold-*": "Small Gold Crystal",
 	"block-orecrystals_crystal_rich-quartz_nativegold-*": "Large Gold Crystal",
 	"block-orecrystals_crystal_bountiful-quartz_nativegold-*": "Giant Gold Crystal",
 	"block-orecrystals_glass-quartz_nativegold": "Crystalline Gold Glass",
 	"block-orecrystals_pottedcrystal-quartz_nativegold-*": "Potted Gold Crystal",
+	"block-crystal_planter-quartz_nativegold-*": "Large Potted Gold Crystal",
 
+	"item-crystal_grenade-quartz_nativesilver": "Silver Crystal Grenade",
+	"item-creature-crystal_heart-quartz_nativesilver": "Silver Crystal Heart",
+	"item-crystal_heart-quartz_nativesilver": "Silver Crystal Heart",
+
+	"block-seed_crystals-quartz_nativesilver-*": "Silver Seed Crystals",
 	"block-orecrystals_crystal_poor-quartz_nativesilver-*": "Tiny Silver Crystal",
 	"block-orecrystals_crystal_medium-quartz_nativesilver-*": "Small Silver Crystal",
 	"block-orecrystals_crystal_rich-quartz_nativesilver-*": "Large Silver Crystal",
 	"block-orecrystals_crystal_bountiful-quartz_nativesilver-*": "Giant Silver Crystal",
 	"block-orecrystals_glass-quartz_nativesilver": "Crystalline Silver Glass",
 	"block-orecrystals_pottedcrystal-quartz_nativesilver-*": "Potted Silver Crystal",
+	"block-crystal_planter-quartz_nativesilver-*": "Large Potted Silver Crystal",
 
+	"item-crystal_grenade-rhodochrosite": "Rhodochrosite Crystal Grenade",
+	"item-creature-crystal_heart-rhodochrosite": "Rhodochrosite Crystal Heart",
+	"item-crystal_heart-rhodochrosite": "Rhodochrosite Crystal Heart",
+
+	"block-seed_crystals-rhodochrosite-*": "Rhodochrosite Seed Crystals",
 	"block-orecrystals_crystal_poor-rhodochrosite-*": "Tiny Rhodochrosite Crystal",
 	"block-orecrystals_crystal_medium-rhodochrosite-*": "Small Rhodochrosite Crystal",
 	"block-orecrystals_crystal_rich-rhodochrosite-*": "Large Rhodochrosite Crystal",
 	"block-orecrystals_crystal_bountiful-rhodochrosite-*": "Giant Rhodochrosite Crystal",
 	"block-orecrystals_glass-rhodochrosite": "Crystalline Rhodochrosite Glass",
 	"block-orecrystals_pottedcrystal-rhodochrosite-*": "Potted Rhodochrosite Crystal",
+	"block-crystal_planter-rhodochrosite-*": "Large Potted Rhodochrosite Crystal",
 
+	"item-crystal_grenade-sphalerite": "Sphalerite Crystal Grenade",
+	"item-creature-crystal_heart-sphalerite": "Sphalerite Crystal Heart",
+	"item-crystal_heart-sphalerite": "Sphalerite Crystal Heart",
+
+	"block-seed_crystals-sphalerite-*": "Sphalerite Seed Crystals",
 	"block-orecrystals_crystal_poor-sphalerite-*": "Tiny Sphalerite Crystal",
 	"block-orecrystals_crystal_medium-sphalerite-*": "Small Sphalerite Crystal",
 	"block-orecrystals_crystal_rich-sphalerite-*": "Large Sphalerite Crystal",
 	"block-orecrystals_crystal_bountiful-sphalerite-*": "Giant Sphalerite Crystal",
 	"block-orecrystals_glass-sphalerite": "Crystalline Sphalerite Glass",
 	"block-orecrystals_pottedcrystal-sphalerite-*": "Potted Sphalerite Crystal",
+	"block-crystal_planter-sphalerite-*": "Large Potted Sphalerite Crystal",
 
+	"item-crystal_grenade-sulfur": "Sulfur Crystal Grenade",
+	"item-creature-crystal_heart-sulfur": "Sulfur Crystal Heart",
+	"item-crystal_heart-sulfur": "Sulfur Crystal Heart",
+
+	"block-seed_crystals-sulfur-*": "Sulfur Seed Crystals",
 	"block-orecrystals_crystal_poor-sulfur-*": "Tiny Sulfur Crystal",
 	"block-orecrystals_crystal_medium-sulfur-*": "Small Sulfur Crystal",
 	"block-orecrystals_crystal_rich-sulfur-*": "Large Sulfur Crystal",
 	"block-orecrystals_crystal_bountiful-sulfur-*": "Giant Sulfur Crystal",
 	"block-orecrystals_glass-sulfur": "Crystalline Sulfur Glass",
 	"block-orecrystals_pottedcrystal-sulfur-*": "Potted Sulfur Crystal",
+	"block-crystal_planter-sulfur-*": "Large Potted Sulfur Crystal",
 
+	"item-crystal_grenade-sylvite": "Sylvite Crystal Grenade",
+	"item-creature-crystal_heart-sylvite": "Sylvite Crystal Heart",
+	"item-crystal_heart-sylvite": "Sylvite Crystal Heart",
+
+	"block-seed_crystals-sylvite-*": "Sylvite Seed Crystals",
 	"block-orecrystals_crystal_poor-sylvite-*": "Tiny Sylvite Crystal",
 	"block-orecrystals_crystal_medium-sylvite-*": "Small Sylvite Crystal",
 	"block-orecrystals_crystal_rich-sylvite-*": "Large Sylvite Crystal",
 	"block-orecrystals_crystal_bountiful-sylvite-*": "Giant Sylvite Crystal",
 	"block-orecrystals_glass-sylvite": "Crystalline Sylvite Glass",
 	"block-orecrystals_pottedcrystal-sylvite-*": "Potted Sylvite Crystal",
+	"block-crystal_planter-sylvite-*": "Large Potted Sylvite Crystal",
 
+	"item-crystal_grenade-uranium": "Uranium Crystal Grenade",
+	"item-creature-crystal_heart-uranium": "Uranium Crystal Heart",
+	"item-crystal_heart-uranium": "Uranium Crystal Heart",
+
+	"block-seed_crystals-uranium-*": "Uranium Seed Crystals",
 	"block-orecrystals_crystal_poor-uranium-*": "Tiny Uranium Crystal",
 	"block-orecrystals_crystal_medium-uranium-*": "Small Uranium Crystal",
 	"block-orecrystals_crystal_rich-uranium-*": "Large Uranium Crystal",
 	"block-orecrystals_crystal_bountiful-uranium-*": "Giant Uranium Crystal",
 	"block-orecrystals_glass-uranium": "Crystalline Uranium Glass",
 	"block-orecrystals_pottedcrystal-uranium-*": "Potted Uranium Crystal",
+	"block-crystal_planter-uranium-*": "Large Potted Uranium Crystal",
 
+	"item-crystal_grenade-wolframite": "Wolframite Crystal Grenade",
+	"item-creature-crystal_heart-wolframite": "Wolframite Crystal Heart",
+	"item-crystal_heart-wolframite": "Wolframite Crystal Heart",
+
+	"block-seed_crystals-wolframite-*": "Wolframite Seed Crystals",
 	"block-orecrystals_crystal_poor-wolframite-*": "Tiny Wolframite Crystal",
 	"block-orecrystals_crystal_medium-wolframite-*": "Small Wolframite Crystal",
 	"block-orecrystals_crystal_rich-wolframite-*": "Large Wolframite Crystal",
 	"block-orecrystals_crystal_bountiful-wolframite-*": "Giant Wolframite Crystal",
 	"block-orecrystals_glass-wolframite": "Crystalline Wolframite Glass",
 	"block-orecrystals_pottedcrystal-wolframite-*": "Potted Wolframite Crystal",
+	"block-crystal_planter-wolframite-*": "Large Potted Wolframite Crystal",
 }

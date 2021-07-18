@@ -1,0 +1,274 @@
+﻿{
+	code: "crystal_grenade",
+	class: "ItemCrystalGrenade",
+	attributesByType: {
+		"*-alum": {
+			"itemlight": [10, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-anthracite": {
+			"itemlight": [47, 1, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-bismuthinite": {
+			"itemlight": [14, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-bituminouscoal": {
+			"itemlight": [0, 1, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-borax": {
+			"itemlight": [11, 1, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-cassiterite": {
+			"itemlight": [6, 3, 4 ],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-chromite": {
+			"itemlight": [52, 1, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-cinnabar": {
+			"itemlight": [62, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-corundum": {
+			"itemlight": [59, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-flint": {
+			"itemlight": [8, 5, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-fluorite": {
+			"itemlight": [9, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-galena": {
+			"itemlight": [35, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-galena_nativesilver": {
+			"itemlight": [35, 1, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-graphite": {
+			"itemlight": [3, 5, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-hematite": {
+			"itemlight": [1, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-ilmenite": {
+			"itemlight": [2, 5, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-kernite": {
+			"itemlight": [6, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-lapislazuli": {
+			"itemlight": [38, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-lignite": {
+			"itemlight": [3, 5, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-limonite": {
+			"itemlight": [5, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-magnetite": {
+			"itemlight": [40, 1, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-malachite": {
+			"itemlight": [27, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-nativecopper": {
+			"itemlight": [3, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-olivine": {
+			"itemlight": [12, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-olivine_peridot": {
+			"itemlight": [15, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-diamond": {
+			"itemlight": [33, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-emerald": {
+			"itemlight": [26, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-pentlandite": {
+			"itemlight": [7, 5, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-phosphorite": {
+			"itemlight": [4, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-quartz": {
+			"itemlight": [0, 0, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-quartz_nativegold": {
+			"itemlight": [8, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-quartz_nativesilver": {
+			"itemlight": [34, 1, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-rhodochrosite": {
+			"itemlight": [1, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-sphalerite": {
+			"itemlight": [6, 5, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-sulfur": {
+			"itemlight": [8, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-sylvite": {
+			"itemlight": [3, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-uranium": {
+			"itemlight": [11, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		},
+		"*-wolframite": {
+			"itemlight": [40, 3, 4],
+			handbook: {
+				groupBy:["crystal_grenade-*"]
+			}
+		}
+	},
+	variantgroups: [
+		{ code: "crystal", states: ["alum", "anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
+		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", "diamond", 
+		"emerald", "pentlandite", "phosphorite", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"] }
+	],
+	creativeinventory: { "general": ["*"], "tools": ["*"], "crystals":["*"] },
+	attributes: {
+		handbook: {
+			groupBy:["crystal_grenade-*"]
+		}
+	},
+	maxstacksize: 1,
+	shape: {
+		base: "entity/air/crystal_grenade"
+	},
+	textures: {
+		"crystal": { base: "entity/{crystal}" },
+		"temporal": { base: "game:item/resource/temporalgear" }
+	},
+	guiTransform: {
+		translation: { x: 3, y: 3, z: 0 },
+		origin: { x: 0.5, y: 0.3, z: 0 },
+		scale: 3
+	},
+	fpHandTransform: {
+		translation: { x: 0.05, y: -0.3, z: 0 },
+		scale: 1.8
+	},
+	tpHandTransform: {
+		translation: { x: -1.1, y: -1, z: -0.9 },
+		rotation: { x: 0, y: 0, z: 90 },
+		origin: { x: 0.5, y: 0.5, z: 0.47 },
+		scale: 0.45
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 90, y: 0, z: 0 },
+		origin: { x: 0.5, y: 0.5, z: 0.5299 },
+		scale: 3
+	}
+}

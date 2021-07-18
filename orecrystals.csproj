@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>orecrystals</RootNamespace>
     <AssemblyName>orecrystals</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,23 +42,23 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VintagestoryAPI">
-      <HintPath>H:\Vintagestory\VintagestoryAPI.dll</HintPath>
+      <HintPath>H:\VintageStory 1.15.0 RC-2\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>H:\Vintagestory\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.15.0 RC-2\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>H:\Vintagestory\Mods\VSEssentials.dll</HintPath>
+      <HintPath>H:\VintageStory 1.15.0 RC-2\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\Vintagestory\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.15.0 RC-2\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>H:\Vintagestory\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>H:\VintageStory 1.15.0 RC-2\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -67,10 +68,22 @@
     <Content Include="assets\orecrystals\blocktypes\orecrystals_crystal_poor.json" />
     <Content Include="assets\orecrystals\blocktypes\orecrystals_crystal_rich.json" />
     <Content Include="assets\orecrystals\lang\en.json" />
+    <None Include="assets\orecrystals\blocktypes\crystal_obelisk.json" />
+    <None Include="assets\orecrystals\blocktypes\crystal_planter.json" />
+    <None Include="assets\orecrystals\blocktypes\crystal_seeds.json" />
+    <None Include="assets\orecrystals\config\handbook\crystalharvest.json" />
+    <None Include="assets\orecrystals\entities\air\crystal_grenade.json" />
+    <None Include="assets\orecrystals\itemtypes\crystal_grenade.json" />
+    <None Include="assets\orecrystals\itemtypes\luminousrod.json" />
+    <None Include="assets\orecrystals\patches\entity\arrow.json" />
+    <None Include="assets\orecrystals\patches\item\arrow.json" />
     <Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_bountiful.json" />
     <Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_medium.json" />
     <Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_poor.json" />
     <Content Include="assets\orecrystals\shapes\block\orecrystals_crystal_rich.json" />
+    <Content Include="assets\orecrystals\sounds\block\glass.ogg" />
+    <Content Include="assets\orecrystals\sounds\effect\crystal_ping.ogg" />
+    <Content Include="assets\orecrystals\textures\block\alum.png" />
     <Content Include="assets\orecrystals\textures\block\anthracite.png" />
     <Content Include="assets\orecrystals\textures\block\bismuthinite.png" />
     <Content Include="assets\orecrystals\textures\block\bituminouscoal.png" />
@@ -85,6 +98,7 @@
     <Content Include="assets\orecrystals\textures\block\fluorite.png" />
     <Content Include="assets\orecrystals\textures\block\galena.png" />
     <Content Include="assets\orecrystals\textures\block\galena_nativesilver.png" />
+    <Content Include="assets\orecrystals\textures\block\glass\alum.png" />
     <Content Include="assets\orecrystals\textures\block\glass\anthracite.png" />
     <Content Include="assets\orecrystals\textures\block\glass\bismuthinite.png" />
     <Content Include="assets\orecrystals\textures\block\glass\bituminouscoal.png" />
@@ -145,28 +159,68 @@
     <Content Include="assets\orecrystals\textures\block\sylvite.png" />
     <Content Include="assets\orecrystals\textures\block\uranium.png" />
     <Content Include="assets\orecrystals\textures\block\wolframite.png" />
+    <Content Include="assets\orecrystals\textures\entity\crystal_locust\crystal_limonite.png" />
+    <Content Include="assets\orecrystals\textures\entity\crystal_locust\limonite.png" />
+    <Content Include="assets\orecrystals\textures\item\crystalheart.png" />
     <Content Include="assets\orecrystals\textures\item\crystalshard.png" />
     <Content Include="modinfo.json" />
     <None Include="assets\orecrystals\blocktypes\orecrystals_pottedcrystal.json" />
-    <None Include="assets\orecrystals\recipes\grid\block\orecrystals_gemcrystal_recipes.json" />
+    <None Include="assets\orecrystals\entities\air\crystal_heart.json" />
+    <None Include="assets\orecrystals\entities\land\crystal_locust.json" />
+    <None Include="assets\orecrystals\itemtypes\crystal_heart.json" />
+    <None Include="assets\orecrystals\itemtypes\heart_core.json" />
+    <None Include="assets\orecrystals\recipes\grid\block\crystal_grenade_recipe.json" />
+    <None Include="assets\orecrystals\recipes\grid\block\crystal_planter_recipes.json" />
+    <None Include="assets\orecrystals\recipes\grid\item\crystaltools_recipes.json" />
+    <None Include="assets\orecrystals\recipes\grid\item\heart_recipes.json" />
     <None Include="assets\orecrystals\recipes\grid\block\orecrystals_glassblock_recipes.json" />
-    <None Include="assets\orecrystals\recipes\grid\block\orecrystals_misccrystal_recipes.json" />
+    <Compile Include="src\behaviours\BehaviourIlluminate.cs" />
+    <Compile Include="src\behaviours\RegisterBehaviours.cs" />
+    <Compile Include="src\blockentity\BECrystalObelisk.cs" />
+    <Compile Include="src\blockentity\BECrystalObeliskSpawner.cs" />
+    <Compile Include="src\blockentity\RegiterBlockEntities.cs" />
+    <Compile Include="src\blocks\CrystalObeliskBlock.cs" />
+    <Compile Include="src\blocks\CrystalPlanter.cs" />
     <Compile Include="src\blocks\OreCrystalsCrystal.cs" />
     <Compile Include="src\blocks\OreCrystalsGlass.cs" />
     <Compile Include="src\blocks\OreCrystalsRegisterBlocks.cs" />
     <Compile Include="src\commands\OreCrystalsRegisterCommands.cs" />
+    <Compile Include="src\entities\EntityCrystalHeart.cs" />
+    <Compile Include="src\entities\EntityCrystalLocust.cs" />
+    <Compile Include="src\entities\EntityCrystalGrenade.cs" />
+    <Compile Include="src\entities\RegisterEntities.cs" />
+    <Compile Include="src\entity\AITask\AIRegisterTask.cs" />
+    <Compile Include="src\entity\AITask\AiTaskCrystalLocustBomb.cs" />
+    <Compile Include="src\items\ItemCrystalGrenade.cs" />
+    <Compile Include="src\items\ItemCrystalHeart.cs" />
     <Compile Include="src\items\OreCrystalsCrystalShard.cs" />
     <Compile Include="src\items\OreCrystalsRegisterItems.cs" />
+    <Compile Include="src\utility\CrystalColour.cs" />
+    <Compile Include="src\utility\Init.cs" />
     <Compile Include="src\worldgen\GenerateOreCrystals.cs" />
     <None Include="assets\orecrystals\blocktypes\orecrystals_glass.json" />
     <None Include="assets\orecrystals\recipes\grid\block\orecrystals_pottedcrystal_recipes.json" />
+    <None Include="assets\orecrystals\shapes\block\crystal_obelisk_ne_bottom.json" />
+    <None Include="assets\orecrystals\shapes\block\crystal_obelisk_ne_top.json" />
+    <None Include="assets\orecrystals\shapes\block\crystal_obelisk_nw_bottom.json" />
+    <None Include="assets\orecrystals\shapes\block\crystal_obelisk_nw_top.json" />
+    <None Include="assets\orecrystals\shapes\block\crystal_obelisk_se_bottom.json" />
+    <None Include="assets\orecrystals\shapes\block\crystal_obelisk_se_top.json" />
+    <None Include="assets\orecrystals\shapes\block\crystal_obelisk_sw_bottom.json" />
+    <None Include="assets\orecrystals\shapes\block\crystal_obelisk_sw_top.json" />
+    <None Include="assets\orecrystals\shapes\block\crystal_planter.json" />
     <None Include="assets\orecrystals\shapes\block\orecrystals_pottedcrystal.json" />
+    <None Include="assets\orecrystals\shapes\block\seed_crystals.json" />
+    <None Include="assets\orecrystals\shapes\entity\air\crystal_grenade.json" />
+    <None Include="assets\orecrystals\shapes\entity\air\crystal_heart.json" />
+    <None Include="assets\orecrystals\shapes\entity\land\crystal_locust.json" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="assets\orecrystals\itemtypes\tools\" />
+    <Folder Include="assets\orecrystals\shapes\item\tool\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="assets\orecrystals\itemtypes\orecrystals_crystalshard.json" />
-    <None Include="assets\orecrystals\recipes\grid\block\orecrystals_glasscrystal_recipes.json" />
-    <None Include="assets\orecrystals\recipes\grid\block\orecrystals_nuggetcrystal_recipes.json" />
     <None Include="assets\orecrystals\recipes\grid\block\orecrystals_orecrystal_recipes.json" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

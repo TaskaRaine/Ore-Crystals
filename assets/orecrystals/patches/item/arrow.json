@@ -1,0 +1,148 @@
+﻿[
+  {
+    "op": "remove",
+    "path": "/shapeByType/*",
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "remove",
+    "path": "/texturesByType/*",
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/creativeinventory",
+    "value": {
+        "crystals": ["*-crystal"]
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+      "op": "add",
+      "path": "/glowLevelByType",
+      "file": "game:itemtypes/tool/arrow",
+      "value": {
+        "arrow-crystal": 100
+      }
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/arrow-crystal",
+    "value": {
+      "base": "orecrystals:item/tool/crystalarrow"
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/arrow-copper",
+    "value": {
+      "base": "item/tool/arrow-copper"
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/arrow-tinbronze",
+    "value": {
+      "base": "item/tool/arrow-copper"
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/arrow-bismuthbronze",
+    "value": {
+      "base": "item/tool/arrow-copper"
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/arrow-bismuthbronze",
+    "value": {
+      "base": "item/tool/arrow-copper"
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/arrow-blackbronze",
+    "value": {
+      "base": "item/tool/arrow-copper"
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/arrow-iron",
+    "value": {
+      "base": "item/tool/arrow-copper"
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/arrow-meteoriciron",
+    "value": {
+      "base": "item/tool/arrow-copper"
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/shapeByType/arrow-steel",
+    "value": {
+      "base": "item/tool/arrow-copper"
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "crystal",
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/arrow-crystal",
+    "value": {
+      "feather": {
+        "base": "item/tool/material/feather"
+      },
+      "feather2": {
+        "base": "item/tool/material/feather2"
+      },
+      "string": {
+        "base": "item/tool/material/string"
+      },
+      "handle": {
+        "base": "orecrystals:block/quartz"
+      },
+      "crystal": {
+        "base": "orecrystals:block/quartz"
+      }
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/itemlightByType",
+    "value": {
+        "arrow-crystal": [0, 0, 6]
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/damageByType/*-crystal",
+    "value": 3.0,
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/attributes/breakChanceOnImpactByType/*-crystal",
+    "value": 0.4,
+    "file": "game:itemtypes/tool/arrow"
+  }
+]

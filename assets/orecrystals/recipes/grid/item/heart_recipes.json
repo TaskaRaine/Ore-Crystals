@@ -1,0 +1,173 @@
+﻿[
+	{
+		//-- Heart Core --//
+		ingredientPattern: "KH",
+		width: 1,
+		height: 2,
+		ingredients: {
+			"K": { type: "item", code: "game:knife-*", isTool: true },
+			"H": { type: "item", code: "crystal_heart-*" }
+		},
+		output: {
+			type: "item", code: "heart_core", quantity: 1
+		}
+	},
+	{
+		//-- Heart From Nugget --//
+		ingredientPattern: "SMSMHMSMS",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"S": { type: "item", code: "orecrystals_crystalshard", quantity: 4 },
+			"M": { 
+				type: "item", 
+				name: "mineral",
+				code: "game:nugget-*",
+				allowedVariants: ["nativecopper", "limonite", "galena", "cassiterite", "chromite", "ilmenite", "sphalerite", "bismuthinite", "magnetite",
+				"hematite", "malachite", "pentlandite", "uranium", "wolframite", "rhodochrosite"],
+				quantity: 1
+			},
+			"H": {
+				type: "item",
+				code: "heart_core",
+				quantity: 1
+			}
+		},
+		output: {
+			type: "item", 
+			code: "crystal_heart-{mineral}",
+			quantity: 1
+		}
+	},
+	{
+		//-- Heart From Ore --//
+		ingredientPattern: "SMSMHMSMS",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"S": { type: "item", code: "orecrystals_crystalshard", quantity: 4 },
+			"M": { 
+				type: "item", 
+				name: "mineral",
+				code: "game:ore-*",
+				allowedVariants: ["lapislazuli", "corundum", "anthracite", "borax", "cinnabar", "lignite", "bituminouscoal", "sylvite", "sulfur",
+				"fluorite", "graphite", "kernite", "phosphorite", "olivine"],
+				quantity: 1
+			},
+			"H": {
+				type: "item",
+				code: "heart_core",
+				quantity: 1
+			}
+		},
+		output: {
+			type: "item", 
+			code: "crystal_heart-{mineral}",
+			quantity: 1
+		}
+	},
+	{
+		//-- Heart From Gem --//
+		ingredientPattern: "SMSMHMSMS",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"S": { type: "item", code: "orecrystals_crystalshard", quantity: 4 },
+			"M": { 
+				type: "item", 
+				name: "mineral",
+				code: "game:gem-*-rough",
+				allowedVariants: ["diamond", "emerald", "olivine_peridot"],
+				quantity: 1
+			},
+			"H": {
+				type: "item",
+				code: "heart_core",
+				quantity: 1
+			}
+		},
+		output: {
+			type: "item", 
+			code: "crystal_heart-{mineral}",
+			quantity: 1
+		}
+	},
+	{
+		//-- Heart From Quartz --//
+		ingredientPattern: "SMSMHMSMS",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"S": { type: "item", code: "orecrystals_crystalshard", quantity: 4 },
+			"M": { 
+				type: "item", 
+				name: "mineral",
+				code: "game:*",
+				allowedVariants: ["clearquartz", "ore-quartz"],
+				quantity: 1
+			},
+			"H": {
+				type: "item",
+				code: "heart_core",
+				quantity: 1
+			}
+		},
+		output: {
+			type: "item", 
+			code: "crystal_heart-quartz",
+			quantity: 1
+		}
+	},
+	{
+		//-- Heart From Flint --//
+		ingredientPattern: "SMSMHMSMS",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"S": { type: "item", code: "orecrystals_crystalshard", quantity: 4 },
+			"M": { 
+				type: "item", 
+				name: "mineral",
+				code: "game:*",
+				allowedVariants: ["flint"],
+				quantity: 1
+			},
+			"H": {
+				type: "item",
+				code: "heart_core",
+				quantity: 1
+			}
+		},
+		output: {
+			type: "item", 
+			code: "crystal_heart-{mineral}",
+			quantity: 1
+		}
+	},
+	{
+		//-- Heart From Silver/Gold --//
+		ingredientPattern: "SMSMHMSMS",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"S": { type: "item", code: "orecrystals_crystalshard", quantity: 4 },
+			"M": { 
+				type: "item", 
+				name: "mineral",
+				code: "game:nugget-*",
+				allowedVariants: ["nativesilver", "nativegold"],
+				quantity: 1
+			},
+			"H": {
+				type: "item",
+				code: "heart_core",
+				quantity: 1
+			}
+		},
+		output: {
+			type: "item", 
+			code: "crystal_heart-quartz_{mineral}",
+			quantity: 1
+		}
+	}
+]

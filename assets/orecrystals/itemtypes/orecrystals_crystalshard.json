@@ -1,7 +1,10 @@
 ﻿{
 	code: "orecrystals_crystalshard",
 	class: "orecrystals_crystalshard",
-	creativeinventory: { "general": ["*"], "crystals":["*"] },
+	attributes: {
+		"itemlight": [0, 0, 1]
+	},
+	creativeinventory: { "general": ["*"], "items":["*"], "crystals":["*"] },
 	maxstacksize: 64,
 	texture: {
 		base: "item/crystalshard"

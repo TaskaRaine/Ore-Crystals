@@ -1,0 +1,256 @@
+﻿{
+	code: "crystal_heart",
+	class: "ItemCrystalHeart",
+	attributesByType: {
+		"*-alum": {
+			"itemlight": [10, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-anthracite": {
+			"itemlight": [47, 1, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-bismuthinite": {
+			"itemlight": [14, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-bituminouscoal": {
+			"itemlight": [0, 1, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-borax": {
+			"itemlight": [11, 1, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-cassiterite": {
+			"itemlight": [6, 3, 4 ],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-chromite": {
+			"itemlight": [52, 1, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-cinnabar": {
+			"itemlight": [62, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-corundum": {
+			"itemlight": [59, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-flint": {
+			"itemlight": [8, 5, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-fluorite": {
+			"itemlight": [9, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-galena": {
+			"itemlight": [35, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-galena_nativesilver": {
+			"itemlight": [35, 1, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-graphite": {
+			"itemlight": [3, 5, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-hematite": {
+			"itemlight": [1, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-ilmenite": {
+			"itemlight": [2, 5, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-kernite": {
+			"itemlight": [6, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-lapislazuli": {
+			"itemlight": [38, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-lignite": {
+			"itemlight": [3, 5, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-limonite": {
+			"itemlight": [5, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-magnetite": {
+			"itemlight": [40, 1, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-malachite": {
+			"itemlight": [27, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-nativecopper": {
+			"itemlight": [3, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-olivine": {
+			"itemlight": [12, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-olivine_peridot": {
+			"itemlight": [15, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-diamond": {
+			"itemlight": [33, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-emerald": {
+			"itemlight": [26, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-pentlandite": {
+			"itemlight": [7, 5, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-phosphorite": {
+			"itemlight": [4, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-quartz": {
+			"itemlight": [0, 0, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-quartz_nativegold": {
+			"itemlight": [8, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-quartz_nativesilver": {
+			"itemlight": [34, 1, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-rhodochrosite": {
+			"itemlight": [1, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-sphalerite": {
+			"itemlight": [6, 5, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-sulfur": {
+			"itemlight": [8, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-sylvite": {
+			"itemlight": [3, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-uranium": {
+			"itemlight": [11, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		},
+		"*-wolframite": {
+			"itemlight": [40, 3, 4],
+			handbook: {
+				groupBy:["crystal_heart-*"]
+			}
+		}
+	},
+	variantgroups: [
+		{ code: "crystal", states: ["alum", "anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "flint", "fluorite", "galena", 
+		"galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", "olivine_peridot", "diamond", 
+		"emerald", "pentlandite", "phosphorite", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"] }
+	],
+	creativeinventory: { "general": ["*"], "creatures":["*"], "crystals":["*"] },
+	maxstacksize: 1,
+	texture: {
+		base: "item/crystalheart_{crystal}"
+	},
+	guiTransform: {
+		translation: { x: 1.5, y: 3, z: 0 },
+		scale: 0.8
+	},
+	fpHandTransform: {
+		translation: { x: 0.05, y: -0.3, z: 0 }
+	},
+	tpHandTransform: {
+		translation: { x: -2.5, y: -1.6, z: -1.9 },
+		rotation: { x: 0, y: 0, z: 90 },
+		scale: 0.25
+	}
+}

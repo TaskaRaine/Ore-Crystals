@@ -154,5 +154,37 @@
 			code: "orecrystals_glass-flint",
 			quantity: 4
 		}
+	},
+	{
+		//-- Silver/Gold Glass --//
+
+		ingredientPattern: "SGSGMGSGS",
+		width: 3,
+		height: 3,
+		ingredients: {
+			"S": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1,
+			},
+			"G": {
+				type: "item",
+				code: "game:*",
+				allowedVariants: ["clearquartz", "ore-quartz"],
+				quantity: 1,
+			},
+			"M": {
+				type: "item",
+				name: "mineral",
+				code: "game:nugget-*",
+				allowedVariants: ["nativesilver", "nativegold"],
+				quantity: 1,
+			},
+		},
+		output: {
+			type: "block",
+			code: "orecrystals_glass-quartz_{mineral}",
+			quantity: 4
+		}
 	}
 ]

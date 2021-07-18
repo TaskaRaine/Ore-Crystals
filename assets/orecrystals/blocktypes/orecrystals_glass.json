@@ -1,6 +1,5 @@
 ﻿{
 	code:"orecrystals_glass",
-	class: "orecrystals_glass",
 	creativeinventory: { "general": ["*"], "construction": ["*"], "crystals":["*"] },
 	attributes: {
 		handbook: {
@@ -8,7 +7,7 @@
 		}
 	},
 	variantgroups: [
-		{ code: "crystal", states: ["anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "diamond", "emerald", "flint", "fluorite", 
+		{ code: "crystal", states: ["alum", "anthracite", "bismuthinite", "bituminouscoal", "borax", "cassiterite", "chromite", "cinnabar", "corundum", "diamond", "emerald", "flint", "fluorite", 
 		"galena", "galena_nativesilver", "graphite", "hematite", "ilmenite", "kernite", "lapislazuli", "lignite", "limonite", "magnetite", "malachite", "nativecopper", "olivine", 
 		"olivine_peridot", "pentlandite", "phosphorite", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"] }
 	],

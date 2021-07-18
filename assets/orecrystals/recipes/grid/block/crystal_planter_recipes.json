@@ -1,0 +1,32 @@
+﻿[
+	{
+		ingredientPattern: "CCCCOC P ",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 5
+			},
+			"O": {
+				type: "block",
+				name: "ore",
+				code: "game:ore-*",
+				quantity: 1
+			},
+			"P": {
+				type: "block",
+				name: "planter",
+				code: "game:clayplanter-*",
+				allowedVariants: ["burnt", "amber", "ashforest", "copper", "cthonic", "earthern", "loam", "ochre", "rime", "seasalt", "tenmoku", "undergrowth"],
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "crystal_planter-anthracite-chalk-burnt",
+			quantity: 1
+		}
+	}
+]
