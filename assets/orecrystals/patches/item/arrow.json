@@ -11,10 +11,8 @@
   },
   {
     "op": "add",
-    "path": "/creativeinventory",
-    "value": {
-        "crystals": ["*-crystal"]
-    },
+    "path": "/creativeinventory/crystals",
+    "value": ["*-crystal"],
     "file": "game:itemtypes/tool/arrow"
   },
   {
@@ -35,72 +33,10 @@
   },
   {
     "op": "add",
-    "path": "/shapeByType/arrow-copper",
+    "path": "/shapeByType/*",
     "value": {
       "base": "item/tool/arrow-copper"
     },
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/shapeByType/arrow-tinbronze",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/shapeByType/arrow-bismuthbronze",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/shapeByType/arrow-bismuthbronze",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/shapeByType/arrow-blackbronze",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/shapeByType/arrow-iron",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/shapeByType/arrow-meteoriciron",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/shapeByType/arrow-steel",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/variantgroups/0/states/-",
-    "value": "crystal",
     "file": "game:itemtypes/tool/arrow"
   },
   {
@@ -123,6 +59,20 @@
         "base": "orecrystals:block/quartz"
       }
     },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/texturesByType/*",
+    "value": {
+      "material": { "base": "block/metal/ingot/{material}" }
+    },
+    "file": "game:itemtypes/tool/arrow"
+  },
+  {
+    "op": "add",
+    "path": "/variantgroups/0/states/-",
+    "value": "crystal",
     "file": "game:itemtypes/tool/arrow"
   },
   {

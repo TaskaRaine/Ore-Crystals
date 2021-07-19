@@ -4,19 +4,22 @@ What's that faint glow in the distance...? Is it a way out of this cave? Is it s
 
 No. It's strange, crystallized metal growing from this ore... Huh. Maybe those temporal storms we've been having have something to do with it?
 
+Deep down in the depths of the world there are many temporal mysteries. A semi-sentient creature enthroned upon a structure of crystal is one such mysteries. It seems to burst with energy, enriching the local cluster of crystals with new life, causing them to rapidly grow an an unnatural rate. They even seem to have taken over the machinery of the depths, the locusts, infesting them with crystal and somehow influenced them to be their guardians.
+
+It may be dangerous, but perhaps...these 'hearts', and these crystals... will they be useful, in some way? 
+
+
 ![Screenshot](resources/images/DeepDarkOreCrystals.png)
 
 ### Description
 
 Welcome to the GitHub repository for the Vintage Story mod, Ore Crystals! 
 
-This is a relatively simple quality of life/visual mod that makes cave exploring a little more exciting and makes those ores a little more noticable!
-
-This mod adds crystals to the worldgen, growing out the sides of any vanilla ore blocks with a surface open to air. They are fragile structures that have a chance to break into shards which can then be used to craft various crystal-based blocks.
-
 ### Releases
 
 ### Vintage Story 1.15.0+
+[Version 1.3.1](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.1/OreCrystals_V1.3.1.zip)
+
 [Version 1.3.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.0/OreCrystals_V1.3.0.zip)
 
 ### Vintage Story 1.13.0 - 1.14.0+
@@ -43,6 +46,9 @@ This mod adds crystals to the worldgen, growing out the sides of any vanilla ore
 [Version 1.0.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.0.0.zip)
 
 ### Changelog
+
+#### Version 1.3.1
+Fixed an issue where a patch to the arrow caused all vanilla game arrows to be removed from the creative inventory/handbook 
 
 #### Version 1.3.0
 Major update to Ore Crystals which features new harvesting and crystal farming mechanics, along with new blocks and items!
