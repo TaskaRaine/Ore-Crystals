@@ -18,6 +18,8 @@ Welcome to the GitHub repository for the Vintage Story mod, Ore Crystals!
 ### Releases
 
 ### Vintage Story 1.15.0+
+[Version 1.3.2](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.2/OreCrystals_V1.3.2.zip)
+
 [Version 1.3.1](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.1/OreCrystals_V1.3.1.zip)
 
 [Version 1.3.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.0/OreCrystals_V1.3.0.zip)
@@ -47,8 +49,23 @@ Welcome to the GitHub repository for the Vintage Story mod, Ore Crystals!
 
 ### Changelog
 
+#### Version 1.3.2
+Increased stack size of Crystal Hearts to 8.
+
+Increased stack size of Crystal Grenades to 8.
+
+Added better detailed death messages for heart/locust/grenade deaths.
+
+Created a placeholder crystal planter that is the sole craftable planter. It better explains the crafting process for the variant blocks as a nondescript crystal planter.
+
+Fixed an issue where crystal planters were not craftable.
+
+Fixed an issue where obelisks could not be broken with chisels.
+
+
 #### Version 1.3.1
 Fixed an issue where a patch to the arrow caused all vanilla game arrows to be removed from the creative inventory/handbook 
+
 
 #### Version 1.3.0
 Major update to Ore Crystals which features new harvesting and crystal farming mechanics, along with new blocks and items!

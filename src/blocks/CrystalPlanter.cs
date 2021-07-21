@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Text;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Config;
 using Vintagestory.GameContent;
@@ -37,9 +38,19 @@ namespace OreCrystals
         {
             base.GetHeldItemInfo(inSlot, dsc, world, withDebugInfo);
 
-            string description = Lang.Get("orecrystals:blockhelp-crystal-planter-desc");
+            //string description = Lang.Get("orecrystals:blockhelp-crystal-planter-desc");
 
-            dsc.Append(description);
+            //dsc.Append(description);
         }
+        /*
+        public override RichTextComponentBase[] GetHandbookInfo(ItemSlot inSlot, ICoreClientAPI capi, ItemStack[] allStacks, ActionConsumable<string> openDetailPageFor)
+        {
+            RichTextComponentBase[] oldText = base.GetHandbookInfo(inSlot, capi, allStacks, openDetailPageFor);
+            RichTextComponentBase[] derp = new RichTextComponentBase[1] { new RichTextComponent(capi, Lang.Get("orecrystals:blockhelp-crystal-planter-desc"), CairoFont.WhiteSmallText()) };
+
+            oldText[1] = new RichTextComponent(capi, Lang.Get("orecrystals:blockhelp-crystal-planter-title"), CairoFont.WhiteSmallishText());
+            return oldText.Concat(derp).ToArray();
+        }
+        */
     }
 }

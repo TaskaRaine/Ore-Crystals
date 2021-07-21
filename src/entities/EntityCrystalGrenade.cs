@@ -173,7 +173,7 @@ namespace OreCrystals
                 new BlockPos((int)Math.Ceiling(ServerPos.X + grenadeRange), (int)Math.Ceiling(ServerPos.Y + grenadeRange), (int)Math.Ceiling(ServerPos.Z + grenadeRange)), 
                 (entity) =>
                 {
-                    entity.ReceiveDamage(new DamageSource(), grenadeDamage);
+                    entity.ReceiveDamage(new DamageSource() { SourceEntity = this }, grenadeDamage);
 
                     return true;
                 });

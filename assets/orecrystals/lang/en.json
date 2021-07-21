@@ -28,7 +28,7 @@ A few useful things can come from these here crystals...!
 
 To weaponize them I've thought up some nifty applications. It's possible to make <a href=\'handbook://item-arrow-crystal\'>luminous arrows</a> that light up the darkest of caves. It's also possible to make devastating <a href=\'handbooksearch://crystal grenade\'>grenades</a> using the volatile nature of the <a href=\'handbooksearch://crystal heart\'>crystal hearts</a>.
 
-Of course, being as pretty as they are, these crystals make for some wonderful decor! Make them into some pretty colored <a href=\'handbooksearch://crystalline\'>crystalline glass</a>. If there's a flowerpot or planter handy, why not make <a href=\'handbooksearch://potted crystal\'>potted crystals</a> or <a href=\'handbook://block-orecrystals:crystal_planter-anthracite-chalk-burnt\'>large potted crystals</a> with them?
+Of course, being as pretty as they are, these crystals make for some wonderful decor! Make them into some pretty colored <a href=\'handbooksearch://crystalline\'>crystalline glass</a>. If there's a flowerpot or planter handy, why not make <a href=\'handbooksearch://potted\'>potted crystals</a> or <a href=\'handbook://block-orecrystals:crystal_planter-default-chalk-burnt\'>large potted crystals</a> with them?
 ",
 
 
@@ -42,7 +42,12 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 
 	"entityhelp-heart-grab": "Take",
 
-	"blockhelp-crystal-planter-desc": "Crafted in grid by placing an ore block atop a planter then surrounding the ore with 5 stacks of 5 crystal shards.",
+	"blockhelp-crystal-planter-title": "Large Potted Crystal Variants",
+	"blockhelp-crystal-planter-desc": 
+"
+Crafted in grid by placing any ore block atop any planter then surrounding the ore with 5 stacks of 5 crystal shards.
+
+The resulting crystal/ore/stone for the crystal planter is based on the ore block used. They will be placed within the planter provided. The image above is not representative of the final product. You will see it in the output slot when you attempt to craft it.",
 
 	"item-orecrystals_crystalshard": "Crystal Shard",
 	"item-luminousrod": "Luminous Rod",
@@ -57,8 +62,14 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-crystal_obelisk-sw-top-*": "Crystal Obelisk",
 	"block-crystal_obelisk-se-top-*": "Crystal Obelisk",
 
+	"block-crystal_planter-default-*": "Large Potted Crystal",
+
 	"item-creature-crystal_locust-*": "Crystal Locust",
 	"item-dead-creature-crystal_locust-*": "Dead Crystal Locust",
+
+	"game:prefixandcreature-crystal_locustalum": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadealum": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartalum": "an angry crystal heart",
 
 	"item-crystal_grenade-alum": "Alum Crystal Grenade",
 	"item-creature-crystal_heart-alum": "Alum Crystal Heart",
@@ -73,6 +84,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-alum-*": "Potted Alum Crystal",
 	"block-crystal_planter-alum-*": "Large Potted Alum Crystal",
 
+	"game:prefixandcreature-crystal_locustanthracite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadeanthracite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartanthracite": "an angry crystal heart",
+
 	"item-crystal_grenade-anthracite": "Anthracite Crystal Grenade",
 	"item-creature-crystal_heart-anthracite": "Anthracite Crystal Heart",
 	"item-crystal_heart-anthracite": "Anthracite Crystal Heart",
@@ -85,6 +100,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-anthracite": "Crystalline Anthracite Glass",
 	"block-orecrystals_pottedcrystal-anthracite-*": "Potted Anthracite Crystal",
 	"block-crystal_planter-anthracite-*": "Large Potted Anthracite Crystal",
+
+	"game:prefixandcreature-crystal_locustbismuthinite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadebismuthinite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartbismuthinite": "an angry crystal heart",
 
 	"item-crystal_grenade-bismuthinite": "Bismuthinite Crystal Grenade",
 	"item-creature-crystal_heart-bismuthinite": "Bismuthinite Crystal Heart",
@@ -99,6 +118,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-bismuthinite-*": "Potted Bismuthinite Crystal",
 	"block-crystal_planter-bismuthinite-*": "Large Potted Bismuthinite Crystal",
 
+	"game:prefixandcreature-crystal_locustbituminouscoal": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadebituminouscoal": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartbituminouscoal": "an angry crystal heart",
+
 	"item-crystal_grenade-bituminouscoal": "Coal Crystal Grenade",
 	"item-creature-crystal_heart-bituminouscoal": "Coal Crystal Heart",
 	"item-crystal_heart-bituminouscoal": "Coal Crystal Heart",
@@ -111,6 +134,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-bituminouscoal": "Crystalline Coal Glass",
 	"block-orecrystals_pottedcrystal-bituminouscoal-*": "Potted Coal Crystal",
 	"block-crystal_planter-bituminouscoal-*": "Large Potted Coal Crystal",
+
+	"game:prefixandcreature-crystal_locustborax": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadeborax": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartborax": "an angry crystal heart",
 
 	"item-crystal_grenade-borax": "Borax Crystal Grenade",
 	"item-creature-crystal_heart-borax": "Borax Crystal Heart",
@@ -125,6 +152,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-borax-*": "Potted Borax Crystal",
 	"block-crystal_planter-borax-*": "Large Potted Borax Crystal",
 
+	"game:prefixandcreature-crystal_locustcassiterite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadecassiterite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartcassiterite": "an angry crystal heart",
+
 	"item-crystal_grenade-cassiterite": "Cassiterite Crystal Grenade",
 	"item-creature-crystal_heart-cassiterite": "Cassiterite Crystal Heart",
 	"item-crystal_heart-cassiterite": "Cassiterite Crystal Heart",
@@ -137,6 +168,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-cassiterite": "Crystalline Cassiterite Glass",
 	"block-orecrystals_pottedcrystal-cassiterite-*": "Potted Cassiterite Crystal",
 	"block-crystal_planter-cassiterite-*": "Large Potted Cassiterite Crystal",
+
+	"game:prefixandcreature-crystal_locustchromite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadechromite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartchromite": "an angry crystal heart",
 
 	"item-crystal_grenade-chromite": "Chromite Crystal Grenade",
 	"item-creature-crystal_heart-chromite": "Chromite Crystal Heart",
@@ -151,6 +186,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-chromite-*": "Potted Chromite Crystal",
 	"block-crystal_planter-chromite-*": "Large Potted Chromite Crystal",
 
+	"game:prefixandcreature-crystal_locustcinnabar": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadecinnabar": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartcinnabar": "an angry crystal heart",
+
 	"item-crystal_grenade-cinnabar": "Cinnabar Crystal Grenade",
 	"item-creature-crystal_heart-cinnabar": "Cinnabar Crystal Heart",
 	"item-crystal_heart-cinnabar": "Cinnabar Crystal Heart",
@@ -163,6 +202,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-cinnabar": "Crystalline Cinnabar Glass",
 	"block-orecrystals_pottedcrystal-cinnabar-*": "Potted Cinnabar Crystal",
 	"block-crystal_planter-cinnabar-*": "Large Potted Cinnabar Crystal",
+
+	"game:prefixandcreature-crystal_locustcorundum": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadecorundum": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartcorundum": "an angry crystal heart",
 
 	"item-crystal_grenade-corundum": "Corundum Crystal Grenade",
 	"item-creature-crystal_heart-corundum": "Corundum Crystal Heart",
@@ -177,6 +220,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-corundum-*": "Potted Corundum Crystal",
 	"block-crystal_planter-corundum-*": "Large Potted Corundum Crystal",
 
+	"game:prefixandcreature-crystal_locustdiamond": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadediamond": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartdiamond": "an angry crystal heart",
+
 	"item-crystal_grenade-diamond": "Diamond Crystal Grenade",
 	"item-creature-crystal_heart-diamond": "Diamond Crystal Heart",
 	"item-crystal_heart-diamond": "Diamond Crystal Heart",
@@ -189,6 +236,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-diamond": "Crystalline Diamond Glass",
 	"block-orecrystals_pottedcrystal-diamond-*": "Potted Diamond Crystal",
 	"block-crystal_planter-diamond-*": "Large Potted Diamond Crystal",
+
+	"game:prefixandcreature-crystal_locustemerald": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadeemerald": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartemerald": "an angry crystal heart",
 
 	"item-crystal_grenade-emerald": "Emerald Crystal Grenade",
 	"item-creature-crystal_heart-emerald": "Emerald Crystal Heart",
@@ -203,6 +254,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-emerald-*": "Potted Emerald Crystal",
 	"block-crystal_planter-emerald-*": "Large Potted Emerald Crystal",
 
+	"game:prefixandcreature-crystal_locustflint": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadeflint": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartflint": "an angry crystal heart",
+
 	"item-crystal_grenade-flint": "Flint Crystal Grenade",
 	"item-creature-crystal_heart-flint": "Flint Crystal Heart",
 	"item-crystal_heart-flint": "Flint Crystal Heart",
@@ -215,6 +270,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-flint": "Crystalline Flint Glass",
 	"block-orecrystals_pottedcrystal-flint-*": "Potted Flint Crystal",
 	"block-crystal_planter-flint-*": "Large Potted Flint Crystal",
+
+	"game:prefixandcreature-crystal_locustfluorite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadefluorite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartfluorite": "an angry crystal heart",
 
 	"item-crystal_grenade-fluorite": "Fluorite Crystal Grenade",
 	"item-creature-crystal_heart-fluorite": "Fluorite Crystal Heart",
@@ -229,6 +288,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-fluorite-*": "Potted Fluorite Crystal",
 	"block-crystal_planter-fluorite-*": "Large Potted Fluorite Crystal",
 
+	"game:prefixandcreature-crystal_locustgalena": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadegalena": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartgalena": "an angry crystal heart",
+
 	"item-crystal_grenade-galena": "Galena Crystal Grenade",
 	"item-creature-crystal_heart-galena": "Galena Crystal Heart",
 	"item-crystal_heart-galena": "Galena Crystal Heart",
@@ -241,6 +304,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-galena": "Crystalline Galena Glass",
 	"block-orecrystals_pottedcrystal-galena-*": "Potted Galena Crystal",
 	"block-crystal_planter-galena-*": "Large Potted Galena Crystal",
+
+	"game:prefixandcreature-crystal_locustgalena_nativesilver": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadegalena_nativesilver": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartgalena_nativesilver": "an angry crystal heart",
 
 	"item-crystal_grenade-galena_nativesilver": "Galena Silver Crystal Grenade",
 	"item-creature-crystal_heart-galena_nativesilver": "Galena Silver Crystal Heart",
@@ -255,6 +322,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-galena_nativesilver-*": "Potted Galena Silver Crystal",
 	"block-crystal_planter-galena_nativesilver-*": "Large Potted Galena Silver Crystal",
 
+	"game:prefixandcreature-crystal_locustgraphite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadegraphite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartgraphite": "an angry crystal heart",
+
 	"item-crystal_grenade-graphite": "Graphite Crystal Grenade",
 	"item-creature-crystal_heart-graphite": "Graphite Crystal Heart",
 	"item-crystal_heart-graphite": "Graphite Crystal Heart",
@@ -267,6 +338,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-graphite": "Crystalline Graphite Glass",
 	"block-orecrystals_pottedcrystal-graphite-*": "Potted Graphite Crystal",
 	"block-crystal_planter-graphite-*": "Large Potted Graphite Crystal",
+
+	"game:prefixandcreature-crystal_locusthematite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadehematite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_hearthematite": "an angry crystal heart",
 
 	"item-crystal_grenade-hematite": "Hematite Crystal Grenade",
 	"item-creature-crystal_heart-hematite": "Hematite Crystal Heart",
@@ -281,6 +356,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-hematite-*": "Potted Hematite Crystal",
 	"block-crystal_planter-hematite-*": "Large Potted Hematite Crystal",
 
+	"game:prefixandcreature-crystal_locustilmenite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadeilmenite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartilmenite": "an angry crystal heart",
+
 	"item-crystal_grenade-ilmenite": "Ilmenite Crystal Grenade",
 	"item-creature-crystal_heart-ilmenite": "Ilmenite Crystal Heart",
 	"item-crystal_heart-ilmenite": "Ilmenite Crystal Heart",
@@ -293,6 +372,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-ilmenite": "Crystalline Ilmenite Glass",
 	"block-orecrystals_pottedcrystal-ilmenite-*": "Potted Ilmenite Crystal",
 	"block-crystal_planter-ilmenite-*": "Large Potted Ilmenite Crystal",
+
+	"game:prefixandcreature-crystal_locustkernite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadekernite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartkernite": "an angry crystal heart",
 
 	"item-crystal_grenade-kernite": "Kernite Crystal Grenade",
 	"item-creature-crystal_heart-kernite": "Kernite Crystal Heart",
@@ -307,6 +390,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-kernite-*": "Potted Kernite Crystal",
 	"block-crystal_planter-kernite-*": "Large Potted Kernite Crystal",
 
+	"game:prefixandcreature-crystal_locustlapislazuli": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadelapislazuli": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartlapislazuli": "an angry crystal heart",
+
 	"item-crystal_grenade-lapislazuli": "Lapis Lazuli Crystal Grenade",
 	"item-creature-crystal_heart-lapislazuli": "Lapis Lazuli Crystal Heart",
 	"item-crystal_heart-lapislazuli": "Lapis Lazuli Crystal Heart",
@@ -319,6 +406,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-lapislazuli": "Crystalline Lapis Lazuli Glass",
 	"block-orecrystals_pottedcrystal-lapislazuli-*": "Potted Lapis Lazuli Crystal",
 	"block-crystal_planter-lapislazuli-*": "Large Potted Lapis Lazuli Crystal",
+
+	"game:prefixandcreature-crystal_locustlignite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadelignite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartlignite": "an angry crystal heart",
 
 	"item-crystal_grenade-lignite": "Lignite Crystal Grenade",
 	"item-creature-crystal_heart-lignite": "Lignite Crystal Heart",
@@ -333,6 +424,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-lignite-*": "Potted Lignite Crystal",
 	"block-crystal_planter-lignite-*": "Large Potted Lignite Crystal",
 
+	"game:prefixandcreature-crystal_locustlimonite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadelimonite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartlimonite": "an angry crystal heart",
+
 	"item-crystal_grenade-limonite": "Limonite Crystal Grenade",
 	"item-creature-crystal_heart-limonite": "Limonite Crystal Heart",
 	"item-crystal_heart-limonite": "Limonite Crystal Heart",
@@ -345,6 +440,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-limonite": "Crystalline Limonite Glass",
 	"block-orecrystals_pottedcrystal-limonite-*": "Potted Limonite Crystal",
 	"block-crystal_planter-limonite-*": "Large Potted Limonite Crystal",
+
+	"game:prefixandcreature-crystal_locustmagnetite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenademagnetite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartmagnetite": "an angry crystal heart",
 
 	"item-crystal_grenade-magnetite": "Magnetite Crystal Grenade",
 	"item-creature-crystal_heart-magnetite": "Magnetite Crystal Heart",
@@ -359,6 +458,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-magnetite-*": "Potted Magnetite Crystal",
 	"block-crystal_planter-magnetite-*": "Large Potted Magnetite Crystal",
 
+	"game:prefixandcreature-crystal_locustmalachite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenademalachite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartmalachite": "an angry crystal heart",
+
 	"item-crystal_grenade-malachite": "Malachite Crystal Grenade",
 	"item-creature-crystal_heart-malachite": "Malachite Crystal Heart",
 	"item-crystal_heart-malachite": "Malachite Crystal Heart",
@@ -371,6 +474,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-malachite": "Crystalline Malachite Glass",
 	"block-orecrystals_pottedcrystal-malachite-*": "Potted Malachite Crystal",
 	"block-crystal_planter-malachite-*": "Large Potted Malachite Crystal",
+
+	"game:prefixandcreature-crystal_locustnativecopper": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadenativecopper": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartnativecopper": "an angry crystal heart",
 
 	"item-crystal_grenade-nativecopper": "Native Copper Crystal Grenade",
 	"item-creature-crystal_heart-nativecopper": "Native Copper Crystal Heart",
@@ -385,6 +492,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-nativecopper-*": "Potted Native Copper Crystal",
 	"block-crystal_planter-nativecopper-*": "Large Potted Native Copper Crystal",
 
+	"game:prefixandcreature-crystal_locustolivine": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadeolivine": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartolivine": "an angry crystal heart",
+
 	"item-crystal_grenade-olivine": "Olivine Crystal Grenade",
 	"item-creature-crystal_heart-olivine": "Olivine Crystal Heart",
 	"item-crystal_heart-olivine": "Olivine Crystal Heart",
@@ -397,6 +508,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-olivine": "Crystalline Olivine Glass",
 	"block-orecrystals_pottedcrystal-olivine-*": "Potted Olivine Crystal",
 	"block-crystal_planter-olivine-*": "Large Potted Olivine Crystal",
+
+	"game:prefixandcreature-crystal_locustolivine_peridot": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadeolivine_peridot": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartolivine_peridot": "an angry crystal heart",
 
 	"item-crystal_grenade-olivine_peridot": "Peridot Crystal Grenade",
 	"item-creature-crystal_heart-olivine_peridot": "Peridot Crystal Heart",
@@ -411,6 +526,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-olivine_peridot-*": "Potted Peridot Crystal",
 	"block-crystal_planter-olivine_peridot-*": "Large Potted Peridot Crystal",
 
+	"game:prefixandcreature-crystal_locustpentlandite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadepentlandite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartpentlandite": "an angry crystal heart",
+
 	"item-crystal_grenade-pentlandite": "Pentlandite Crystal Grenade",
 	"item-creature-crystal_heart-pentlandite": "Pentlandite Crystal Heart",
 	"item-crystal_heart-pentlandite": "Pentlandite Crystal Heart",
@@ -423,6 +542,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-pentlandite": "Crystalline Pentlandite Glass",
 	"block-orecrystals_pottedcrystal-pentlandite-*": "Potted Pentlandite Crystal",
 	"block-crystal_planter-pentlandite-*": "Large Potted Pentlandite Crystal",
+
+	"game:prefixandcreature-crystal_locustphosphorite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadephosphorite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartphosphorite": "an angry crystal heart",
 
 	"item-crystal_grenade-phosphorite": "Phosphorite Crystal Grenade",
 	"item-creature-crystal_heart-phosphorite": "Phosphorite Crystal Heart",
@@ -437,6 +560,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-phosphorite-*": "Potted Phosphorite Crystal",
 	"block-crystal_planter-phosphorite-*": "Large Potted Phosphorite Crystal",
 
+	"game:prefixandcreature-crystal_locustquartz": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadequartz": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartquartz": "an angry crystal heart",
+
 	"item-crystal_grenade-quartz": "Quartz Crystal Grenade",
 	"item-creature-crystal_heart-quartz": "Quartz Crystal Heart",
 	"item-crystal_heart-quartz": "Quartz Crystal Heart",
@@ -449,6 +576,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-quartz": "Crystalline Quartz Glass",
 	"block-orecrystals_pottedcrystal-quartz-*": "Potted Quartz Crystal",
 	"block-crystal_planter-quartz-*": "Large Potted Quartz Crystal",
+
+	"game:prefixandcreature-crystal_locustquartz_nativegold": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadequartz_nativegold": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartquartz_nativegold": "an angry crystal heart",
 
 	"item-crystal_grenade-quartz_nativegold": "Gold Crystal Grenade",
 	"item-creature-crystal_heart-quartz_nativegold": "Gold Crystal Heart",
@@ -463,6 +594,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-quartz_nativegold-*": "Potted Gold Crystal",
 	"block-crystal_planter-quartz_nativegold-*": "Large Potted Gold Crystal",
 
+	"game:prefixandcreature-crystal_locustquartz_nativesilver": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadequartz_nativesilver": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartquartz_nativesilver": "an angry crystal heart",
+
 	"item-crystal_grenade-quartz_nativesilver": "Silver Crystal Grenade",
 	"item-creature-crystal_heart-quartz_nativesilver": "Silver Crystal Heart",
 	"item-crystal_heart-quartz_nativesilver": "Silver Crystal Heart",
@@ -475,6 +610,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-quartz_nativesilver": "Crystalline Silver Glass",
 	"block-orecrystals_pottedcrystal-quartz_nativesilver-*": "Potted Silver Crystal",
 	"block-crystal_planter-quartz_nativesilver-*": "Large Potted Silver Crystal",
+
+	"game:prefixandcreature-crystal_locustrhodochrosite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenaderhodochrosite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartrhodochrosite": "an angry crystal heart",
 
 	"item-crystal_grenade-rhodochrosite": "Rhodochrosite Crystal Grenade",
 	"item-creature-crystal_heart-rhodochrosite": "Rhodochrosite Crystal Heart",
@@ -489,6 +628,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-rhodochrosite-*": "Potted Rhodochrosite Crystal",
 	"block-crystal_planter-rhodochrosite-*": "Large Potted Rhodochrosite Crystal",
 
+	"game:prefixandcreature-crystal_locustsphalerite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadesphalerite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartsphalerite": "an angry crystal heart",
+
 	"item-crystal_grenade-sphalerite": "Sphalerite Crystal Grenade",
 	"item-creature-crystal_heart-sphalerite": "Sphalerite Crystal Heart",
 	"item-crystal_heart-sphalerite": "Sphalerite Crystal Heart",
@@ -501,6 +644,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-sphalerite": "Crystalline Sphalerite Glass",
 	"block-orecrystals_pottedcrystal-sphalerite-*": "Potted Sphalerite Crystal",
 	"block-crystal_planter-sphalerite-*": "Large Potted Sphalerite Crystal",
+
+	"game:prefixandcreature-crystal_locustsulfur": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadesulfur": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartsulfur": "an angry crystal heart",
 
 	"item-crystal_grenade-sulfur": "Sulfur Crystal Grenade",
 	"item-creature-crystal_heart-sulfur": "Sulfur Crystal Heart",
@@ -515,6 +662,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-sulfur-*": "Potted Sulfur Crystal",
 	"block-crystal_planter-sulfur-*": "Large Potted Sulfur Crystal",
 
+	"game:prefixandcreature-crystal_locustsylvite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadesylvite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartsylvite": "an angry crystal heart",
+
 	"item-crystal_grenade-sylvite": "Sylvite Crystal Grenade",
 	"item-creature-crystal_heart-sylvite": "Sylvite Crystal Heart",
 	"item-crystal_heart-sylvite": "Sylvite Crystal Heart",
@@ -528,6 +679,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_pottedcrystal-sylvite-*": "Potted Sylvite Crystal",
 	"block-crystal_planter-sylvite-*": "Large Potted Sylvite Crystal",
 
+	"game:prefixandcreature-crystal_locusturanium": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadeuranium": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_hearturanium": "an angry crystal heart",
+
 	"item-crystal_grenade-uranium": "Uranium Crystal Grenade",
 	"item-creature-crystal_heart-uranium": "Uranium Crystal Heart",
 	"item-crystal_heart-uranium": "Uranium Crystal Heart",
@@ -540,6 +695,10 @@ Of course, being as pretty as they are, these crystals make for some wonderful d
 	"block-orecrystals_glass-uranium": "Crystalline Uranium Glass",
 	"block-orecrystals_pottedcrystal-uranium-*": "Potted Uranium Crystal",
 	"block-crystal_planter-uranium-*": "Large Potted Uranium Crystal",
+
+	"game:prefixandcreature-crystal_locustwolframite": "a crystal locust",
+	"game:prefixandcreature-crystal_grenadewolframite": "a crystal grenade explosion",
+	"game:prefixandcreature-crystal_heartwolframite": "an angry crystal heart",
 
 	"item-crystal_grenade-wolframite": "Wolframite Crystal Grenade",
 	"item-creature-crystal_heart-wolframite": "Wolframite Crystal Heart",

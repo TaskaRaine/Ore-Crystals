@@ -78,6 +78,7 @@
 		zOffset: 3,
 		reflective: true
 	},
+	resistance: 3.0,
 	lightAbsorption: 0,
 	lightHsvByType: {
 		"*-alum-*": [10, 3, 6],
@@ -124,7 +125,6 @@
 		"break": "block/glass",
 		"hit": "game:block/glass"
 	},
-	requiredMiningTier: 1,
 	drops: [
 		{ type: "item", code: "orecrystals_crystalshard", tool: "pickaxe", quantity: { avg: 2, var: 3, dist: "gaussian" }  },
 		{ type: "item", code: "luminousrod", tool: "pickaxe", quantity: { avg: .75, var: 3, dist: "invexp" } },

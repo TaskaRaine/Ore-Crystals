@@ -127,7 +127,7 @@ namespace OreCrystals
                             //-- Crystals broken by an enraged heart are like mines, dealing damage to any entity standing on it --//
                             World.GetEntitiesInsideCuboid(crystalToBreakPos, new BlockPos(crystalToBreakPos.X + 1, crystalToBreakPos.Y + 1, crystalToBreakPos.Z + 1), (entity) =>
                             {
-                                entity.ReceiveDamage(new DamageSource(), 2.0f);
+                                entity.ReceiveDamage(new DamageSource() { SourceEntity = this }, 2.0f);
 
                                 return true;
                             });

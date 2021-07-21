@@ -237,7 +237,7 @@
 		"emerald", "pentlandite", "phosphorite", "quartz", "quartz_nativegold", "quartz_nativesilver", "rhodochrosite", "sphalerite", "sulfur", "sylvite", "uranium", "wolframite"] }
 	],
 	creativeinventory: { "general": ["*"], "creatures":["*"], "crystals":["*"] },
-	maxstacksize: 1,
+	maxstacksize: 8,
 	texture: {
 		base: "item/crystalheart_{crystal}"
 	},

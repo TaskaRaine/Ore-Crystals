@@ -242,7 +242,7 @@
 			groupBy:["crystal_grenade-*"]
 		}
 	},
-	maxstacksize: 1,
+	maxstacksize: 8,
 	shape: {
 		base: "entity/air/crystal_grenade"
 	},

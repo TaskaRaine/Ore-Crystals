@@ -19,13 +19,12 @@
 				type: "block",
 				name: "planter",
 				code: "game:clayplanter-*",
-				allowedVariants: ["burnt", "amber", "ashforest", "copper", "cthonic", "earthern", "loam", "ochre", "rime", "seasalt", "tenmoku", "undergrowth"],
 				quantity: 1
 			}
 		},
 		output: {
 			type: "block",
-			code: "crystal_planter-anthracite-chalk-burnt",
+			code: "crystal_planter-default-chalk-burnt",
 			quantity: 1
 		}
 	}
