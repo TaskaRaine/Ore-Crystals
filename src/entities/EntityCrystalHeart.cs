@@ -153,7 +153,8 @@ namespace OreCrystals
             {
                 DamageHeart(byEntity, itemslot, hitPosition);
 
-                AngerHeart();
+                if(Api.World.Config.GetString("creatureHostility") != "off")
+                    AngerHeart();
             }
             else
             {

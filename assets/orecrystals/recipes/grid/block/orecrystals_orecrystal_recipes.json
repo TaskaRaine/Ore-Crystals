@@ -126,4 +126,29 @@
 			quantity: 1
 		}
 	},
+	{
+		//-- Crystal Seeds Quartz --//
+		ingredientPattern: "CMCMCMCMC",
+		width:3,
+		height:3,
+		ingredients: {
+			"C": {
+				type: "item",
+				code: "orecrystals_crystalshard",
+				quantity: 1
+			},
+			"M": {
+				type: "item",
+				name: "mineral",
+				code: "game:*",
+				allowedVariants: ["clearquartz", "ore-quartz"],
+				quantity: 1
+			}
+		},
+		output: {
+			type: "block",
+			code: "seed_crystals-quartz-ore_down",
+			quantity: 1
+		}
+	}
 ]

@@ -18,6 +18,8 @@ Welcome to the GitHub repository for the Vintage Story mod, Ore Crystals!
 ### Releases
 
 ### Vintage Story 1.15.0+
+[Version 1.3.3](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.3/OreCrystals_V1.3.3.zip)
+
 [Version 1.3.2](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.2/OreCrystals_V1.3.2.zip)
 
 [Version 1.3.1](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.1/OreCrystals_V1.3.1.zip)
@@ -48,6 +50,20 @@ Welcome to the GitHub repository for the Vintage Story mod, Ore Crystals!
 [Version 1.0.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.0.0.zip)
 
 ### Changelog
+
+#### Version 1.3.3
+Fixed a rare crash that occurred with the obelisk heart spawner 
+
+Fixed a crash caused by crystals being broken with a nearly destroyed tool.
+
+Breaking obelisk blocks will now appropriately damage both pickaxes and chisels.
+
+With passive/never hostile mode active, crystal locusts will no longer attack the player. In passive mode, Hearts will still get angry when attacked. Not in never aggressive.
+
+Only one spawner exists per obelisk block now. This should prevent hearts from 'doubling up' on occassion.
+
+Quartz crystal seeds can now be crafted.
+
 
 #### Version 1.3.2
 Increased stack size of Crystal Hearts to 8.

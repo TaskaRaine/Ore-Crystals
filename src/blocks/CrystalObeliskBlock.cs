@@ -9,6 +9,8 @@ namespace OreCrystals
 {
     class CrystalObeliskBlock : Block
     {
+        private const int OBELISK_DURABILITY_DAMAGE = 5;
+
         WorldInteraction[] interactions = null;
 
         public override void OnLoaded(ICoreAPI api)
@@ -60,6 +62,20 @@ namespace OreCrystals
                 if(block is CrystalObeliskBlock)
                 {
                     world.BlockAccessor.BreakBlock(bpos, byPlayer, dropQuantityMultiplier);
+
+                    if(byPlayer.InventoryManager.ActiveTool == EnumTool.Chisel)
+                    {
+                        if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
+                            byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, OBELISK_DURABILITY_DAMAGE);
+                    }
+                    else if (byPlayer.InventoryManager.ActiveTool == EnumTool.Pickaxe)
+                    {
+                        //-- Vintage Story applies durability damage on block break with a pickaxe. If it's already 0, it causes an exception --//
+                        if (byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Durability - OBELISK_DURABILITY_DAMAGE > 0)
+                            byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, OBELISK_DURABILITY_DAMAGE - 1);
+                        else
+                            byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Durability = 1;
+                    }
                 }
             }, true);
 

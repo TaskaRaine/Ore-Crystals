@@ -159,17 +159,21 @@ namespace OreCrystals
 
                 if(!playerInRange)
                 {
-                    crystalHeart.Die(EnumDespawnReason.OutOfRange);
-                    crystalHeart = null;
+                    if(crystalHeart != null)
+                    {    
+                        crystalHeart.Die(EnumDespawnReason.OutOfRange);
 
-                    heartSpawned = false;
+                        crystalHeart = null;
 
-                    foreach(Entity locust in crystalLocusts)
-                    {
-                        locust.Die(EnumDespawnReason.OutOfRange);
+                        heartSpawned = false;
+
+                        foreach(Entity locust in crystalLocusts)
+                        {
+                            locust.Die(EnumDespawnReason.OutOfRange);
+                        }
+
+                        crystalLocusts.Clear();
                     }
-
-                    crystalLocusts.Clear();
                 }
             }
         }

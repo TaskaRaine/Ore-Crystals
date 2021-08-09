@@ -189,7 +189,13 @@ namespace OreCrystals
                         world.BlockAccessor.SetBlock(0, pos);
 
                         if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
-                            byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, CRYSTAL_DURABILITY_DAMAGE);
+                        {
+                            //-- Vintage Story applies durability damage on block break with a pickaxe. If it's already 0, it causes an exception --//
+                            if (byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Durability - CRYSTAL_DURABILITY_DAMAGE > 0)
+                                byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.DamageItem(world, byPlayer.Entity, byPlayer.InventoryManager.ActiveHotbarSlot, CRYSTAL_DURABILITY_DAMAGE - 1);
+                            else
+                                byPlayer.InventoryManager.ActiveHotbarSlot.Itemstack.Collectible.Durability = 1;
+                        }
                     }
                     else
                     {
@@ -222,10 +228,6 @@ namespace OreCrystals
                 }
 
                 world.PlaySoundAt(Sounds.GetBreakSound(byPlayer), pos.X, pos.Y, pos.Z, byPlayer);
-            }
-            else
-            {
-                base.OnBlockBroken(world, pos, null, 0);
             }
         }
         /*

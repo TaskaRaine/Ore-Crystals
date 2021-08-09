@@ -2,11 +2,11 @@
 	code:"crystal_obelisk",
 	class:"CrystalObeliskBlock",
 	entityClassByType: {
-		"*-nw-*": "BlockEntityCrystalObeliskSpawner"
+		"*-nw-bottom-*": "BlockEntityCrystalObeliskSpawner"
 	},
 	creativeinventory: { "crystals": ["*"] },
 	attributesByType: {
-		"*-nw-*": {
+		"*-nw-bottom-*": {
 			heartTaken: false,
 			heartSpawned: false
 		},
