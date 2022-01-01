@@ -50,18 +50,18 @@ namespace OreCrystals
 
                     if (taskAi != null)
                     {
-                        AiTaskMeleeAttack meleeAttack = taskAi.taskManager.GetTask<AiTaskMeleeAttack>();
-                        AiTaskCrystalLocustBomb bombAttack = taskAi.taskManager.GetTask<AiTaskCrystalLocustBomb>();
-                        AiTaskSeekEntity seekEntity = taskAi.taskManager.GetTask<AiTaskSeekEntity>();
+                        AiTaskMeleeAttack meleeAttack = taskAi.TaskManager.GetTask<AiTaskMeleeAttack>();
+                        AiTaskCrystalLocustBomb bombAttack = taskAi.TaskManager.GetTask<AiTaskCrystalLocustBomb>();
+                        AiTaskSeekEntity seekEntity = taskAi.TaskManager.GetTask<AiTaskSeekEntity>();
 
                         if (meleeAttack != null)
-                            taskAi.taskManager.RemoveTask(meleeAttack);
+                            taskAi.TaskManager.RemoveTask(meleeAttack);
 
                         if (bombAttack != null)
-                            taskAi.taskManager.RemoveTask(bombAttack);
+                            taskAi.TaskManager.RemoveTask(bombAttack);
 
                         if (seekEntity != null)
-                            taskAi.taskManager.RemoveTask(seekEntity);
+                            taskAi.TaskManager.RemoveTask(seekEntity);
                     }
                 }
             }

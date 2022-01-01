@@ -226,33 +226,13 @@ namespace OreCrystals
                         }
                     }
                 }
-
                 world.PlaySoundAt(Sounds.GetBreakSound(byPlayer), pos.X, pos.Y, pos.Z, byPlayer);
             }
+            else
+            {
+                base.OnBlockBroken(world, pos, null, 0);
+            }
         }
-        /*
-        public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier)
-        {
-            if(dropQuantityMultiplier != 0)
-                switch (this.FirstCodePart())
-                {
-                    case "orecrystals_crystal_bountiful":
-                        dropQuantityMultiplier = 4;
-                        break;
-                    case "orecrystals_crystal_rich":
-                        dropQuantityMultiplier = 2;
-                        break;
-                    case "orecrystals_crystal_medium":
-                        dropQuantityMultiplier = 1;
-                        break;
-                    default:
-                        dropQuantityMultiplier = 0;
-                        break;
-                }
-
-            return base.GetDrops(world, pos, byPlayer, dropQuantityMultiplier);
-        }
-        */
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {
             return interactions;

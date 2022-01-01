@@ -32,7 +32,7 @@ namespace OreCrystals
 
             if(api is ICoreServerAPI)
             {
-                crystalLocusts = new List<Entity>(3);
+                crystalLocusts = new List<Entity>(CRYSTAL_LOCUST_COUNT);
 
                 if (!heartTaken)
                 {

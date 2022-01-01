@@ -292,18 +292,15 @@ namespace OreCrystals
                     };
                     CrystalObeliskBlock crystalObeliskBottomNE = new CrystalObeliskBlock
                     {
-                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-ne-bottom-" + variant)),
-                        EntityClass = "BlockEntityCrystalObelisk"
+                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-ne-bottom-" + variant))
                     };
                     CrystalObeliskBlock crystalObeliskBottomSW = new CrystalObeliskBlock
                     {
-                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-sw-bottom-" + variant)),
-                        EntityClass = "BlockEntityCrystalObelisk"
+                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-sw-bottom-" + variant))
                     };
                     CrystalObeliskBlock crystalObeliskBottomSE = new CrystalObeliskBlock
                     {
-                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-se-bottom-" + variant)),
-                        EntityClass = "BlockEntityCrystalObelisk"
+                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-se-bottom-" + variant))
                     };
 
                     CrystalObeliskBlock crystalObeliskTopNW = new CrystalObeliskBlock

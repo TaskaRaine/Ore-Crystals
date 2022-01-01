@@ -2,10 +2,10 @@
   "type": "code",
   "modid": "orecrystals",
   "name": "Ore Crystals",
-  "author": "Taska Raine",
+  "authors": ["Taska Raine"],
   "description": "Adds crystals to ore deposits along with other various crystal-based craftables!",
-  "version": "1.3.3",
+  "version": "1.3.5",
   "dependency": {
-    "game": "1.15.0"
+    "game": "1.16.0"
   }
 }

@@ -83,6 +83,7 @@ namespace OreCrystals
         {
             base.OnGameTick(dt);
 
+            //if(IsPlayerInRange())
             if (Alive && !heartAngered)
             {
                 if (Api.Side == EnumAppSide.Server)
@@ -203,6 +204,16 @@ namespace OreCrystals
             AnimManager.StartAnimation("angry-animate");
         }
 
+        private bool IsPlayerInRange()
+        {
+            for(int i = 0; i < this.World.AllPlayers.Length; i++)
+            {
+                if (this.World.AllPlayers[0].Entity.Pos.DistanceTo(this.Pos.AsBlockPos.ToVec3d()) <= CRYSTAL_GROWTH_RANGE * 3)
+                    return true;
+            }
+
+            return false;
+        }
         private void HandleAnimation()
         {
             if (World.Side == EnumAppSide.Client)

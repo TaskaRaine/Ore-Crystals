@@ -17,8 +17,11 @@ Welcome to the GitHub repository for the Vintage Story mod, Ore Crystals!
 
 ### Releases
 
+### Vintage Story 1.16.0+
+[Version 1.3.5](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.5/OreCrystals_V1.3.5.zip)
+
 ### Vintage Story 1.15.0+
-[Version 1.3.3](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.3/OreCrystals_V1.3.3.zip)
+[Version 1.3.4](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.4/OreCrystals_V1.3.4.zip)
 
 [Version 1.3.2](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.2/OreCrystals_V1.3.2.zip)
 
@@ -51,7 +54,10 @@ Welcome to the GitHub repository for the Vintage Story mod, Ore Crystals!
 
 ### Changelog
 
-#### Version 1.3.3
+#### Version 1.3.5
+Compatability patch for Vintage Story 1.16
+
+#### Version 1.3.4
 Fixed a rare crash that occurred with the obelisk heart spawner 
 
 Fixed a crash caused by crystals being broken with a nearly destroyed tool.
