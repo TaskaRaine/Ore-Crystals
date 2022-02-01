@@ -18,6 +18,8 @@ Welcome to the GitHub repository for the Vintage Story mod, Ore Crystals!
 ### Releases
 
 ### Vintage Story 1.16.0+
+[Version 1.3.6](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.6/OreCrystals_V1.3.6.zip)
+
 [Version 1.3.5](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.5/OreCrystals_V1.3.5.zip)
 
 ### Vintage Story 1.15.0+
@@ -53,6 +55,15 @@ Welcome to the GitHub repository for the Vintage Story mod, Ore Crystals!
 [Version 1.0.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.0.0.zip)
 
 ### Changelog
+
+#### Version 1.3.6
+Fixed an issue that would cause the server to hang.
+
+Ore Crystals should now be much more resiliant in such cases where mods add new ores. There is no compatibility for these ores, but steps have been taken to reduce potential issues that could arise.
+
+All 'remove' patches have been replaced with 'move' patches to prevent mod compatibility issues.
+
+The break chance for crystal arrows has been increased. They're powerful, but should often break.
 
 #### Version 1.3.5
 Compatability patch for Vintage Story 1.16

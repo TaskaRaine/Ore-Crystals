@@ -93,17 +93,24 @@ namespace OreCrystals
         {
             EntityProperties entityType = sApi.World.GetEntityType(new AssetLocation("orecrystals", "crystal_locust-" + variant));
 
+            if (entityType == null)
+                return;
+
             if (crystalLocusts.Count < CRYSTAL_LOCUST_COUNT)
             {
                 for(int i = crystalLocusts.Count; i < CRYSTAL_LOCUST_COUNT; i ++)
                 {
                     Entity locust = sApi.World.ClassRegistry.CreateEntity(entityType);
-                    locust.ServerPos.SetPos(FindOpenSpace(this.Pos.ToVec3i(), i));
-                    locust.Pos.SetFrom(locust.ServerPos);
 
-                    sApi.World.SpawnEntity(locust);
+                    if(locust != null)
+                    {
+                        locust.ServerPos.SetPos(FindOpenSpace(this.Pos.ToVec3i(), i));
+                        locust.Pos.SetFrom(locust.ServerPos);
 
-                    crystalLocusts.Add(locust);
+                        sApi.World.SpawnEntity(locust);
+
+                        crystalLocusts.Add(locust);
+                    }
                 }
             }
         }
@@ -112,22 +119,15 @@ namespace OreCrystals
         {
             EntityProperties entityType = sApi.World.GetEntityType(new AssetLocation("orecrystals", "crystal_heart-" + variant));
 
-            if(entityType != null)
-            {
-                crystalHeart = sApi.World.ClassRegistry.CreateEntity(entityType);
+            if (entityType == null)
+                return;
 
-                crystalHeart.ServerPos.SetPos(new EntityPos(this.Pos.X + 1, this.Pos.Y + 1, this.Pos.Z + 1));
+            crystalHeart = sApi.World.ClassRegistry.CreateEntity(entityType);
+            crystalHeart.ServerPos.SetPos(new EntityPos(this.Pos.X + 1, this.Pos.Y + 1, this.Pos.Z + 1));
+            crystalHeart.Pos.SetFrom(crystalHeart.ServerPos);
+            sApi.World.SpawnEntity(crystalHeart);
 
-                crystalHeart.Pos.SetFrom(crystalHeart.ServerPos);
-
-                sApi.World.SpawnEntity(crystalHeart);
-
-                this.heartSpawned = true;
-            }
-            else
-            {
-                System.Diagnostics.Debug.WriteLine("Heart not spawned. Variant: " + variant);
-            }
+            this.heartSpawned = true;
         }
 
         //-- Serverside Only --//

@@ -1,120 +1,78 @@
 ﻿[
-{
-    "op": "remove",
-    "path": "/client/shapeByType/*",
-    "file": "game:entities/arrow"
-  },
-  {
-    "op": "remove",
-    "path": "/client/texturesByType/*",
-    "file": "game:entities/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/client/shapeByType/arrow-crystal",
-    "value": {
-      "base": "orecrystals:item/tool/crystalarrow"
+    {
+        "op": "add",
+        "path": "/client/shapeByType/arrow-crystal",
+        "value": {
+            "base": "orecrystals:item/tool/crystalarrow"
+        },
+        "file": "game:entities/arrow",
+        "side": "Server"
     },
-    "file": "game:entities/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/client/shapeByType/arrow-copper",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:entities/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/client/shapeByType/arrow-tinbronze",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:entities/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/client/shapeByType/arrow-bismuthbronze",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:entities/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/client/shapeByType/arrow-bismuthbronze",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:entities/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/client/shapeByType/arrow-blackbronze",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:entities/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/client/shapeByType/arrow-iron",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:entities/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/client/shapeByType/arrow-meteoriciron",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:entities/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/client/shapeByType/arrow-steel",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:entities/arrow"
-  },
     {
         "op": "add",
         "path": "/variantgroups/0/states/-",
         "value": "crystal",
-        "file": "game:entities/arrow"
+        "file": "game:entities/arrow",
+        "side": "Server"
     },
     {
-    "op": "add",
-    "path": "/client/texturesByType/arrow-crystal",
-    "value": {
-      "feather": {
-        "base": "item/tool/material/feather"
-      },
-      "feather2": {
-        "base": "item/tool/material/feather2"
-      },
-      "string": {
-        "base": "item/tool/material/string"
-      },
-      "handle": {
-        "base": "orecrystals:block/quartz"
-      },
-      "crystal": {
-        "base": "orecrystals:block/quartz"
-      }
+        "op": "add",
+        "path": "/client/texturesByType/arrow-crystal",
+        "value": {
+            "feather": {
+            "base": "item/tool/material/feather"
+            },
+            "feather2": {
+            "base": "item/tool/material/feather2"
+            },
+            "string": {
+            "base": "item/tool/material/string"
+            },
+            "handle": {
+            "base": "orecrystals:block/quartz"
+            },
+            "crystal": {
+            "base": "orecrystals:block/quartz"
+            }
+        },
+        "file": "game:entities/arrow",
+        "side": "Server"
     },
-    "file": "game:entities/arrow"
-  },
-  {
-      "op": "add",
-      "path": "/client/behaviors/-",
-      "file": "game:entities/arrow",
-      "value": {
-           "code": "illuminate"
-      }
-  }
+    {
+        "op": "add",
+        "path": "/client/behaviors/-",
+        "value": {
+            "code": "illuminate"
+        },
+        "file": "game:entities/arrow",
+        "side": "Server"
+    },
+    {
+        "op": "move",
+        "fromPath": "/client/shapeByType/*",
+        "path": "/tempShape",
+        "file": "game:entities/arrow",
+        "side": "Server"
+    },
+    {
+        "op": "move",
+        "fromPath": "/tempShape",
+        "path": "/client/shapeByType/*",
+        "file": "game:entities/arrow",
+        "side": "Server"
+    },
+    {
+        "op": "move",
+        "fromPath": "/client/texturesByType/*",
+        "path": "/tempTexture",
+        "file": "game:entities/arrow",
+        "side": "Server"
+    },
+    {
+        "op": "move",
+        "fromPath": "/tempTexture",
+        "path": "/client/texturesByType/*",
+        "file": "game:entities/arrow",
+        "side": "Server"
+    },
 ]

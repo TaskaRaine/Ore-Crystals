@@ -1,27 +1,19 @@
 ﻿[
   {
-    "op": "remove",
-    "path": "/shapeByType/*",
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
-    "op": "remove",
-    "path": "/texturesByType/*",
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
     "op": "add",
     "path": "/creativeinventory/crystals",
     "value": ["*-crystal"],
-    "file": "game:itemtypes/tool/arrow"
+    "file": "game:itemtypes/tool/arrow",
+    "side": "Server"
   },
   {
       "op": "add",
       "path": "/glowLevelByType",
-      "file": "game:itemtypes/tool/arrow",
       "value": {
         "arrow-crystal": 100
-      }
+      },
+      "file": "game:itemtypes/tool/arrow",
+      "side": "Server"
   },
   {
     "op": "add",
@@ -29,15 +21,8 @@
     "value": {
       "base": "orecrystals:item/tool/crystalarrow"
     },
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/shapeByType/*",
-    "value": {
-      "base": "item/tool/arrow-copper"
-    },
-    "file": "game:itemtypes/tool/arrow"
+    "file": "game:itemtypes/tool/arrow",
+    "side": "Server"
   },
   {
     "op": "add",
@@ -59,21 +44,15 @@
         "base": "orecrystals:block/quartz"
       }
     },
-    "file": "game:itemtypes/tool/arrow"
-  },
-  {
-    "op": "add",
-    "path": "/texturesByType/*",
-    "value": {
-      "material": { "base": "block/metal/ingot/{material}" }
-    },
-    "file": "game:itemtypes/tool/arrow"
+    "file": "game:itemtypes/tool/arrow",
+    "side": "Server"
   },
   {
     "op": "add",
     "path": "/variantgroups/0/states/-",
     "value": "crystal",
-    "file": "game:itemtypes/tool/arrow"
+    "file": "game:itemtypes/tool/arrow",
+    "side": "Server"
   },
   {
     "op": "add",
@@ -81,18 +60,49 @@
     "value": {
         "arrow-crystal": [0, 0, 6]
     },
-    "file": "game:itemtypes/tool/arrow"
+    "file": "game:itemtypes/tool/arrow",
+    "side": "Server"
   },
   {
     "op": "add",
     "path": "/attributes/damageByType/*-crystal",
     "value": 3.0,
-    "file": "game:itemtypes/tool/arrow"
+    "file": "game:itemtypes/tool/arrow",
+    "side": "Server"
   },
   {
     "op": "add",
     "path": "/attributes/breakChanceOnImpactByType/*-crystal",
-    "value": 0.4,
-    "file": "game:itemtypes/tool/arrow"
-  }
+    "value": 0.8,
+    "file": "game:itemtypes/tool/arrow",
+    "side": "Server"
+  },
+  {
+    "op": "move",
+    "path": "/shapeTemp",
+    "fromPath": "/shapeByType/*",
+    "file": "game:itemtypes/tool/arrow",
+    "side": "Server"
+  },
+  {
+    "op": "move",
+    "path": "/shapeByType/*",
+    "fromPath": "/shapeTemp",
+    "file": "game:itemtypes/tool/arrow",
+    "side": "Server"
+  },
+  {
+    "op": "move",
+    "path": "/textureTemp",
+    "fromPath": "/texturesByType/*",
+    "file": "game:itemtypes/tool/arrow",
+    "side": "Server"
+  },
+  {
+    "op": "move",
+    "path": "/texturesByType/*",
+    "fromPath": "/textureTemp",
+    "file": "game:itemtypes/tool/arrow",
+    "side": "Server"
+  },
 ]

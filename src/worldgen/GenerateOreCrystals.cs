@@ -201,12 +201,10 @@ namespace OreCrystals
         private void CreateNewCrystal(OreCrystal crystal)
         {
             string codeName = "orecrystals_crystal_" + crystal.quality + "-" + crystal.oreType + "-" + crystal.orientation;
-            int crystalID = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", codeName));
+            Block newCrystal =  api.World.BlockAccessor.GetBlock(new AssetLocation("orecrystals", codeName));
 
-            OreCrystalsCrystal newCrystal = new OreCrystalsCrystal
-            {
-                BlockId = crystalID
-            };
+            if (newCrystal == null)
+                return;
 
             newCrystal.TryPlaceBlockForWorldGen(chunkBlockAccessor, crystal.crystalPos, BlockFacing.UP, this.worldSeedRand);
         }
@@ -285,40 +283,19 @@ namespace OreCrystals
 
                 if(canGenerate)
                 {
-                    CrystalObeliskBlock crystalObeliskBottomNW = new CrystalObeliskBlock
-                    {
-                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-nw-bottom-" + variant)),
-                        EntityClass = "BlockEntityCrystalObeliskSpawner"
-                    };
-                    CrystalObeliskBlock crystalObeliskBottomNE = new CrystalObeliskBlock
-                    {
-                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-ne-bottom-" + variant))
-                    };
-                    CrystalObeliskBlock crystalObeliskBottomSW = new CrystalObeliskBlock
-                    {
-                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-sw-bottom-" + variant))
-                    };
-                    CrystalObeliskBlock crystalObeliskBottomSE = new CrystalObeliskBlock
-                    {
-                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-se-bottom-" + variant))
-                    };
+                    Block crystalObeliskBottomNW = api.World.BlockAccessor.GetBlock(new AssetLocation("orecrystals", "crystal_obelisk-nw-bottom-" + variant));
+                    Block crystalObeliskBottomNE = api.World.BlockAccessor.GetBlock(new AssetLocation("orecrystals", "crystal_obelisk-ne-bottom-" + variant));
+                    Block crystalObeliskBottomSW = api.World.BlockAccessor.GetBlock(new AssetLocation("orecrystals", "crystal_obelisk-sw-bottom-" + variant));
+                    Block crystalObeliskBottomSE = api.World.BlockAccessor.GetBlock(new AssetLocation("orecrystals", "crystal_obelisk-se-bottom-" + variant));
 
-                    CrystalObeliskBlock crystalObeliskTopNW = new CrystalObeliskBlock
-                    {
-                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-nw-top-" + variant))
-                    };
-                    CrystalObeliskBlock crystalObeliskTopNE = new CrystalObeliskBlock
-                    {
-                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-ne-top-" + variant))
-                    };
-                    CrystalObeliskBlock crystalObeliskTopSW = new CrystalObeliskBlock
-                    {
-                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-sw-top-" + variant))
-                    };
-                    CrystalObeliskBlock crystalObeliskTopSE = new CrystalObeliskBlock
-                    {
-                        BlockId = api.WorldManager.GetBlockId(new AssetLocation("orecrystals", "crystal_obelisk-se-top-" + variant))
-                    };
+                    Block crystalObeliskTopNW = api.World.BlockAccessor.GetBlock(new AssetLocation("orecrystals", "crystal_obelisk-nw-top-" + variant));
+                    Block crystalObeliskTopNE = api.World.BlockAccessor.GetBlock(new AssetLocation("orecrystals", "crystal_obelisk-ne-top-" + variant));
+                    Block crystalObeliskTopSW = api.World.BlockAccessor.GetBlock(new AssetLocation("orecrystals", "crystal_obelisk-sw-top-" + variant));
+                    Block crystalObeliskTopSE = api.World.BlockAccessor.GetBlock(new AssetLocation("orecrystals", "crystal_obelisk-se-top-" + variant));
+
+                    if (crystalObeliskBottomNW == null || crystalObeliskBottomNE == null || crystalObeliskBottomSW == null || crystalObeliskBottomSE == null
+                    || crystalObeliskTopNW == null || crystalObeliskTopNE == null || crystalObeliskTopSW == null || crystalObeliskTopSE == null)
+                        return false;
 
                     crystalObeliskBottomNW.TryPlaceBlockForWorldGen(chunkBlockAccessor, pos.UpCopy(), BlockFacing.UP, worldSeedRand);
                     crystalObeliskBottomNE.TryPlaceBlockForWorldGen(chunkBlockAccessor, eastNeighbour.UpCopy(), BlockFacing.UP, worldSeedRand);
