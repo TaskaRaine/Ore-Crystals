@@ -68,6 +68,12 @@ Recipes have been implemented to craft crystallized ore items. These recipes are
 
 Luminous rods can be broken down into crystal shards. This recipe was provided by Kagranack on Discord.
 
+Fixed an exception that occurred when the heart would break an obelisk.
+
+Breaking particle logic has been moved to the crystal/obelisk blocks. When broken via normal means, these blocks will now also break with glowy particles. 
+
+Further particle tweaks.
+
 #### Version 1.3.6
 Fixed an issue that would cause the server to hang.
 

@@ -125,9 +125,6 @@ namespace OreCrystals
                             {
                                 Block crystal = blockAccessor.GetBlock(crystalToBreakPos);
 
-                                SetBreakParticlePosDirCol(crystalToBreakPos.ToVec3d(), crystal.LastCodePart(), crystal.FirstCodePart(1));
-                                this.World.SpawnParticles(crystalBreakParticles);
-
                                 BreakCrystal(crystalToBreakPos);
 
                                 //-- Crystals broken by an enraged heart are like mines, dealing damage to any entity standing on it --//

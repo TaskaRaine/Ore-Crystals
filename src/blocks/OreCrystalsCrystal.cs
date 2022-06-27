@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Common.Entities;
@@ -153,8 +154,13 @@ namespace OreCrystals
 
             try
             {
-                world.BlockAccessor.SetBlock(id, blockSel.Position);
-                return true;
+                if (world.BlockAccessor.GetSolidBlock(blockSel.Position.X, blockSel.Position.Y, blockSel.Position.Z).IsReplacableBy(this))
+                {
+                    world.BlockAccessor.SetBlock(id, blockSel.Position);
+                    return true;
+                }
+
+                return false;
             }
             catch
             {
@@ -226,14 +232,60 @@ namespace OreCrystals
                         }
                     }
                 }
-                world.PlaySoundAt(Sounds.GetBreakSound(byPlayer), pos.X, pos.Y, pos.Z, byPlayer);
             }
             else
             {
-                base.OnBlockBroken(world, pos, null, 0);
+                world.BlockAccessor.SetBlock(0, pos);
             }
 
-            SpawnBlockBrokenParticles(pos);
+            if (api.Side == EnumAppSide.Server)
+                world.PlaySoundAt(Sounds.GetBreakSound(byPlayer), pos.X, pos.Y, pos.Z, byPlayer, true, 32, 1);
+            else
+                BreakParticles(pos);
+        }
+        // -- Break particles have been moved from the heart to the block to allow glowing break particles to occur with just normal block breaking methods --//
+        private SimpleParticleProperties InitBreakParticles(Vec3d pos)
+        {
+            Random rand = new Random();
+            Vec3f velocityRand = new Vec3f((float)rand.NextDouble(), (float)rand.NextDouble(), (float)rand.NextDouble()) * 6;
+
+            return new SimpleParticleProperties()
+            {
+                MinPos = new Vec3d(pos.X, pos.Y, pos.Z),
+                AddPos = new Vec3d(1, 1, 1),
+
+                MinVelocity = new Vec3f(velocityRand.X, velocityRand.Y, velocityRand.Z),
+                AddVelocity = new Vec3f(-velocityRand.X, -velocityRand.Y, -velocityRand.Z) * 2,
+
+                GravityEffect = 0.2f,
+
+                MinSize = 0.1f,
+                MaxSize = 0.4f,
+                SizeEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEAR, -0.1f),
+
+                MinQuantity = 20,
+                AddQuantity = 40,
+
+                LifeLength = 1.2f,
+                addLifeLength = 1.4f,
+
+                ShouldDieInLiquid = false,
+
+                WithTerrainCollision = true,
+
+                Color = CrystalColour.GetColour(FirstCodePart(1)),
+                OpacityEvolve = new EvolvingNatFloat(EnumTransformFunction.LINEARREDUCE, 255),
+
+                Bounciness = 0.4f,
+
+                VertexFlags = 150,
+
+                ParticleModel = EnumParticleModel.Cube
+            };
+        }
+        public void BreakParticles(BlockPos pos)
+        {
+            api.World.SpawnParticles(InitBreakParticles(pos.ToVec3d()));
         }
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {
