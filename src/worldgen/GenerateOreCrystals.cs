@@ -133,10 +133,15 @@ namespace OreCrystals
                 neighbourPos = GetNeighbour(CrystalDirection.UP, blockPos);
                 neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
+                switch(neighbourBlockMaterial)
                 {
-                    if(obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
-                        CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_down"));
+                    case EnumBlockMaterial.Air:
+                    case EnumBlockMaterial.Plant:
+                    case EnumBlockMaterial.Liquid:
+                        if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
+                            CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_down"));
+
+                        break;
                 }
             }
 
@@ -146,9 +151,15 @@ namespace OreCrystals
                 neighbourPos = GetNeighbour(CrystalDirection.DOWN, blockPos);
                 neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
+                switch (neighbourBlockMaterial)
                 {
-                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_up"));
+                    case EnumBlockMaterial.Air:
+                    case EnumBlockMaterial.Plant:
+                    case EnumBlockMaterial.Liquid:
+                        if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
+                            CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_up"));
+
+                        break;
                 }
             }
             //-- Check space SOUTH(z + 1) for crystal spawn --//
@@ -157,9 +168,15 @@ namespace OreCrystals
                 neighbourPos = GetNeighbour(CrystalDirection.SOUTH, blockPos);
                 neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
+                switch (neighbourBlockMaterial)
                 {
-                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_north"));
+                    case EnumBlockMaterial.Air:
+                    case EnumBlockMaterial.Plant:
+                    case EnumBlockMaterial.Liquid:
+                        if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
+                            CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_north"));
+
+                        break;
                 }
             }
             //-- Check space NORTH(z - 1) for crystal spawn --//
@@ -168,9 +185,15 @@ namespace OreCrystals
                 neighbourPos = GetNeighbour(CrystalDirection.NORTH, blockPos);
                 neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
+                switch (neighbourBlockMaterial)
                 {
-                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_south"));
+                    case EnumBlockMaterial.Air:
+                    case EnumBlockMaterial.Plant:
+                    case EnumBlockMaterial.Liquid:
+                        if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
+                            CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_south"));
+
+                        break;
                 }
             }
             //-- Check space EAST(x + 1) for crystal spawn --//
@@ -179,9 +202,15 @@ namespace OreCrystals
                 neighbourPos = GetNeighbour(CrystalDirection.EAST, blockPos);
                 neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
+                switch (neighbourBlockMaterial)
                 {
-                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_west"));
+                    case EnumBlockMaterial.Air:
+                    case EnumBlockMaterial.Plant:
+                    case EnumBlockMaterial.Liquid:
+                        if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
+                            CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_west"));
+
+                        break;
                 }
             }
             //-- Check space WEST(x - 1) for crystal spawn --//
@@ -190,9 +219,15 @@ namespace OreCrystals
                 neighbourPos = GetNeighbour(CrystalDirection.WEST, blockPos);
                 neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
 
-                if (neighbourBlockMaterial == EnumBlockMaterial.Air || neighbourBlockMaterial == EnumBlockMaterial.Plant)
+                switch (neighbourBlockMaterial)
                 {
-                    CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_east"));
+                    case EnumBlockMaterial.Air:
+                    case EnumBlockMaterial.Plant:
+                    case EnumBlockMaterial.Liquid:
+                        if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
+                            CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_east"));
+
+                        break;
                 }
             }
         }

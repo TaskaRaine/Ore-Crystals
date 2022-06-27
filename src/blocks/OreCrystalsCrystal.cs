@@ -232,6 +232,8 @@ namespace OreCrystals
             {
                 base.OnBlockBroken(world, pos, null, 0);
             }
+
+            SpawnBlockBrokenParticles(pos);
         }
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {

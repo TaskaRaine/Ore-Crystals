@@ -42,23 +42,23 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
     <Reference Include="VintagestoryAPI">
-      <HintPath>H:\VintageStory 1.16.0 RC-4\VintagestoryAPI.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.0 Pre-1\VintagestoryAPI.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSSurvivalMod">
-      <HintPath>H:\VintageStory 1.16.0 RC-4\Mods\VSSurvivalMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.0 Pre-1\Mods\VSSurvivalMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSEssentials">
-      <HintPath>H:\VintageStory 1.16.0 RC-4\Mods\VSEssentials.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.0 Pre-1\Mods\VSEssentials.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="VSCreativeMod">
-      <HintPath>H:\VintageStory 1.16.0 RC-4\Mods\VSCreativeMod.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.0 Pre-1\Mods\VSCreativeMod.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>H:\VintageStory 1.16.0 RC-4\Lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>H:\VintageStory 1.17.0 Pre-1\Lib\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
@@ -171,11 +171,12 @@
     <None Include="assets\orecrystals\itemtypes\heart_core.json" />
     <None Include="assets\orecrystals\recipes\grid\block\crystal_grenade_recipe.json" />
     <None Include="assets\orecrystals\recipes\grid\block\crystal_planter_recipes.json" />
+    <None Include="assets\orecrystals\recipes\grid\item\crystalizedores_graded_recipes.json" />
     <None Include="assets\orecrystals\recipes\grid\item\crystaltools_recipes.json" />
     <None Include="assets\orecrystals\recipes\grid\item\heart_recipes.json" />
     <None Include="assets\orecrystals\recipes\grid\block\orecrystals_glassblock_recipes.json" />
-    <Compile Include="src\behaviours\BehaviourIlluminate.cs" />
-    <Compile Include="src\behaviours\RegisterBehaviours.cs" />
+    <Compile Include="src\entitybehavior\BehaviorIlluminate.cs" />
+    <Compile Include="src\entitybehavior\RegisterEntityBehaviors.cs" />
     <Compile Include="src\blockentity\BECrystalObelisk.cs" />
     <Compile Include="src\blockentity\BECrystalObeliskSpawner.cs" />
     <Compile Include="src\blockentity\RegiterBlockEntities.cs" />
@@ -218,6 +219,7 @@
   <ItemGroup>
     <Folder Include="assets\orecrystals\itemtypes\tools\" />
     <Folder Include="assets\orecrystals\shapes\item\tool\" />
+    <Folder Include="src\blockbehavior\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="assets\orecrystals\itemtypes\orecrystals_crystalshard.json" />

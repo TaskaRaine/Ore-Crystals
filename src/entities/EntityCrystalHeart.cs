@@ -88,12 +88,15 @@ namespace OreCrystals
             {
                 if (Api.Side == EnumAppSide.Server)
                 {
-                    if (growthRand.Next(1, 101) <= CRYSTAL_GROWTH_CHANCE)
+                    if(sApi.World.IsFullyLoadedChunk(this.ServerPos.AsBlockPos))
                     {
-                        BlockPos crystalToGrowPos = GetNearbyCrystal(false);
+                        if (growthRand.Next(1, 101) <= CRYSTAL_GROWTH_CHANCE)
+                        {
+                            BlockPos crystalToGrowPos = GetNearbyCrystal(false);
 
-                        if (crystalToGrowPos != null)
-                            GrowCrystal(crystalToGrowPos);
+                            if (crystalToGrowPos != null)
+                                GrowCrystal(crystalToGrowPos);
+                        }
                     }
                 }
                 else
@@ -110,38 +113,37 @@ namespace OreCrystals
                 //-- If the heart is damaged, it will become angry, breaking any crystal blocks within its range and kills itself when no more remain --//
                 if (Api.Side == EnumAppSide.Server)
                 {
-                    this.World.SpawnParticles(heartAngerParticles);
-
-                    if (growthRand.Next(1, 101) <= CRYSTAL_BREAK_CHANCE)
+                    if (sApi.World.IsFullyLoadedChunk(this.ServerPos.AsBlockPos))
                     {
-                        BlockPos crystalToBreakPos = GetNearbyCrystal(true);
+                        this.World.SpawnParticles(heartAngerParticles);
 
-                        if (crystalToBreakPos != null)
+                        if (growthRand.Next(1, 101) <= CRYSTAL_BREAK_CHANCE)
                         {
-                            Block crystal = blockAccessor.GetBlock(crystalToBreakPos);
+                            BlockPos crystalToBreakPos = GetNearbyCrystal(true);
 
-                            SetBreakParticlePosDirCol(crystalToBreakPos.ToVec3d(), crystal.LastCodePart(), crystal.FirstCodePart(1));
-                            this.World.SpawnParticles(crystalBreakParticles);
-
-                            BreakCrystal(crystalToBreakPos);
-
-                            //-- Crystals broken by an enraged heart are like mines, dealing damage to any entity standing on it --//
-                            World.GetEntitiesInsideCuboid(crystalToBreakPos, new BlockPos(crystalToBreakPos.X + 1, crystalToBreakPos.Y + 1, crystalToBreakPos.Z + 1), (entity) =>
+                            if (crystalToBreakPos != null)
                             {
-                                entity.ReceiveDamage(new DamageSource() { SourceEntity = this }, 2.0f);
+                                Block crystal = blockAccessor.GetBlock(crystalToBreakPos);
 
-                                return true;
-                            });
-                        }
-                        else
-                        {
-                            DestroyHeart();
+                                SetBreakParticlePosDirCol(crystalToBreakPos.ToVec3d(), crystal.LastCodePart(), crystal.FirstCodePart(1));
+                                this.World.SpawnParticles(crystalBreakParticles);
+
+                                BreakCrystal(crystalToBreakPos);
+
+                                //-- Crystals broken by an enraged heart are like mines, dealing damage to any entity standing on it --//
+                                World.GetEntitiesInsideCuboid(crystalToBreakPos, new BlockPos(crystalToBreakPos.X + 1, crystalToBreakPos.Y + 1, crystalToBreakPos.Z + 1), (entity) =>
+                                {
+                                    entity.ReceiveDamage(new DamageSource() { SourceEntity = this }, 2.0f);
+
+                                    return true;
+                                });
+                            }
+                            else
+                            {
+                                DestroyHeart();
+                            }
                         }
                     }
-                }
-                else
-                {
-                    //HandleAnimation();
                 }
             }
         }

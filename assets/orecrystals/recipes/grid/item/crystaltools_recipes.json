@@ -12,5 +12,18 @@
 		output: {
 			type: "item", code: "game:arrow-crystal", quantity: 4
 		}
-	}
+	},
+	{
+		//-- Crystalshards --//
+		ingredientPattern: "KH",
+		width: 1,
+		height: 2,
+		ingredients: {
+			"K": { type: "item", code: "game:chisel-*", isTool: true },
+			"H": { type: "item", code: "luminousrod" }
+		},
+		output: {
+			type: "item", code: "orecrystals_crystalshard", quantity: 7
+		}
+	},
 ]

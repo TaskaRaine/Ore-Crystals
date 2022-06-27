@@ -3,7 +3,7 @@ using Vintagestory.API.Common.Entities;
 
 namespace OreCrystals
 {
-    class BehaviourIlluminate : EntityBehavior
+    class BehaviorIlluminate : EntityBehavior
     {
         private byte[] lightHsv = new byte[] { 0, 0, 6 };
 
@@ -11,7 +11,7 @@ namespace OreCrystals
         {
             return "illuminate";
         }
-        public BehaviourIlluminate(Entity entity) : base(entity)
+        public BehaviorIlluminate(Entity entity) : base(entity)
         {
             //-- A hack way to force only crystal arrows to illuminate. Other arrows are given the behaviour, but won't emit light. --//
             //-- This makes it so that Ore Crystals won't overwrite behaviour changes from other mods --//

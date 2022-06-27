@@ -6,7 +6,7 @@ namespace OreCrystals
     {
         public override void Start(ICoreAPI api)
         {
-            api.RegisterEntityBehaviorClass("illuminate", typeof(BehaviourIlluminate));
+            api.RegisterEntityBehaviorClass("illuminate", typeof(BehaviorIlluminate));
         }
     }
 }

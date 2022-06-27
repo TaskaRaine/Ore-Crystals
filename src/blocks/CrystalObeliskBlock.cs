@@ -57,11 +57,11 @@ namespace OreCrystals
             base.OnBlockBroken(world, pos, byPlayer, dropQuantityMultiplier);
 
             //-- When this block is broken, break any obelisk blocks that are positioned alongside it --//
-            world.BlockAccessor.WalkBlocks(new BlockPos(pos.X - 1, pos.Y - 1, pos.Z - 1), new BlockPos(pos.X + 1, pos.Y + 1, pos.Z + 1), (block, bpos) =>
+            world.BlockAccessor.WalkBlocks(new BlockPos(pos.X - 1, pos.Y - 1, pos.Z - 1), new BlockPos(pos.X + 1, pos.Y + 1, pos.Z + 1), (block, xPos, yPos, zPos) =>
             {
                 if(block is CrystalObeliskBlock)
                 {
-                    world.BlockAccessor.BreakBlock(bpos, byPlayer, dropQuantityMultiplier);
+                    world.BlockAccessor.BreakBlock(new BlockPos(xPos, yPos, zPos), byPlayer, dropQuantityMultiplier);
 
                     if(byPlayer.InventoryManager.ActiveTool == EnumTool.Chisel)
                     {

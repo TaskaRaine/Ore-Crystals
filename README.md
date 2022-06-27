@@ -17,6 +17,9 @@ Welcome to the GitHub repository for the Vintage Story mod, Ore Crystals!
 
 ### Releases
 
+### Vintage Story 1.17.0+
+[Version 1.3.7](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.7/OreCrystals_V1.3.7.zip)
+
 ### Vintage Story 1.16.0+
 [Version 1.3.6](https://github.com/TaskaRaine/Ore-Crystals/releases/download/1.3.6/OreCrystals_V1.3.6.zip)
 
@@ -55,6 +58,15 @@ Welcome to the GitHub repository for the Vintage Story mod, Ore Crystals!
 [Version 1.0.0](https://github.com/TaskaRaine/Ore-Crystals/releases/download/v1.0/orecrystals_v1.0.0.zip)
 
 ### Changelog
+
+#### Version 1.3.7
+Ore Crystals is now compatible with Vintage Story 1.17.0+
+
+Crystals should now once again spawn under water. With the new water physics update in vanilla, they should be able to share space with water blocks.
+
+Recipes have been implemented to craft crystallized ore items. These recipes are based off of recipes provided by Kagranack on Discord.
+
+Luminous rods can be broken down into crystal shards. This recipe was provided by Kagranack on Discord.
 
 #### Version 1.3.6
 Fixed an issue that would cause the server to hang.
