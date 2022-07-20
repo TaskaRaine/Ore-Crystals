@@ -109,7 +109,7 @@ namespace OreCrystals
                     {
                         blockPos.Y = y;
 
-                        Block block = chunkBlockAccessor.GetBlock(blockPos);
+                        Block block = chunkBlockAccessor.GetBlock(blockPos, BlockLayersAccess.SolidBlocks);
                         if (block is BlockOre)
                         {
                             string code = block.Code.Path;
@@ -131,13 +131,12 @@ namespace OreCrystals
             if (blockPos.Y < worldBlockAccessor.MapSizeY)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.UP, blockPos);
-                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos, BlockLayersAccess.SolidBlocks).BlockMaterial;
 
                 switch(neighbourBlockMaterial)
                 {
                     case EnumBlockMaterial.Air:
                     case EnumBlockMaterial.Plant:
-                    case EnumBlockMaterial.Liquid:
                         if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
                             CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_down"));
 
@@ -149,13 +148,12 @@ namespace OreCrystals
             if (blockPos.Y > 0)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.DOWN, blockPos);
-                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos, BlockLayersAccess.SolidBlocks).BlockMaterial;
 
                 switch (neighbourBlockMaterial)
                 {
                     case EnumBlockMaterial.Air:
                     case EnumBlockMaterial.Plant:
-                    case EnumBlockMaterial.Liquid:
                         if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
                             CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_up"));
 
@@ -166,13 +164,12 @@ namespace OreCrystals
             if (blockPos.Z < worldBlockAccessor.MapSizeZ)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.SOUTH, blockPos);
-                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos, BlockLayersAccess.SolidBlocks).BlockMaterial;
 
                 switch (neighbourBlockMaterial)
                 {
                     case EnumBlockMaterial.Air:
                     case EnumBlockMaterial.Plant:
-                    case EnumBlockMaterial.Liquid:
                         if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
                             CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_north"));
 
@@ -183,13 +180,12 @@ namespace OreCrystals
             if (blockPos.Z > 0)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.NORTH, blockPos);
-                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos, BlockLayersAccess.SolidBlocks).BlockMaterial;
 
                 switch (neighbourBlockMaterial)
                 {
                     case EnumBlockMaterial.Air:
                     case EnumBlockMaterial.Plant:
-                    case EnumBlockMaterial.Liquid:
                         if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
                             CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_south"));
 
@@ -200,13 +196,12 @@ namespace OreCrystals
             if (blockPos.X < worldBlockAccessor.MapSizeX)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.EAST, blockPos);
-                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos, BlockLayersAccess.SolidBlocks).BlockMaterial;
 
                 switch (neighbourBlockMaterial)
                 {
                     case EnumBlockMaterial.Air:
                     case EnumBlockMaterial.Plant:
-                    case EnumBlockMaterial.Liquid:
                         if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
                             CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_west"));
 
@@ -217,13 +212,12 @@ namespace OreCrystals
             if (blockPos.X > 0)
             {
                 neighbourPos = GetNeighbour(CrystalDirection.WEST, blockPos);
-                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos).BlockMaterial;
+                neighbourBlockMaterial = chunkBlockAccessor.GetBlock(neighbourPos, BlockLayersAccess.SolidBlocks).BlockMaterial;
 
                 switch (neighbourBlockMaterial)
                 {
                     case EnumBlockMaterial.Air:
                     case EnumBlockMaterial.Plant:
-                    case EnumBlockMaterial.Liquid:
                         if (obeliskSpawned == true || !GenerateObelisk(code, blockPos, ref obeliskSpawned))
                             CreateNewCrystal(new OreCrystal(code, neighbourPos, "ore_east"));
 
@@ -291,7 +285,7 @@ namespace OreCrystals
         }
         private bool GenerateObelisk(string oreCode, BlockPos pos, ref bool obeliskSpawned)
         {
-            int blockID = chunkBlockAccessor.GetBlockId(pos);
+            int blockID = chunkBlockAccessor.GetBlockId(pos, BlockLayersAccess.SolidBlocks);
             bool canGenerate = false;
 
             string[] codeSplit = oreCode.Split('-');
@@ -302,16 +296,16 @@ namespace OreCrystals
             BlockPos southeastNeighbour = GetNeighbour(CrystalDirection.SOUTH, eastNeighbour);
 
             //-- If a 2x2 horizontal grid is all the same ore, check the spaces above in a 2x2 cube to see if an obelisk can fit. If yes, create an obelisk --//
-            if (chunkBlockAccessor.GetBlockId(eastNeighbour) == blockID && chunkBlockAccessor.GetBlockId(southNeighbour) == blockID && chunkBlockAccessor.GetBlockId(southeastNeighbour) == blockID)
+            if (chunkBlockAccessor.GetBlockId(eastNeighbour, BlockLayersAccess.SolidBlocks) == blockID && chunkBlockAccessor.GetBlockId(southNeighbour, BlockLayersAccess.SolidBlocks) == blockID && chunkBlockAccessor.GetBlockId(southeastNeighbour, BlockLayersAccess.SolidBlocks) == blockID)
             {
-                if (chunkBlockAccessor.GetBlock(pos.UpCopy()).BlockMaterial == EnumBlockMaterial.Air && 
-                    chunkBlockAccessor.GetBlock(eastNeighbour.UpCopy()).BlockMaterial == EnumBlockMaterial.Air && 
-                    chunkBlockAccessor.GetBlock(southNeighbour.UpCopy()).BlockMaterial == EnumBlockMaterial.Air && 
-                    chunkBlockAccessor.GetBlock(southeastNeighbour.UpCopy()).BlockMaterial == EnumBlockMaterial.Air &&
-                    chunkBlockAccessor.GetBlock(pos.UpCopy(2)).BlockMaterial == EnumBlockMaterial.Air &&
-                    chunkBlockAccessor.GetBlock(eastNeighbour.UpCopy(2)).BlockMaterial == EnumBlockMaterial.Air &&
-                    chunkBlockAccessor.GetBlock(southNeighbour.UpCopy(2)).BlockMaterial == EnumBlockMaterial.Air &&
-                    chunkBlockAccessor.GetBlock(southeastNeighbour.UpCopy(2)).BlockMaterial == EnumBlockMaterial.Air)
+                if (chunkBlockAccessor.GetBlock(pos.UpCopy(), BlockLayersAccess.SolidBlocks).BlockMaterial == EnumBlockMaterial.Air && 
+                    chunkBlockAccessor.GetBlock(eastNeighbour.UpCopy(), BlockLayersAccess.SolidBlocks).BlockMaterial == EnumBlockMaterial.Air && 
+                    chunkBlockAccessor.GetBlock(southNeighbour.UpCopy(), BlockLayersAccess.SolidBlocks).BlockMaterial == EnumBlockMaterial.Air && 
+                    chunkBlockAccessor.GetBlock(southeastNeighbour.UpCopy(), BlockLayersAccess.SolidBlocks).BlockMaterial == EnumBlockMaterial.Air &&
+                    chunkBlockAccessor.GetBlock(pos.UpCopy(2), BlockLayersAccess.SolidBlocks).BlockMaterial == EnumBlockMaterial.Air &&
+                    chunkBlockAccessor.GetBlock(eastNeighbour.UpCopy(2), BlockLayersAccess.SolidBlocks).BlockMaterial == EnumBlockMaterial.Air &&
+                    chunkBlockAccessor.GetBlock(southNeighbour.UpCopy(2), BlockLayersAccess.SolidBlocks).BlockMaterial == EnumBlockMaterial.Air &&
+                    chunkBlockAccessor.GetBlock(southeastNeighbour.UpCopy(2), BlockLayersAccess.SolidBlocks).BlockMaterial == EnumBlockMaterial.Air)
                 {
                     canGenerate = true;
                 }

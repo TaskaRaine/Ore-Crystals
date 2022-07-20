@@ -2,13 +2,13 @@
 	code: "orecrystals_crystalshard",
 	class: "orecrystals_crystalshard",
 	attributes: {
-		"itemlight": [0, 0, 1]
 	},
 	creativeinventory: { "general": ["*"], "items":["*"], "crystals":["*"] },
 	maxstacksize: 64,
 	texture: {
 		base: "item/crystalshard"
 	},
+	lightHSV: [0, 0, 1],
 	fpHandTransform: {
 		translation: { x: 0.05, y: -0.25, z: 0 }
 	},

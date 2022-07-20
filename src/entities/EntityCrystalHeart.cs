@@ -123,7 +123,7 @@ namespace OreCrystals
 
                             if (crystalToBreakPos != null)
                             {
-                                Block crystal = blockAccessor.GetBlock(crystalToBreakPos);
+                                Block crystal = blockAccessor.GetBlock(crystalToBreakPos, BlockLayersAccess.SolidBlocks);
 
                                 BreakCrystal(crystalToBreakPos);
 
@@ -297,7 +297,7 @@ namespace OreCrystals
         {
             this.Die();
 
-            Block hostBlock = World.BlockAccessor.GetBlock(ServerPos.AsBlockPos);
+            Block hostBlock = World.BlockAccessor.GetBlock(ServerPos.AsBlockPos, BlockLayersAccess.SolidBlocks);
 
             //-- If it survives to the end, it will take its host obelisk with it --//
             if(hostBlock is CrystalObeliskBlock)
@@ -337,7 +337,7 @@ namespace OreCrystals
                 {
                     for (int z = heartPos.Z - CRYSTAL_GROWTH_RANGE; z <= heartPos.Z + CRYSTAL_GROWTH_RANGE; z++)
                     {
-                        checkBlock = blockAccessor.GetBlock(x, y, z);
+                        checkBlock = blockAccessor.GetBlock(x, y, z, BlockLayersAccess.SolidBlocks);
 
                         if (checkBlock is OreCrystalsCrystal)
                         {
@@ -366,7 +366,7 @@ namespace OreCrystals
         private void GrowCrystal(BlockPos crystalPos)
         {
             //-- Change the block at crystalPos to its next stage --//
-            Block crystal = blockAccessor.GetBlock(crystalPos);
+            Block crystal = blockAccessor.GetBlock(crystalPos, BlockLayersAccess.SolidBlocks);
             int newBlockId = -1;
 
             switch(crystal.FirstCodePart())
@@ -400,8 +400,6 @@ namespace OreCrystals
         }
         private void BreakCrystal(BlockPos crystalPos)
         {
-            Block crystal = blockAccessor.GetBlock(crystalPos);
-
             this.World.BlockAccessor.BreakBlock(crystalPos, null, 0);
 
             this.World.BlockAccessor.Commit();
@@ -496,7 +494,8 @@ namespace OreCrystals
 
                 VertexFlags = 150,
 
-                ParticleModel = EnumParticleModel.Quad
+                ParticleModel = EnumParticleModel.Quad,
+                Async = true
             };
         }
         private void InitObeliskAreaParticles()
@@ -526,7 +525,8 @@ namespace OreCrystals
 
                 VertexFlags = 150,
 
-                ParticleModel = EnumParticleModel.Quad
+                ParticleModel = EnumParticleModel.Quad,
+                Async = true
             };
         }
         private void InitBreakParticles()

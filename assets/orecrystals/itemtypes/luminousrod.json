@@ -3,11 +3,11 @@
 	creativeinventory: { "general": ["*"], "crystals":["*"] },
 	maxstacksize: 64,
 	attributes: {
-		"itemlight": [0, 0, 6]
 	},
 	texture: {
 		base: "item/luminousrod"
 	},
+	lightHSV: [0, 0, 6],
 	fpHandTransform: {
 		translation: { x: 0.05, y: -0.25, z: 0 }
 	},

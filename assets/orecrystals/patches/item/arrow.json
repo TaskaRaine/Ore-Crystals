@@ -56,7 +56,7 @@
   },
   {
     "op": "add",
-    "path": "/attributes/itemlightByType",
+    "path": "/lightHSVByType",
     "value": {
         "arrow-crystal": [0, 0, 6]
     },

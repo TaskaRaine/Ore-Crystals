@@ -1,13 +1,13 @@
 ﻿{
 	code: "heart_core",
 	attributes: {
-		"itemlight": [26, 3, 2]
 	},
 	creativeinventory: { "general": ["*"], "items":["*"], "crystals":["*"] },
 	maxstacksize: 64,
 	texture: {
 		base: "item/heartcore"
 	},
+	lightHSV: [26, 3, 2],
 	guiTransform: {
 		translation: { x: 2, y: 0, z: 0 },
 		origin: { x: 0.6, y: 0.5, z: 0 },

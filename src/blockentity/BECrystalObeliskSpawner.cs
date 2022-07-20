@@ -193,7 +193,7 @@ namespace OreCrystals
                 {
                     for(int z = spawnerPos.Z - 3; z <= spawnerPos.Z + 3; z++)
                     {
-                        spaceBlock = blockAccessor.GetBlock(x, y, z);
+                        spaceBlock = blockAccessor.GetBlock(x, y, z, BlockLayersAccess.SolidBlocks);
 
                         if (spaceBlock.BlockMaterial == EnumBlockMaterial.Air)
                             possiblePositions.Add(new Vec3i(x, y, z));

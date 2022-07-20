@@ -77,37 +77,37 @@ namespace OreCrystals
             switch (codeLastPart)
             {
                 case "ore_up":
-                    if (world.BlockAccessor.GetBlockId(pos.UpCopy(1)) == 0)
+                    if (world.BlockAccessor.GetBlockId(pos.UpCopy(1), BlockLayersAccess.SolidBlocks) == 0)
                     {
                         world.BlockAccessor.BreakBlock(pos, null, 0);
                     }
                     break;
                 case "ore_down":
-                    if (world.BlockAccessor.GetBlockId(pos.DownCopy(1)) == 0)
+                    if (world.BlockAccessor.GetBlockId(pos.DownCopy(1), BlockLayersAccess.SolidBlocks) == 0)
                     {
                         world.BlockAccessor.BreakBlock(pos, null, 0);
                     }
                     break;
                 case "ore_north":
-                    if (world.BlockAccessor.GetBlockId(pos.NorthCopy(1)) == 0)
+                    if (world.BlockAccessor.GetBlockId(pos.NorthCopy(1), BlockLayersAccess.SolidBlocks) == 0)
                     {
                         world.BlockAccessor.BreakBlock(pos, null, 0);
                     }
                     break;
                 case "ore_south":
-                    if (world.BlockAccessor.GetBlockId(pos.SouthCopy(1)) == 0)
+                    if (world.BlockAccessor.GetBlockId(pos.SouthCopy(1), BlockLayersAccess.SolidBlocks) == 0)
                     {
                         world.BlockAccessor.BreakBlock(pos, null, 0);
                     }
                     break;
                 case "ore_east":
-                    if (world.BlockAccessor.GetBlockId(pos.EastCopy(1)) == 0)
+                    if (world.BlockAccessor.GetBlockId(pos.EastCopy(1), BlockLayersAccess.SolidBlocks) == 0)
                     {
                         world.BlockAccessor.BreakBlock(pos, null, 0);
                     }
                     break;
                 case "ore_west":
-                    if (world.BlockAccessor.GetBlockId(pos.WestCopy(1)) == 0)
+                    if (world.BlockAccessor.GetBlockId(pos.WestCopy(1), BlockLayersAccess.SolidBlocks) == 0)
                     {
                         world.BlockAccessor.BreakBlock(pos, null, 0);
                     }
@@ -181,7 +181,7 @@ namespace OreCrystals
                         //-- If the block is broken with a chisel, return the crystal to its 'poor' state and damage the chisel --//
                         Block harvestedCrystal = world.GetBlock(new AssetLocation("orecrystals", "orecrystals_crystal_poor-" + this.FirstCodePart(1) + "-" + this.LastCodePart()));
 
-                        if (harvestedCrystal.Id != world.BlockAccessor.GetBlockId(pos))
+                        if (harvestedCrystal.Id != world.BlockAccessor.GetBlockId(pos, BlockLayersAccess.SolidBlocks))
                             world.BlockAccessor.SetBlock(harvestedCrystal.Id, pos);
                         else
                             world.BlockAccessor.SetBlock(0, pos);

@@ -72,6 +72,8 @@ Fixed an exception that occurred when the heart would break an obelisk.
 
 Breaking particle logic has been moved to the crystal/obelisk blocks. When broken via normal means, these blocks will now also break with glowy particles. 
 
+Ore Crystals is no longer reliant on the Item Lights mod for item illumination. This functionality is now available in vanilla Vintage Story.
+
 Further particle tweaks.
 
 #### Version 1.3.6
